@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "vismatix": {
+      "url": "https://vismatix.online/mcp",
+      "auth": {
+        "CLIENT_ID": "YOUR_OAUTH_CLIENT_ID",
+        "scopes": [
+          "profile:read",
+          "projects:read",
+          "posts:read"
+        ]
+      }
+    }
+  }
+}
