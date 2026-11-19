@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Vismatix REST API v3 example; MCP companion endpoint is v3.3.0.
+
 BASE_URL="https://vismatix.online/api/v3"
 API_KEY="vmtx_u_YOUR_API_KEY"
 

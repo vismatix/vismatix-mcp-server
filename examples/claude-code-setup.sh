@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Vismatix MCP Server v3.3.0.
+
 # Option 1 (Recommended): Add Vismatix remote MCP with OAuth 2.1 + PKCE (S256)
 claude mcp add --transport http vismatix https://vismatix.online/mcp
 

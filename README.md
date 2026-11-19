@@ -22,7 +22,7 @@ The operator details and registration identifiers above are published as supplie
 - Public pre-login documentation endpoint: <https://vismatix.online/mcp/public>
 - Compatibility endpoint aliases: `/api/mcp` and `/api/mcp/public`
 - Transport: MCP Streamable HTTP with JSON-RPC 2.0; GET provides discovery, POST handles MCP messages, and DELETE terminates a session.
-- Server version: `3.2.0`
+- Server version: `3.3.0`
 - Default protocol version: `2025-03-26`; supported versions: `2025-11-25`, `2025-06-18`, `2025-03-26`, and `2024-11-05`.
 
 The authenticated endpoint initiates OAuth when a client connects without a bearer credential. OAuth discovery is available at:
@@ -39,6 +39,8 @@ Vismatix supports OAuth 2.1 Authorization Code with PKCE `S256`, OAuth Dynamic C
 
 The supported OAuth scopes are `profile:read`, `projects:read`, `projects:write`, `posts:read`, `posts:write`, `posts:publish`, `matrix:read`, `matrix:write`, `tasks:read`, `tasks:write`, `analytics:read`, `webhooks:manage`, `wallet:read`, `wallet:transfer`, `ai:use`, and `offline_access`. Review the consent screen and grant only the access needed for your workflow. Workspace plan and role checks still apply.
 
+The HTTP transport accepts JSON-RPC 2.0 objects and batches, negotiates JSON or Server-Sent Events from `Accept`, and returns `202 Accepted` with an empty body for notifications. An `initialize` response creates a `Mcp-Session-Id`; subsequent responses echo a valid supplied session ID. Keep credentials in the `Authorization: Bearer` header and store them in a secure credential manager.
+
 For terminal or headless clients, the optional device flow uses <https://vismatix.online/agentauth>. The agent starts a device request, shows the human an 8-character code to approve, then polls for the credential. The flow can issue an account key (`vmtx_u_`) or a single-project key (`vmtx_p_`). The account key has broader account authority; the project key is restricted to its project. Treat issued credentials as secrets and store them in your client’s secure credential store.
 
 ## Client Setup (30-Second Configs)
@@ -51,6 +53,8 @@ Ready-to-copy client configurations and skill playbooks are included in this rep
 - VS Code Copilot `.vscode/mcp.json`: [`examples/vscode-mcp.json`](examples/vscode-mcp.json)
 - Claude Code Setup Script: [`examples/claude-code-setup.sh`](examples/claude-code-setup.sh)
 - Codex CLI TOML Config: [`examples/codex-config.toml`](examples/codex-config.toml)
+- JSON-RPC v3.3 notification/session smoke example: [`examples/mcp-v33-protocol-smoke.sh`](examples/mcp-v33-protocol-smoke.sh)
+- REST API v3 quickstart: [`examples/api-v3-quickstart.sh`](examples/api-v3-quickstart.sh)
 
 ### Claude Code
 
@@ -136,12 +140,12 @@ Add `vismatix` in `~/.gemini/settings.json`:
 
 See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt).
 
-## MCP Capabilities (`v3.2.0`)
+## MCP Capabilities (`v3.3.0`)
 
-- **37 Tools:** 10 pre-login discovery/GEO/auth tools + 27 authenticated workspace, matrix, publishing, AI, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
+- **41 Tools:** 10 pre-login discovery/GEO/auth tools + 31 authenticated workspace, matrix, publishing, AI, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
 - **6 Static Documentation Resources** (`resources/list`)
-- **3 Authenticated Workspace Resource Templates** (`resources/templates/list`)
-- **8 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
+- **4 Authenticated Workspace Resource Templates** (`resources/templates/list`)
+- **9 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
 
 ### Pre-login discovery and setup tools
 
@@ -185,6 +189,10 @@ See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/125
 - `vismatix_manage_presets_and_templates`
 - `vismatix_manage_notifications`
 - `vismatix_audit_and_health`
+- `vismatix_bulk_create_drafts` — validate up to 15 drafts independently and create valid rows in one atomic batch.
+- `vismatix_smart_fill_matrix` — place eligible drafts into open Golden Peak windows, honoring schedule bounds, collisions, approval gates, and Enterprise slot limits.
+- `vismatix_audit_post_readiness` — check platform character/media rules, forbidden brand terms, and locally known destination connection status.
+- `vismatix_get_gc_and_plan_status` — inspect plan, safe Enterprise overrides, quotas, GC visibility, and credential scopes without exposing tokens.
 
 `vismatix_audit_and_health` also exposes public `health` and `geo_guidelines` operations; other operations are subject to authentication and authorization.
 
@@ -206,6 +214,7 @@ See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/125
 | `vismatix://workspace/{id}/snapshot` | `projects:read` | Post status counts, active campaigns, open Golden Peak matrix coordinates, pending tasks, recent ideas, and active channels |
 | `vismatix://workspace/{id}/matrix/week` | `matrix:read` | Weekly 7×12 occupancy metrics, occupied slots, and open Golden Peak windows |
 | `vismatix://workspace/{id}/brand-voice` | `projects:read` | Workspace brief plus Brand Kit persona, target audience, tone rules, `forbidden_words`, Arabic register, signature, and hashtag vault |
+| `vismatix://workspace/{id}/readiness-report` | `projects:read` | Live connection metadata, failed/stuck scheduled items, Brand Kit completeness, and available Golden Peak slots for the next seven days |
 
 ### Composable Workflow Prompts
 
@@ -219,6 +228,7 @@ See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/125
 | `brand_audit_and_realign` | Workflow | Audits queued drafts/scheduled posts against `brand_kit.forbidden_words`, tone rules, and platform limits |
 | `campaign_matrix_fill` | Workflow | Populates multi-channel campaigns across open Golden Peak coordinates within the `+60m..+12m` window |
 | `cross_channel_repurpose` | Workflow | Rewrites flagship copy natively per active channel (respecting `17` supported destinations), audits GEO/Virality, and saves drafts |
+| `preflight_and_publish_week` | Workflow | Inspect readiness, preflight upcoming posts, propose safe edits, and fill open slots only after schedule confirmation |
 
 The authoritative, current tool schemas and descriptions are returned by the live `tools/list` method. See [the developer guide](https://vismatix.online/docs/developer/agents) for client setup and authentication details.
 

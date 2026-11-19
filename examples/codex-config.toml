@@ -1,4 +1,4 @@
-# Vismatix MCP configuration for Codex CLI (~/.codex/config.toml)
+# Vismatix MCP Server v3.3.0 configuration for Codex CLI (~/.codex/config.toml)
 # CLI equivalent:
 #   codex mcp add vismatix --url https://vismatix.online/mcp
 #   codex mcp login vismatix
