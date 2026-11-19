@@ -1,0 +1,48 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "vismatix",
+    "version": "3.3.0",
+    "description": "Manage Vismatix workspaces, content drafts, publishing readiness, and the 84-slot weekly matrix through the official remote MCP server.",
+    "author": {
+        "name": "Al-Manassa Al-Shamikha Trading Establishment",
+        "email": "support@vismatix.online",
+        "url": "https://vismatix.online"
+    },
+    "homepage": "https://vismatix.online/docs/developer/agents",
+    "repository": "https://github.com/vismatix/vismatix-mcp-server",
+    "keywords": [
+        "content operations",
+        "publishing",
+        "MCP",
+        "social media"
+    ],
+    "extensions": {
+        "com.openai": {
+            "onboardingSkill": "./skills/setup/SKILL.md",
+            "interface": {
+                "displayName": "Vismatix",
+                "shortDescription": "Plan, draft, and audit multichannel content.",
+                "longDescription": "Connect your Vismatix workspace using OAuth 2.1, review the 84-slot matrix, prepare drafts, and check publishing readiness. Write and publish actions remain subject to Vismatix permissions and your confirmation.",
+                "developerName": "Al-Manassa Al-Shamikha Trading Establishment",
+                "category": "Productivity",
+                "capabilities": [
+                    "Read workspace data",
+                    "Create drafts",
+                    "Audit publishing readiness"
+                ],
+                "websiteURL": "https://vismatix.online",
+                "supportURL": "https://vismatix.online/contact",
+                "privacyPolicyURL": "https://vismatix.online/privacy",
+                "termsOfServiceURL": "https://vismatix.online/terms",
+                "defaultPrompt": [
+                    "Review my Vismatix workspace readiness and summarize blockers.",
+                    "Find open Golden Peak matrix slots for the next week.",
+                    "Audit these drafts against my Brand Kit before scheduling."
+                ],
+                "brandColor": "#22d3ee",
+                "composerIcon": "./assets/icon.png",
+                "logo": "./assets/icon.png"
+            }
+        }
+    }
+}

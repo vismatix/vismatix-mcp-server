@@ -1,0 +1,28 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+    "mcpServers": {
+        "vismatix": {
+            "type": "streamable-http",
+            "url": "https://vismatix.online/mcp",
+            "extensions": {
+                "com.openai": {
+                    "auth": {
+                        "type": "oauth",
+                        "client": {
+                            "mode": "cimd"
+                        },
+                        "baseScopes": [
+                            "profile:read",
+                            "projects:read",
+                            "posts:read",
+                            "posts:write",
+                            "matrix:read",
+                            "matrix:write",
+                            "ai:use"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

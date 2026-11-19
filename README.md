@@ -131,14 +131,17 @@ Add `vismatix` in `~/.gemini/settings.json`:
 }
 ```
 
-### ChatGPT
+### ChatGPT Plugin ZIP
 
-1. Open **Plugins** and choose **Add custom MCP server**.
-2. Set the public HTTPS server URL to `https://vismatix.online/mcp`.
-3. Select OAuth authentication, review the tool list, then create and install the connection.
-4. Complete OAuth and review the requested Vismatix scopes before using tools.
+Download the [Vismatix ChatGPT Plugin ZIP](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip) or use the generated files in [`chatgpt-plugin/`](chatgpt-plugin/). It is a portable OpenAI Agent Plugins package containing the root `plugin.json`, OAuth-enabled `mcp.json`, setup skill, metadata, and bilingual guide. The directory copy is kept aligned with the downloadable archive.
 
-See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt).
+1. In ChatGPT on the web, open the Plugins section for the intended workspace. If **Upload plugin** is available and you have permission, choose **Add → Upload plugin** and select the ZIP.
+2. Enable the plugin. If the workspace prompts for an MCP connection, use `https://vismatix.online/mcp`, choose OAuth, and complete Vismatix sign-in and scope consent. OAuth discovery advertises PKCE `S256`, CIMD, and DCR.
+3. Start a new conversation and review the tool-approval prompt before any write or publishing action.
+
+ChatGPT controls ZIP-upload and custom-MCP availability by plan, workspace policy, and role. Upload may require an eligible workspace owner or administrator. OpenAI currently does not allow personal accounts to create new custom GPTs; this portable Plugin ZIP is not a legacy ChatGPT Plugin Store package or a GPT Actions OpenAPI import. The hosted ChatGPT MCP connection uses OAuth and does not send user-supplied API keys. [`chatgpt-plugin/mcp-api-key.json`](chatgpt-plugin/mcp-api-key.json) is an alternative for MCP clients that support Bearer API keys; keep keys out of chat and source control.
+
+See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/build/plugins), [plugin ZIP upload instructions](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt), and [custom MCP connection guide](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt).
 
 ## MCP Capabilities (`v3.3.0`)
 

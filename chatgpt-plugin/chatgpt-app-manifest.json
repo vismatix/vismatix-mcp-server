@@ -1,0 +1,46 @@
+{
+    "name": "Vismatix",
+    "version": "3.3.0",
+    "package_format": "OpenAI Agent Plugins portable ZIP",
+    "mcp_endpoint": "https://vismatix.online/mcp",
+    "oauth": {
+        "protocol": "OAuth 2.1",
+        "issuer": "https://vismatix.online",
+        "authorization_server_metadata_url": "https://vismatix.online/.well-known/oauth-authorization-server",
+        "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource",
+        "authorization_endpoint": "https://vismatix.online/oauth/authorize",
+        "token_endpoint": "https://vismatix.online/oauth/token",
+        "registration_endpoint": "https://vismatix.online/oauth/register",
+        "grant_type": "authorization_code",
+        "code_challenge_method": "S256",
+        "client_registration": {
+            "cimd": true,
+            "dcr": true
+        },
+        "scopes": [
+            "profile:read",
+            "projects:read",
+            "posts:read",
+            "posts:write",
+            "matrix:read",
+            "matrix:write",
+            "ai:use"
+        ]
+    },
+    "api_key": {
+        "scheme": "Bearer",
+        "accepted_key_families": [
+            "vmtx_u_*",
+            "vmtx_p_*"
+        ],
+        "chatgpt_hosted_mcp_supported": false,
+        "compatible_clients": true
+    },
+    "operator": {
+        "name": "Al-Manassa Al-Shamikha Trading Establishment",
+        "commercial_registration": "7016588738"
+    },
+    "contact_email": "support@vismatix.online",
+    "privacy_url": "https://vismatix.online/privacy",
+    "terms_url": "https://vismatix.online/terms"
+}

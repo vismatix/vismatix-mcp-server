@@ -1,0 +1,55 @@
+{
+    "name": "Vismatix",
+    "server_name": "vismatix",
+    "transport": "streamable-http",
+    "url": "https://vismatix.online/mcp",
+    "protocol_versions": [
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26"
+    ],
+    "authentication": {
+        "chatgpt": {
+            "type": "oauth",
+            "discovery_url": "https://vismatix.online/.well-known/oauth-authorization-server",
+            "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource",
+            "pkce": "S256"
+        },
+        "compatible_mcp_clients": {
+            "type": "bearer_api_key",
+            "accepted_key_families": [
+                "vmtx_u_*",
+                "vmtx_p_*"
+            ],
+            "header": "Authorization: Bearer <key>"
+        }
+    },
+    "oauth_scopes": [
+        "profile:read",
+        "projects:read",
+        "posts:read",
+        "posts:write",
+        "matrix:read",
+        "matrix:write",
+        "ai:use"
+    ],
+    "tools": [
+        "vismatix_get_gc_and_plan_status",
+        "vismatix_audit_post_readiness",
+        "vismatix_bulk_create_drafts",
+        "vismatix_smart_fill_matrix"
+    ],
+    "resource_templates": [
+        "vismatix://workspace/{id}/snapshot",
+        "vismatix://workspace/{id}/matrix/week",
+        "vismatix://workspace/{id}/brand-voice",
+        "vismatix://workspace/{id}/readiness-report"
+    ],
+    "prompts": [
+        "preflight_and_publish_week",
+        "weekly_content_sprint",
+        "brand_audit_and_realign",
+        "campaign_matrix_fill"
+    ],
+    "security_note": "ChatGPT hosted MCP connections use OAuth. The Bearer API-key mode is provided for compatible MCP clients; support for customer-supplied keys varies by client."
+}

@@ -1,0 +1,10 @@
+{
+    "note": "Informational MCP metadata only. This is not the retired legacy ChatGPT Plugins Store manifest; use root plugin.json for the portable package format.",
+    "name_for_human": "Vismatix",
+    "name_for_model": "vismatix",
+    "description_for_human": "Plan and prepare multichannel content using your Vismatix workspace.",
+    "description_for_model": "Connect to the Vismatix remote MCP server using OAuth 2.1.",
+    "mcp_url": "https://vismatix.online/mcp",
+    "contact_email": "support@vismatix.online",
+    "legal_info_url": "https://vismatix.online/terms"
+}

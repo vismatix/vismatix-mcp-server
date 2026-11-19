@@ -1,0 +1,18 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+    "mcpServers": {
+        "vismatix": {
+            "type": "streamable-http",
+            "url": "https://vismatix.online/mcp",
+            "extensions": {
+                "com.openai": {
+                    "auth": {
+                        "type": "api_key",
+                        "headerScheme": "bearer"
+                    }
+                }
+            }
+        }
+    },
+    "usage_note": "Use only with an MCP client that supports user-supplied Bearer keys. ChatGPT hosted MCP currently requires OAuth."
+}
