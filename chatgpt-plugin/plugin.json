@@ -2,7 +2,8 @@
     "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
     "name": "vismatix",
     "version": "3.3.0",
-    "description": "Manage Vismatix workspaces, content drafts, publishing readiness, and the 84-slot weekly matrix through the official remote MCP server.",
+    "description": "AI-native content operations for workspaces, Hoxi AI, Strategy Radar, the 84-slot weekly matrix, and 17 social publishing destinations.",
+    "description_for_model": "Read VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md first for authoritative Vismatix knowledge: workspaces and team roles, the 84-slot matrix and Golden Peak windows, Hoxi AI and Brand Kit guardrails, Strategy Radar, supported channels, plans and GC credits, API v3, and OAuth 2.1 security. Use the 41 MCP tools, four live workspace resources, and nine workflow prompts by matching each goal to the live schemas. Read workspace context before actions and get explicit confirmation before publishing.",
     "author": {
         "name": "Al-Manassa Al-Shamikha Trading Establishment",
         "email": "support@vismatix.online",
@@ -22,7 +23,7 @@
             "interface": {
                 "displayName": "Vismatix",
                 "shortDescription": "Plan, draft, and audit multichannel content.",
-                "longDescription": "Connect your Vismatix workspace using OAuth 2.1, review the 84-slot matrix, prepare drafts, and check publishing readiness. Write and publish actions remain subject to Vismatix permissions and your confirmation.",
+                "longDescription": "Vismatix is an AI-native content operations workspace for creators, teams, and agencies. It combines the 84-slot weekly matrix and Golden Peak windows, Hoxi AI and Brand Kit guardrails, Strategy Radar, team workspaces, and 17 active publishing destinations. Consult VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md for complete product, plan/GC, workflow, and API/security context. Connect through OAuth 2.1; writes obey plan, scope, approval, and confirmation rules.",
                 "developerName": "Al-Manassa Al-Shamikha Trading Establishment",
                 "category": "Productivity",
                 "capabilities": [

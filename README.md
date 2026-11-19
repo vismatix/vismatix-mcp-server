@@ -133,7 +133,7 @@ Add `vismatix` in `~/.gemini/settings.json`:
 
 ### ChatGPT Plugin ZIP
 
-Download the [Vismatix ChatGPT Plugin ZIP](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip) or use the generated files in [`chatgpt-plugin/`](chatgpt-plugin/). It is a portable OpenAI Agent Plugins package containing the root `plugin.json`, OAuth-enabled `mcp.json`, setup skill, metadata, and bilingual guide. The directory copy is kept aligned with the downloadable archive.
+Download the [Vismatix ChatGPT Plugin ZIP](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip) or use the generated files in [`chatgpt-plugin/`](chatgpt-plugin/). It is a portable OpenAI Agent Plugins package containing `plugin.json`, OAuth-enabled `mcp.json`, the setup skill, `PLUGIN_PROMPT.md` domain manual, and the complete generated `VISMATIX_FULL_GUIDE.md`. The guide is also available live over MCP as `vismatix://docs/full-guide`. The directory copy is kept aligned with the downloadable archive.
 
 1. In ChatGPT on the web, open the Plugins section for the intended workspace. If **Upload plugin** is available and you have permission, choose **Add → Upload plugin** and select the ZIP.
 2. Enable the plugin. If the workspace prompts for an MCP connection, use `https://vismatix.online/mcp`, choose OAuth, and complete Vismatix sign-in and scope consent. OAuth discovery advertises PKCE `S256`, CIMD, and DCR.
@@ -146,7 +146,7 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 ## MCP Capabilities (`v3.3.0`)
 
 - **41 Tools:** 10 pre-login discovery/GEO/auth tools + 31 authenticated workspace, matrix, publishing, AI, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
-- **6 Static Documentation Resources** (`resources/list`)
+- **7 Static Documentation Resources** (`resources/list`)
 - **4 Authenticated Workspace Resource Templates** (`resources/templates/list`)
 - **9 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
 
@@ -207,6 +207,7 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 | `vismatix://guide/quick` | Compact agent quick reference |
 | `vismatix://guide/llms` | `llms.txt` discovery index |
 | `vismatix://docs/handbook-all` | Compiled 13-guide user handbook |
+| `vismatix://docs/full-guide` | Complete generated platform, product, UI, pricing/GC, channel, API, security, and MCP guide |
 | `vismatix://docs/studio-ui-map` | Workspace UI map JSON |
 | `vismatix://api/openapi` | OpenAPI 3.1.0 specification |
 

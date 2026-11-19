@@ -1,6 +1,6 @@
 # Vismatix ChatGPT Plugin
 
-This ZIP uses the portable OpenAI Agent Plugins layout (`plugin.json`, `mcp.json`, `skills/`, and `assets/`) and includes a Vismatix connection guide.
+This ZIP uses the portable OpenAI Agent Plugins layout (`plugin.json`, `mcp.json`, `skills/`, and `assets/`). Begin with `PLUGIN_PROMPT.md` for the system/domain manual, then consult `VISMATIX_FULL_GUIDE.md` for complete current product and developer knowledge.
 
 ## English setup
 
@@ -27,7 +27,9 @@ This is a portable MCP plugin package, not the retired legacy ChatGPT Plugins St
 - `plugin.json`: portable plugin identity and ChatGPT presentation metadata.
 - `mcp.json`: Streamable HTTP connector with OAuth 2.1/CIMD and least-privilege scopes.
 - `mcp-api-key.json`: optional Bearer-key configuration for compatible MCP clients.
-- `PLUGIN_PROMPT.md` and `skills/setup/SKILL.md`: workflow and safety instructions.
+- `PLUGIN_PROMPT.md`: system/domain manual for Vismatix product knowledge, MCP tool/resource/prompt selection, language behavior, and safe workflows.
+- `VISMATIX_FULL_GUIDE.md`: full dynamically generated Vismatix Platform Guide based on the `/llms-full.txt` knowledge base.
+- `skills/setup/SKILL.md`: connection and workflow safety instructions.
 - `icon.svg` and `assets/icon.png`: Vismatix's official square brand mark in SVG and PNG formats.
 - `manifest.json`, `chatgpt-app-manifest.json`, and `mcp-connector.json`: readable Vismatix metadata and connector reference.
 

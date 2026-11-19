@@ -3,7 +3,7 @@
     "name_for_human": "Vismatix",
     "name_for_model": "vismatix",
     "description_for_human": "Manage content drafts, publishing readiness, and the weekly matrix in Vismatix.",
-    "description_for_model": "Use Vismatix MCP to inspect accessible workspaces, audit drafts, create drafts, and schedule approved content.",
+    "description_for_model": "Read VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md first. Vismatix covers content operations, the 84-slot weekly matrix, Hoxi AI, Brand Kit, Strategy Radar, workspaces and team roles, 17 publishing destinations, GC plans, API v3, and OAuth 2.1. Use its 41 MCP tools, live workspace resources, and prompts with tenant-scoped context; confirm before publishing.",
     "mcp_url": "https://vismatix.online/mcp",
     "oauth": {
         "protocol": "OAuth 2.1",
