@@ -1,0 +1,24 @@
+{
+    "mcpServers": {
+        "vismatix": {
+            "url": "https://vismatix.online/mcp"
+        }
+    },
+    "_alternatives": {
+        "bearer_api_key": {
+            "url": "https://vismatix.online/mcp",
+            "headers": {
+                "Authorization": "Bearer vmtx_u_YOUR_API_KEY"
+            }
+        },
+        "project_scoped_key": {
+            "url": "https://vismatix.online/mcp",
+            "headers": {
+                "Authorization": "Bearer vmtx_p_YOUR_PROJECT_KEY"
+            }
+        },
+        "public_pre_login_docs": {
+            "url": "https://vismatix.online/mcp/public"
+        }
+    }
+}

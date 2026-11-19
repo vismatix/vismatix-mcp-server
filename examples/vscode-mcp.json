@@ -1,0 +1,8 @@
+{
+    "servers": {
+        "vismatix": {
+            "type": "http",
+            "url": "https://vismatix.online/mcp"
+        }
+    }
+}

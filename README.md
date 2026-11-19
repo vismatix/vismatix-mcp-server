@@ -1,8 +1,8 @@
 # Vismatix MCP Server
 
-Official public integration documentation and client examples for connecting AI assistants and developer tools to Vismatix.
+Official public integration documentation, agent skill files, and client examples for connecting AI assistants and IDE/CLI agents to Vismatix.
 
-Vismatix is an AI-native content operations and multi-channel publishing platform. Its workspace includes a 7-day × 12-slot (84-cell) Weekly Matrix, Strategy Radar, Hoxi Copilot, and publishing workflows for supported social destinations. The hosted Workspace Studio is proprietary. This repository publishes integration documentation and examples; it does not contain or license the hosted application core.
+Vismatix is an AI-native content operations and multi-channel publishing platform centered on a 7-day × 12-slot (84-cell) Weekly Matrix, Strategy Radar, Hoxi Copilot, and publishing workflows across 17 active social destinations (X/Twitter and YouTube are unsupported). The hosted Workspace Studio is proprietary. This repository publishes integration specifications, Agent Pack files, and client examples; it does not contain or license the hosted application core.
 
 ## Operator and legal identity
 
@@ -22,7 +22,7 @@ The operator details and registration identifiers above are published as supplie
 - Public pre-login documentation endpoint: <https://vismatix.online/mcp/public>
 - Compatibility endpoint aliases: `/api/mcp` and `/api/mcp/public`
 - Transport: MCP Streamable HTTP with JSON-RPC 2.0; GET provides discovery, POST handles MCP messages, and DELETE terminates a session.
-- Server version: `3.1.0`
+- Server version: `3.2.0`
 - Default protocol version: `2025-03-26`; supported versions: `2025-11-25`, `2025-06-18`, `2025-03-26`, and `2024-11-05`.
 
 The authenticated endpoint initiates OAuth when a client connects without a bearer credential. OAuth discovery is available at:
@@ -41,9 +41,28 @@ The supported OAuth scopes are `profile:read`, `projects:read`, `projects:write`
 
 For terminal or headless clients, the optional device flow uses <https://vismatix.online/agentauth>. The agent starts a device request, shows the human an 8-character code to approve, then polls for the credential. The flow can issue an account key (`vmtx_u_`) or a single-project key (`vmtx_p_`). The account key has broader account authority; the project key is restricted to its project. Treat issued credentials as secrets and store them in your client’s secure credential store.
 
+## Client Setup (30-Second Configs)
+
+Ready-to-copy client configurations and skill playbooks are included in this repository and downloadable directly from <https://vismatix.online/docs/developer/agents>:
+
+- Agent Skill Playbook: [`SKILL.md`](SKILL.md)
+- Agent Cheat Sheet & Prompt Contract: [`AGENTS.md`](AGENTS.md)
+- Cursor / Windsurf MCP Config: [`examples/cursor-mcp.json`](examples/cursor-mcp.json)
+- VS Code Copilot `.vscode/mcp.json`: [`examples/vscode-mcp.json`](examples/vscode-mcp.json)
+- Claude Code Setup Script: [`examples/claude-code-setup.sh`](examples/claude-code-setup.sh)
+- Codex CLI TOML Config: [`examples/codex-config.toml`](examples/codex-config.toml)
+
+### Claude Code
+
+```sh
+claude mcp add --transport http vismatix https://vismatix.online/mcp
+```
+
+See [`examples/claude-code-setup.sh`](examples/claude-code-setup.sh) for pre-login docs and `VISMATIX_API_KEY` header modes.
+
 ### Claude Desktop
 
-Claude Desktop connects to remote MCP servers through its Connectors settings; remote connectors should not be added to `claude_desktop_config.json`.
+Claude Desktop connects to remote MCP servers through its Connectors settings; remote connectors should not be added to `claude_desktop_config.json` manually unless bridging local stdio.
 
 1. Open **Settings → Connectors**.
 2. Choose **Add custom connector** (for Team or Enterprise, an owner may need to enable it first).
@@ -51,11 +70,11 @@ Claude Desktop connects to remote MCP servers through its Connectors settings; r
 4. Add the connector, choose **Connect**, and complete Vismatix’s OAuth sign-in and scope approval.
 5. Enable only the tools needed in the chat’s tools menu.
 
-Claude’s connector availability depends on the Claude plan and workspace policy. See [Anthropic’s remote MCP connector guide](https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp).
+See [Anthropic’s remote MCP connector guide](https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp).
 
-### Cursor
+### Cursor & Windsurf
 
-Cursor supports remote Streamable HTTP MCP servers with OAuth. Add a server from **Cursor → Settings → Tools & Integrations → MCP** or create `.cursor/mcp.json` in a project. A minimal DCR configuration is:
+Cursor and Windsurf support remote Streamable HTTP MCP servers with OAuth. Add a server from **Settings → Tools & Integrations → MCP** or save [`examples/cursor-mcp.json`](examples/cursor-mcp.json) as `.cursor/mcp.json`:
 
 ```json
 {
@@ -67,13 +86,26 @@ Cursor supports remote Streamable HTTP MCP servers with OAuth. Add a server from
 }
 ```
 
-Cursor will discover the OAuth metadata and run the authorization flow. If your integration has a pre-registered static OAuth client, the optional `auth.CLIENT_ID` field shown in [`examples/mcp-client-config.json`](examples/mcp-client-config.json) is a placeholder to replace. Vismatix supports DCR/CIMD; remove the `auth` object to use client registration instead of static credentials. Do not invent a client ID or commit a client secret.
+If your integration has a pre-registered static OAuth client, the optional `auth.CLIENT_ID` field shown in [`examples/mcp-client-config.json`](examples/mcp-client-config.json) is a placeholder to replace. Vismatix supports DCR/CIMD; omit `auth` to use dynamic client registration instead of static credentials. Do not invent a client ID or commit a client secret.
 
-See [Cursor’s MCP documentation](https://cursor.com/docs/mcp).
+### VS Code (GitHub Copilot / MCP)
+
+Save [`examples/vscode-mcp.json`](examples/vscode-mcp.json) as `.vscode/mcp.json` in your workspace:
+
+```json
+{
+  "servers": {
+    "vismatix": {
+      "type": "http",
+      "url": "https://vismatix.online/mcp"
+    }
+  }
+}
+```
 
 ### Codex CLI
 
-Codex CLI accepts a remote MCP URL and can open the browser-based OAuth flow:
+Codex CLI accepts a remote MCP URL and opens the browser-based OAuth flow (see [`examples/codex-config.toml`](examples/codex-config.toml)):
 
 ```sh
 codex mcp add vismatix --url https://vismatix.online/mcp
@@ -81,22 +113,35 @@ codex mcp login vismatix
 codex mcp list
 ```
 
-Approve the requested Vismatix scopes in the browser. Alternatively, use the optional `/agentauth` device flow if the client environment is headless. Codex configuration is local to the user and should not be committed with credentials.
+### Gemini CLI
+
+Add `vismatix` in `~/.gemini/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "vismatix": {
+      "httpUrl": "https://vismatix.online/mcp"
+    }
+  }
+}
+```
 
 ### ChatGPT
-
-To add a custom MCP server in ChatGPT, use the custom MCP server/plugin connection controls available to your account or workspace:
 
 1. Open **Plugins** and choose **Add custom MCP server**.
 2. Set the public HTTPS server URL to `https://vismatix.online/mcp`.
 3. Select OAuth authentication, review the tool list, then create and install the connection.
 4. Complete OAuth and review the requested Vismatix scopes before using tools.
 
-Workspace permissions and available UI can vary by account. See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt).
+See [OpenAI’s custom MCP server guide](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt).
 
-## MCP tools
+## MCP Capabilities (`v3.2.0`)
 
-The server advertises 37 tools. Ten tools support pre-login discovery or setup; account and workspace actions require authorization. Public availability is still subject to endpoint and tool-specific limits.
+- **37 Tools:** 10 pre-login discovery/GEO/auth tools + 27 authenticated workspace, matrix, publishing, AI, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
+- **6 Static Documentation Resources** (`resources/list`)
+- **3 Authenticated Workspace Resource Templates** (`resources/templates/list`)
+- **8 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
 
 ### Pre-login discovery and setup tools
 
@@ -143,7 +188,7 @@ The server advertises 37 tools. Ten tools support pre-login discovery or setup; 
 
 `vismatix_audit_and_health` also exposes public `health` and `geo_guidelines` operations; other operations are subject to authentication and authorization.
 
-### Resources
+### Static Resources
 
 | URI | Resource |
 | --- | --- |
@@ -154,12 +199,26 @@ The server advertises 37 tools. Ten tools support pre-login discovery or setup; 
 | `vismatix://docs/studio-ui-map` | Workspace UI map JSON |
 | `vismatix://api/openapi` | OpenAPI 3.1.0 specification |
 
-### Prompts
+### Authenticated Workspace Resource Templates
 
-- `human-studio-companion`
-- `agent-auth-onboarding`
-- `weekly-content-planner`
-- `geo-article-auditor`
+| URI Template | Required Scope | Description |
+| --- | --- | --- |
+| `vismatix://workspace/{id}/snapshot` | `projects:read` | Post status counts, active campaigns, open Golden Peak matrix coordinates, pending tasks, recent ideas, and active channels |
+| `vismatix://workspace/{id}/matrix/week` | `matrix:read` | Weekly 7×12 occupancy metrics, occupied slots, and open Golden Peak windows |
+| `vismatix://workspace/{id}/brand-voice` | `projects:read` | Workspace brief plus Brand Kit persona, target audience, tone rules, `forbidden_words`, Arabic register, signature, and hashtag vault |
+
+### Composable Workflow Prompts
+
+| Prompt Name | Type | Description |
+| --- | --- | --- |
+| `human-studio-companion` | Companion | Studio-first creator assistance in `ar`, `en`, `es`, `fr`, or `de` |
+| `agent-auth-onboarding` | Auth | Step-by-step `/agentauth` 8-character device flow guide |
+| `weekly-content-planner` | Planner | Quick matrix gap scan + post creation + scheduling |
+| `geo-article-auditor` | GEO | Generative Engine Optimization audit & FAQ/JSON-LD recommendations |
+| `weekly_content_sprint` | Workflow | End-to-end sprint reading workspace snapshot & brand voice, checking open 84-slot peaks, scoring hooks, and batch-staging drafts |
+| `brand_audit_and_realign` | Workflow | Audits queued drafts/scheduled posts against `brand_kit.forbidden_words`, tone rules, and platform limits |
+| `campaign_matrix_fill` | Workflow | Populates multi-channel campaigns across open Golden Peak coordinates within the `+60m..+12m` window |
+| `cross_channel_repurpose` | Workflow | Rewrites flagship copy natively per active channel (respecting `17` supported destinations), audits GEO/Virality, and saves drafts |
 
 The authoritative, current tool schemas and descriptions are returned by the live `tools/list` method. See [the developer guide](https://vismatix.online/docs/developer/agents) for client setup and authentication details.
 
@@ -174,6 +233,7 @@ A quick `curl` example is available in [`examples/api-v3-quickstart.sh`](example
 ## Public machine-readable references
 
 - [Developer docs](https://vismatix.online/docs)
+- [Agent Pack downloads](https://vismatix.online/docs/developer/agents)
 - [OpenAPI 3.1.0](https://vismatix.online/openapi.json)
 - [`llms.txt`](https://vismatix.online/llms.txt)
 - [`llms-full.txt`](https://vismatix.online/llms-full.txt)

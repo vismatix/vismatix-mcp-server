@@ -1,0 +1,16 @@
+# Vismatix MCP configuration for Codex CLI (~/.codex/config.toml)
+# CLI equivalent:
+#   codex mcp add vismatix --url https://vismatix.online/mcp
+#   codex mcp login vismatix
+
+[mcp_servers.vismatix]
+url = "https://vismatix.online/mcp"
+
+# Optional zero-auth pre-login documentation endpoint:
+# [mcp_servers.vismatix_public]
+# url = "https://vismatix.online/mcp/public"
+
+# Optional API key authentication (keep keys in environment variables, never commit secrets):
+# [mcp_servers.vismatix]
+# url = "https://vismatix.online/mcp"
+# bearer_token_env_var = "VISMATIX_API_KEY"
