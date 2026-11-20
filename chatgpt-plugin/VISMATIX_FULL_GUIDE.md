@@ -88,15 +88,16 @@ Vismatix's Open-Core approach makes the OpenAPI 3.1 specification, developer doc
 
 # VISMATIX — Complete Studio UI, Platform, Handbook, AI Architecture, Consumption, Math & API v3 Agent Bible
 
-> **Drop-in Agent Knowledge File** (`VISMATIX-AGENT-GUIDE.md`)
+> **Drop-in Agent Knowledge File** (`VISMATIX_FULL_GUIDE.md`)
 > **Production Gateway:** `https://vismatix.online` | **Current Environment:** `https://vismatix.online`
 > **Marketing & Integrations:** `https://vismatix.online` | **Interactive Workspace:** `https://app.vismatix.online`
 > **API v3 Base URL:** `https://vismatix.online/api/v3` | **OpenAPI 3.1 Spec:** `https://vismatix.online/api/v3/openapi.json`
+> **Standalone Markdown Download:** `https://vismatix.online/docs/agent-pack/VISMATIX_FULL_GUIDE.md` | **Agent Packs:** `https://vismatix.online/docs/developer/agents`
 > **Remote MCP Server:** `https://vismatix.online/mcp` (`https://vismatix.online/api/mcp`) | **Human Verification Portal:** `https://vismatix.online/agentauth` | **Local CLI MCP:** `php artisan vismatix:mcp`
 > **Official Company Owner Email:** `owner@vismatix.online` | **Platform Support Email:** `support@vismatix.online`
 > **Official Community:** [Discord Server](https://discord.gg/Wqyn939s2B) | [Facebook Page](https://facebook.com/Vismatix)
 > **Compiled Coverage:** Human-First Studio Assistant Contract + practical creation, scheduling, publishing, connection, and support-handoff playbooks + Complete Web UI Encyclopedia + all 35 live `/docs` pages (13 Handbook guides + 22 API v3 guides) + product limits, AI and quota references, 17 active publishing destinations, media behavior, MCP tool schemas, legal identity and current billing availability.
-> **Snapshot Timestamp:** `2026-11-20T07:12:19+00:00`
+> **Guide Source:** Current public Vismatix documentation, platform configuration, and API catalog.
 
 ## 0. HOST ARCHITECTURE
 
@@ -2873,7 +2874,7 @@ HTTP/1.1 403 Forbidden
 
 ##### Agent Packs
 
-Choose one complete bundle: a universal pack for six agent environments or the dedicated ChatGPT package.
+Choose the universal agent bundle, the dedicated ChatGPT package, or the standalone full platform guide.
 
 ###### Universal Agent Pack
 
@@ -2892,6 +2893,16 @@ Ready-to-upload ChatGPT package with the complete Vismatix platform guide, domai
 
  `https://vismatix.online/mcp`
  [Download vismatix-chatgpt-plugin.zip](/docs/agent-pack/chatgpt-plugin.zip)
+
+###### Full Platform Guide
+
+ MARKDOWN · GUIDE
+
+Single standalone Markdown manual for direct paste or upload into any AI chat, custom project knowledge, or CLI agent without unzipping.
+
+ `https://vismatix.online/docs/agent-pack/VISMATIX_FULL_GUIDE.md`
+
+[Download VISMATIX_FULL_GUIDE.md](/docs/agent-pack/VISMATIX_FULL_GUIDE.md)
 
 OAuth 2.1 + MCP • 41 Tools CIMD • DCR • /agentauth
 

@@ -43,14 +43,15 @@ The HTTP transport accepts JSON-RPC 2.0 objects and batches, negotiates JSON or 
 
 For terminal or headless clients, the optional device flow uses <https://vismatix.online/agentauth>. The agent starts a device request, shows the human an 8-character code to approve, then polls for the credential. The flow can issue an account key (`vmtx_u_`) or a single-project key (`vmtx_p_`). The account key has broader account authority; the project key is restricted to its project. Treat issued credentials as secrets and store them in your client’s secure credential store.
 
-## The Two Agent Packs
+## Agent Packs and Full Platform Guide
 
-Vismatix publishes two primary downloads so teams can choose the right bundle without sorting through per-editor files:
+Vismatix publishes two primary ZIP bundles plus a standalone Markdown guide, so teams can choose the right format without sorting through per-editor files:
 
 1. **Universal Agent Pack** — [Download `vismatix-agent-pack.zip`](https://vismatix.online/docs/agent-pack/universal-agent-pack.zip). One unified bundle for Claude Code, Cursor, Windsurf, OpenAI Codex, Gemini CLI, and VS Code Copilot. It includes `VISMATIX_FULL_GUIDE.md`, `VISMATIX_AGENT_GUIDE.md`, `AGENTS.md`, `SKILL.md`, a single remote Streamable HTTP `mcp.json`, and setup notes. The generated package source is [`universal-agent-pack/`](universal-agent-pack/).
 2. **ChatGPT Plugin** — [Download `vismatix-chatgpt-plugin.zip`](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip). A dedicated ChatGPT bundle with `plugin.json`, `mcp.json`, `PLUGIN_PROMPT.md`, the complete platform guide, and an English/Arabic setup guide. Its generated package source is [`chatgpt-plugin/`](chatgpt-plugin/).
+3. **Standalone Full Platform Guide** — [Download `VISMATIX_FULL_GUIDE.md`](https://vismatix.online/docs/agent-pack/VISMATIX_FULL_GUIDE.md) for a single Markdown manual that can be pasted or uploaded directly into an AI chat, custom project knowledge, or CLI agent without unzipping. The standalone file is kept byte-for-byte identical to the copy embedded in both ZIP bundles. It is also available inline at <https://vismatix.online/llms-full.txt> and live over MCP as `vismatix://docs/full-guide`.
 
-Both bundles include the full Vismatix knowledge base. MCP clients should read `VISMATIX_AGENT_GUIDE.md` or `PLUGIN_PROMPT.md`, then use `VISMATIX_FULL_GUIDE.md` and live schemas. The complete guide is also available over authenticated MCP as `vismatix://docs/full-guide`. Both ZIP endpoints return `application/zip` with `X-Robots-Tag: noindex, nofollow`. Existing `/docs/agent-pack?target=...` exports remain available for backward compatibility; they are no longer the primary UI choices.
+Both bundles include the full Vismatix knowledge base. MCP clients should read `VISMATIX_AGENT_GUIDE.md` or `PLUGIN_PROMPT.md`, then use `VISMATIX_FULL_GUIDE.md` and live schemas. All three options appear together in the Agent Packs section at <https://vismatix.online/docs/developer/agents> and in signed-in AI Connections settings. Existing `/docs/agent-pack?target=...` exports remain available for backward compatibility; they are no longer the primary UI choices.
 
 ## Client Setup (30-Second Configs)
 
