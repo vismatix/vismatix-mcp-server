@@ -34,7 +34,7 @@ public_open_core_materials: https://vismatix.online/openapi.json | https://visma
 - **What the 84-slot matrix means:** 7 days × 12 two-hour local-time windows = 84 weekly planning cells. Preferred slot order: `[7, 10, 8, 11, 6, 9, 5]`.
 - **Active destinations:** 17 — LinkedIn, Facebook Pages, Pinterest, Tumblr, Telegram, Discord, Instagram, TikTok, Snapchat, Threads, Reddit, WhatsApp Web, Bluesky, Medium, Substack, Twitch, and Kick.
 - **Monthly plans (USD):** Starter `$6.89` Entry / Discovery; full production plans start with Plus at $13.98/month, followed by Pro `$29.98` and Ultra `$51.98`. There is no free workspace plan. Public tools do not require a workspace subscription.
-- **Known product limits:** Vismatix does not currently support X (Twitter) or YouTube publishing, native iOS/Android apps, or synced post-publication likes and reach. Inbox provider ingestion and replies depend on configured adapters, account state, and granted provider capabilities. Supported features and platform rules can change.
+- **Known product limits:** Vismatix does not currently support X (Twitter) or YouTube publishing or native iOS/Android apps. Live post-publish analytics currently stores provider-returned snapshots for Facebook and Instagram when permissions and an external post ID are available; other destinations remain unavailable until an analytics adapter is configured. Sandbox data is explicitly labeled and must not be presented as live provider data. Inbox provider ingestion and replies depend on configured adapters, account state, and granted provider capabilities. Supported features and platform rules can change.
 - **Open-Core scope:** Vismatix publicly provides its OpenAPI 3.1 specification, Python and JavaScript client libraries, and static HTML documentation; the hosted interactive Studio is proprietary. This describes which product surfaces are public and does not claim that the Studio or application core is open-source licensed. No official public application-core repository is identified in these materials.
 - **Workspace and billing access:** Workspace operations require an active paid plan; public creator tools do not. Plan activation and Reserve token-pack purchases debit existing GC. Direct GC top-ups and card checkout are unavailable, Stripe is not configured, and plans do not automatically renew.
 - **Enterprise Custom:** Per-account feature switches and limits can be agreed for workspaces, team seats, publishing channels, weekly matrix slots, API/MCP rates, Hoxi throughput, and support arrangements. Billing can be monthly, annual, or one-time in GC; an active contract is administered by Vismatix and debits the agreed amount from the user's existing GC balance. An email inquiry only starts a discussion; a plan is activated on the account by an administrator after the terms are agreed.
@@ -44,23 +44,23 @@ public_open_core_materials: https://vismatix.online/openapi.json | https://visma
 ## Localized Quick Facts
 
 ### English (en)
-Vismatix is a paid publishing workspace for creators, teams, and agencies. Its weekly plan has 84 cells (7 days × 12 two-hour windows), and its catalog includes 17 active publishing destinations. Starter costs `$6.89/month` for Entry / Discovery; full production plans are Plus `$13.98`, Pro `$29.98`, and Ultra `$51.98` per month. Vismatix includes a workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingestion and outbound reply delivery depend on configured adapters and granted capabilities. It does not publish to X or YouTube, offer native mobile apps, or synchronize post-publication engagement analytics.
+Vismatix is a paid publishing workspace for creators, teams, and agencies. Its weekly plan has 84 cells (7 days × 12 two-hour windows), and its catalog includes 17 active publishing destinations. Starter costs `$6.89/month` for Entry / Discovery; full production plans are Plus `$13.98`, Pro `$29.98`, and Ultra `$51.98` per month. Vismatix includes a workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingestion and outbound reply delivery depend on configured adapters and granted capabilities. It does not publish to X or YouTube or offer native mobile apps. Post-publish analytics stores measured Facebook and Instagram snapshots when provider permissions and an external post ID are available; other destinations remain explicitly unavailable until a supported adapter is configured.
 Workspace operations require an active paid plan; public tools are available without one. Plan activation and Reserve packs debit existing GC; direct GC top-ups and card checkout are unavailable, and plans do not automatically renew. Enterprise Custom features and limits are agreed by contract and assigned by an administrator, with billing from existing GC. Operator: Al-Manassa Al-Shamikha Trading Establishment, CR `7016588738`, VAT `300090183700003`, Jeddah, Kingdom of Saudi Arabia.
 
 ### العربية (ar)
-Vismatix مساحة نشر مدفوعة لصنّاع المحتوى والفرق والوكالات. يتكوّن التخطيط الأسبوعي من 84 خانة (7 أيام × 12 نافذة من ساعتين)، ويضم الدليل 17 وجهة نشر نشطة. تبدأ Starter بسعر `$6.89` شهرياً للدخول والاستكشاف؛ وباقات الإنتاج الكامل هي Plus بسعر `$13.98` وPro بسعر `$29.98` وUltra بسعر `$51.98` شهرياً. يشمل المنتج صندوق تواصل موحداً لمساحة العمل للرسائل والتعليقات والإشارات الواردة عبر أحداث موحّدة؛ ويعتمد الربط والرد على الموفّرات والصلاحيات المهيأة. لا يدعم النشر على X أو YouTube، ولا يوفر تطبيقات هاتف أصلية أو مزامنة تحليلات التفاعل بعد النشر.
+Vismatix مساحة نشر مدفوعة لصنّاع المحتوى والفرق والوكالات. يتكوّن التخطيط الأسبوعي من 84 خانة (7 أيام × 12 نافذة من ساعتين)، ويضم الدليل 17 وجهة نشر نشطة. تبدأ Starter بسعر `$6.89` شهرياً للدخول والاستكشاف؛ وباقات الإنتاج الكامل هي Plus بسعر `$13.98` وPro بسعر `$29.98` وUltra بسعر `$51.98` شهرياً. يشمل المنتج صندوق تواصل موحداً لمساحة العمل للرسائل والتعليقات والإشارات الواردة عبر أحداث موحّدة؛ ويعتمد الربط والرد على الموفّرات والصلاحيات المهيأة. لا يدعم النشر على X أو YouTube، ولا يوفر تطبيقات هاتف أصلية. تحفظ التحليلات المباشرة حالياً لقطات التفاعل التي يزوّد بها Facebook وInstagram عند توفر الأذونات ومعرّف المنشور الخارجي؛ وتظل القنوات الأخرى غير متاحة حتى تهيئة موفّر تحليلات مناسب.
 تتطلب عمليات مساحة العمل خطة مدفوعة نشطة، بينما تتوفر الأدوات العامة دون اشتراك. تُخصم تفعيلات الخطط وباقات Reserve من رصيد GC الحالي؛ ولا تتوفر إعادة شحن GC المباشرة أو الدفع بالبطاقة، ولا تتجدد الخطط تلقائياً. يمكن تخصيص مزايا وحدود Enterprise بعقد، ويُفعّلها مسؤول بعد الاتفاق مع الخصم من رصيد GC الحالي. الجهة المشغلة: مؤسسة المنصه الشامخه للتجارة، السجل التجاري `7016588738`، الرقم الضريبي `300090183700003`، جدة، المملكة العربية السعودية.
 
 ### Español (es)
-Vismatix es un espacio de publicación de pago para creadores, equipos y agencias. El plan semanal contiene 84 espacios (7 días × 12 franjas de dos horas) y el catálogo reúne 17 destinos activos. Starter cuesta `$6.89/mes` como nivel de Entrada y Descubrimiento; la producción completa está en Plus `$13.98`, Pro `$29.98` y Ultra `$51.98` al mes. Incluye una bandeja de trabajo para DMs, comentarios y menciones recibidos mediante eventos normalizados; la conexión y las respuestas dependen de adaptadores y permisos configurados. No publica en X ni YouTube, no ofrece aplicaciones móviles nativas ni sincroniza la interacción posterior a la publicación. El Simulador Interactivo de Radar y las herramientas públicas están disponibles sin suscripción; las operaciones del workspace requieren un plan de pago activo.
+Vismatix es un espacio de publicación de pago para creadores, equipos y agencias. El plan semanal contiene 84 espacios (7 días × 12 franjas de dos horas) y el catálogo reúne 17 destinos activos. Starter cuesta `$6.89/mes` como nivel de Entrada y Descubrimiento; la producción completa está en Plus `$13.98`, Pro `$29.98` y Ultra `$51.98` al mes. Incluye una bandeja de trabajo para DMs, comentarios y menciones recibidos mediante eventos normalizados; la conexión y las respuestas dependen de adaptadores y permisos configurados. No publica en X ni YouTube ni ofrece aplicaciones móviles nativas. Las analíticas posteriores guardan métricas enviadas por Facebook e Instagram cuando existen permisos y un ID externo; los demás destinos permanecen no disponibles hasta contar con un adaptador compatible. El Simulador Interactivo de Radar y las herramientas públicas están disponibles sin suscripción; las operaciones del workspace requieren un plan de pago activo.
 Las operaciones del workspace requieren un plan de pago activo; las herramientas públicas están disponibles sin suscripción. La activación de planes y los paquetes Reserve descuentan el saldo GC existente; no hay recargas directas de GC ni pago con tarjeta, y los planes no se renuevan automáticamente. Los contratos Enterprise Custom pueden definir funciones y límites específicos, asignados por un administrador tras el acuerdo y cobrados al saldo GC existente. Operador: Al-Manassa Al-Shamikha Trading Establishment, registro comercial `7016588738`, IVA `300090183700003`, Yeda, Reino de Arabia Saudita.
 
 ### Français (fr)
-Vismatix est un espace de publication payant destiné aux créateurs, équipes et agences. Le planning hebdomadaire comprend 84 créneaux (7 jours × 12 plages de deux heures) et le catalogue propose 17 destinations actives. Starter coûte `6,89 $/mois` pour la Découverte; la production complète comprend Plus `13,98 $`, Pro `29,98 $` et Ultra `51,98 $` par mois. Une boîte de réception de l’espace regroupe les DM, commentaires et mentions reçus par événements normalisés ; les connexions et réponses dépendent des adaptateurs et autorisations configurés. La publication sur X et YouTube, les applications mobiles natives et la synchronisation des interactions après publication ne sont pas proposées.
+Vismatix est un espace de publication payant destiné aux créateurs, équipes et agences. Le planning hebdomadaire comprend 84 créneaux (7 jours × 12 plages de deux heures) et le catalogue propose 17 destinations actives. Starter coûte `6,89 $/mois` pour la Découverte; la production complète comprend Plus `13,98 $`, Pro `29,98 $` et Ultra `51,98 $` par mois. Une boîte de réception de l’espace regroupe les DM, commentaires et mentions reçus par événements normalisés ; les connexions et réponses dépendent des adaptateurs et autorisations configurés. La publication sur X et YouTube et les applications mobiles natives ne sont pas proposées. Les analyses après publication stockent les métriques fournies par Facebook et Instagram lorsque les autorisations et un identifiant externe sont disponibles ; les autres destinations restent indisponibles jusqu’à la configuration d’un adaptateur compatible.
 Les opérations d’espace de travail nécessitent un forfait payant actif ; les outils publics sont accessibles sans abonnement. L’activation des forfaits et les packs Reserve débitent le solde GC existant ; les recharges GC directes et le paiement par carte ne sont pas disponibles, et les forfaits ne se renouvellent pas automatiquement. Les contrats Enterprise Custom peuvent définir des fonctions et limites spécifiques, activées par un administrateur après accord et débitées du solde GC existant. Exploitant : Al-Manassa Al-Shamikha Trading Establishment, CR `7016588738`, TVA `300090183700003`, Djeddah, Royaume d’Arabie saoudite.
 
 ### Deutsch (de)
-Vismatix ist ein kostenpflichtiger Veröffentlichungsarbeitsplatz für Kreative, Teams und Agenturen. Der Wochenplan umfasst 84 Zeitfenster (7 Tage × 12 zweistündige Blöcke); der Katalog enthält 17 aktive Ziele. Starter kostet `$6.89/Monat` als Einstiegs- und Entdeckungstarif; vollständige Produktion gibt es mit Plus `$13.98`, Pro `$29.98` und Ultra `$51.98` pro Monat. Der Workspace enthält einen gemeinsamen Eingang für per normalisierten Ereignissen eingehende DMs, Kommentare und Erwähnungen; Verbindungen und Antworten hängen von konfigurierten Adaptern und Berechtigungen ab. Veröffentlichungen auf X und YouTube, native Mobil-Apps und synchronisierte Interaktionsanalysen nach der Veröffentlichung sind derzeit nicht verfügbar.
+Vismatix ist ein kostenpflichtiger Veröffentlichungsarbeitsplatz für Kreative, Teams und Agenturen. Der Wochenplan umfasst 84 Zeitfenster (7 Tage × 12 zweistündige Blöcke); der Katalog enthält 17 aktive Ziele. Starter kostet `$6.89/Monat` als Einstiegs- und Entdeckungstarif; vollständige Produktion gibt es mit Plus `$13.98`, Pro `$29.98` und Ultra `$51.98` pro Monat. Der Workspace enthält einen gemeinsamen Eingang für per normalisierten Ereignissen eingehende DMs, Kommentare und Erwähnungen; Verbindungen und Antworten hängen von konfigurierten Adaptern und Berechtigungen ab. Veröffentlichungen auf X und YouTube sowie native Mobil-Apps werden nicht angeboten. Post-Publish-Analysen speichern von Facebook und Instagram gelieferte Messwerte, sofern Berechtigungen und eine externe Beitrags-ID vorliegen; andere Ziele bleiben bis zur Unterstützung durch einen passenden Adapter nicht verfügbar.
 Workspace-Operationen erfordern einen aktiven kostenpflichtigen Tarif; öffentliche Tools sind ohne Abo verfügbar. Tarifaktivierungen und Reserve-Pakete werden vom vorhandenen GC-Guthaben abgebucht. Direkte GC-Aufladungen und Kartenzahlung sind nicht verfügbar; Tarife verlängern sich nicht automatisch. Enterprise-Custom-Verträge können Funktionen und Kontingente festlegen; ein Administrator weist den vereinbarten Tarif nach Vertragsabschluss zu, die Abrechnung erfolgt über vorhandenes GC-Guthaben. Betreiber: Al-Manassa Al-Shamikha Trading Establishment, Handelsregister `7016588738`, USt.-Nr. `300090183700003`, Dschidda, Königreich Saudi-Arabien.
 
 ## Source and Licensing Transparency
@@ -128,9 +128,9 @@ Vismatix's Open-Core approach makes the OpenAPI 3.1 specification, developer doc
 
 The workspace is paid-only. Starter is the $6.89/month Entry / Discovery tier; full production begins with Plus at $13.98/month. Public creator tools are available without a workspace subscription.
 
-Vismatix now includes a workspace-scoped inbox for normalized DMs, comments, and mentions; actual provider ingestion and reply delivery depend on configured adapters and granted capabilities. Vismatix does not support X or YouTube publishing, native mobile apps, or synchronized post-publication engagement analytics.
+Vismatix now includes a workspace-scoped inbox for normalized DMs, comments, and mentions; actual provider ingestion and reply delivery depend on configured adapters and granted capabilities. Vismatix does not support X or YouTube publishing or native mobile apps. Post-publish analytics stores measured Facebook and Instagram snapshots when provider permissions and an external post ID are available; other destinations remain unavailable until a supported analytics adapter is configured.
 
-Vismatix Hoxi writing details updated November 20, 2026. Third-party product and pricing details reflect public sources reviewed November 16, 2026.
+Vismatix Hoxi writing and post-publish analytics details updated November 20, 2026. Third-party product and pricing details reflect public sources reviewed November 16, 2026.
 
 | Capability / Criterion | Vismatix | Buffer | Hootsuite | Metricool | Sprout Social | Later |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -143,7 +143,7 @@ Vismatix Hoxi writing details updated November 20, 2026. Third-party product and
 | Free Forever Plan | No free workspace plan. Paid plans start at $6.89/mo; the Radar Simulator is free, while Studio access is by invitation and checkout is closed. | Yes; up to 3 channels on Free | No permanent free plan; free trial available | Yes; Free plan with 1 brand and limited monthly posts/analytics | No permanent free plan; 30-day trial available | No permanent free plan; 14-day trial available |
 | Entry Paid Monthly Price | $6.89/mo (Starter discovery tier) · Full production plans from $13.98/mo (Plus) | $6/channel/mo billed monthly; $5/channel/mo equivalent billed annually | Standard: $99/user/mo billed annually | Starter: $20/mo billed annually; monthly billing may differ | Essentials: $79/seat/mo billed annually ($99 monthly) | Starter: $18.75/mo billed annually |
 | Agency Multi-Client Workspaces | Unlimited workspaces from Plus ($13.98/mo); workspace and plan limits apply | Per-channel pricing; cost rises as channels are added | Team plan starts around $249/mo; profile and seat limits depend on plan | 5 brands on Starter; higher tiers support more brands, with custom options at the top end | Per-seat plans; additional profiles and advanced services can raise total cost | Scales by Social Set (8 profiles); additional sets are available on higher tiers |
-| Post-Publish Engagement Analytics | Schedule cadence and ROI telemetry; no synced post-publish likes/reach | Post metrics and channel analytics | Post and channel analytics with reporting options | Deep post-publish and advertising analytics | Cross-channel analytics, reporting, and social listening | Social performance and link-in-bio analytics; features vary by plan |
+| Post-Publish Engagement Analytics | Provider-backed Facebook and Instagram post snapshots, engagement rollups, Hoxi post-mortems, and a measured 84-slot heatmap; other channels require an analytics adapter | Post metrics and channel analytics | Post and channel analytics with reporting options | Deep post-publish and advertising analytics | Cross-channel analytics, reporting, and social listening | Social performance and link-in-bio analytics; features vary by plan |
 | Unified Social Inbox (DMs/Replies) | Workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingest/reply depend on configured adapters and granted capabilities | Engagement tools for comments; a full cross-channel DM inbox is not listed | Unified inbox for supported comments and direct messages | Inbox and streams for social messages; availability varies by plan and network | Advanced Smart Inbox for team engagement workflows | Instagram Conversations and comment management on eligible plans; not a full cross-network inbox |
 | Native iOS / Android Mobile Apps | Responsive web app; no native iOS/Android app currently | Native iOS and Android apps | Native iOS and Android apps | Native iOS and Android apps | Native iOS and Android apps | Native iOS and Android apps |
 | Pay-As-You-Go Add-Ons | 20 Growth Credit micro-features priced from $0.25–$5.00 | No comparable per-action wallet listed; per-channel plan pricing | No comparable per-action wallet listed; plan upgrades and add-ons | No comparable per-action wallet listed; plan limits and add-ons | No comparable per-action wallet listed; plan and seat upgrades | No comparable per-action wallet listed; paid plan add-ons available |
@@ -233,9 +233,9 @@ Use these workflows to move from a user's goal to a clear, verifiable result. Ke
 6. [Exact Algorithmic Formulas: Schedule Health, Rebalancer, ROI, Cadence, HookMeter & GEO](#6-exact-algorithmic-formulas-schedule-health-rebalancer-roi-cadence-hookmeter--geo)
 7. [17 Active Publishing Destinations, Reliability & Media Pipeline](#7-17-active-publishing-destinations-reliability--media-pipeline)
 8. [Developer REST API v3 Security, Keys, Rate Limits, Wallet & Idempotency](#8-developer-rest-api-v3-security-keys-rate-limits-wallet--idempotency)
-9. [Complete Catalog: 119 REST API v3 Route Registrations & Examples](#9-complete-catalog-119-rest-api-v3-route-registrations--examples)
+9. [Complete Catalog: 124 REST API v3 Route Registrations & Examples](#9-complete-catalog-124-rest-api-v3-route-registrations--examples)
 10. [Webhooks, HMAC-SHA256 Verification & SDKs](#10-webhooks-hmac-sha256-verification--sdks)
-10B. [Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 46 Tools)](#10b-official-vismatix-mcp-server-mcp-agentauth-device-auth--46-tools)
+10B. [Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 50 Tools)](#10b-official-vismatix-mcp-server-mcp-agentauth-device-auth--50-tools)
 11. [Drop-In Autonomous Agent System Prompt & Tool Schemas (20 Functions)](#11-drop-in-autonomous-agent-system-prompt--tool-schemas-20-functions)
 12. [Complete Live `/docs` Page-by-Page Reference (All 35 Pages)](#12-complete-live-docs-page-by-page-reference-all-35-pages)
 
@@ -779,7 +779,7 @@ For high-security clients, incoming API v3 requests can optionally include:
 
 ---
 
-## 9. Complete Catalog: 119 REST API v3 Route Registrations & Examples
+## 9. Complete Catalog: 124 REST API v3 Route Registrations & Examples
 
 Base prefix: **`https://vismatix.online/api/v3`** (or `https://vismatix.online/api/v3`). Supports `?fields=id,title,status` sparse fieldsets on list/detail collections where applicable. External API keys and MCP integrations use `/api/v3/*` exclusively.
 
@@ -911,7 +911,8 @@ Base prefix: **`https://vismatix.online/api/v3`** (or `https://vismatix.online/a
 - `GET /notifications` *(vmtx_u_)* | `GET /notifications/unread-count` | `POST /notifications/mark-all-read` | `POST /notifications/{id}/read` | `DELETE /notifications/{id}`
 
 ### Analytics, Webhooks, Wallet, GEO & Verified AI
-- `GET /analytics/overview` | `GET /analytics/heatmap` | `GET /analytics/export`
+- Post-publish analytics stores time-series snapshots and workspace-safe post rollups for impressions, reach, likes, comments, shares, saves, clicks, video views, and engagement rate. `GET /analytics/overview` returns workspace KPIs and trends; `GET /analytics/posts` ranks published posts and supports CSV; `GET /analytics/heatmap` aggregates measured engagement into the 7×12 weekly Matrix; `GET /analytics/export` returns the client report. `POST /analytics/sync` queues a workspace refresh; `POST /analytics/posts/{post}/sync` refreshes one accessible post with rate limiting. `POST /analytics/posts/{post}/diagnose` returns a measurement-grounded Hoxi post-mortem; `POST /analytics/posts/{post}/repurpose` creates draft-only content in eligible open Golden Peak cells.
+- Live provider analytics are currently collected from connected Facebook and Instagram accounts with the required provider grants and an external published-post ID. Missing metrics and unsupported providers are reported as unavailable, not zero or estimated. Deterministic sandbox metrics are explicitly labeled and restricted to local/testing or sandbox connections.
 - `GET /webhooks/presets` *(vmtx_u_)* | `GET /webhooks` | `POST /webhooks` | `GET /webhooks/{id}` | `GET /webhooks/{id}/deliveries` | `PUT /webhooks/{id}` | `POST /webhooks/{id}/test` | `POST /webhooks/{id}/retry` *(returns 409 if no retryable persisted failed deliveries)* | `DELETE /webhooks/{id}`
 - `GET /wallet` *(vmtx_u_)* | `GET /wallet/transactions` | `POST /wallet/redeem` | `POST /wallet/transfer` *(Idempotency-Key critical)*
 - `POST /geo/analyze` *(Public/Auth)* | `GET /geo/guidelines` *(Public/Auth)*
@@ -982,9 +983,9 @@ Base prefix: **`https://vismatix.online/api/v3`** (or `https://vismatix.online/a
 
 ---
 
-## 10B. Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 46 Tools)
+## 10B. Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 50 Tools)
 
-Vismatix ships a dual-era **Remote MCP Server (Streamable HTTP `2026-07-28` stateless plus legacy `2025-11-25` / `2025-06-18` / `2025-03-26`, JSON-RPC 2.0)** with **OAuth 2.1 + PKCE (`S256`) + CIMD + DCR**, **10 pre-login public docs/UI/plan/discovery tools**, **36 authenticated tools**, **7 static documentation resources including `vismatix://docs/full-guide`**, **4 authenticated workspace resource templates**, and **9 workflow prompts**. Modern clients use `server/discover`, per-request protocol metadata, and method/name headers without protocol sessions; legacy clients retain `initialize` negotiation and optional session IDs. JSON-RPC notifications return empty HTTP `202` with no body when accepted; both eras negotiate JSON/SSE responses.
+Vismatix ships a dual-era **Remote MCP Server (Streamable HTTP `2026-07-28` stateless plus legacy `2025-11-25` / `2025-06-18` / `2025-03-26`, JSON-RPC 2.0)** with **OAuth 2.1 + PKCE (`S256`) + CIMD + DCR**, **10 pre-login public docs/UI/plan/discovery tools**, **40 authenticated tools**, **7 static documentation resources including `vismatix://docs/full-guide`**, **4 authenticated workspace resource templates**, and **9 workflow prompts**. Modern clients use `server/discover`, per-request protocol metadata, and method/name headers without protocol sessions; legacy clients retain `initialize` negotiation and optional session IDs. JSON-RPC notifications return empty HTTP `202` with no body when accepted; both eras negotiate JSON/SSE responses.
 
 ### 1) Official Connection Endpoints & Transports
 - **Primary Authenticated Remote MCP (OAuth 2.1 + Bearer API Key):**
@@ -1063,7 +1064,7 @@ Vismatix ships a dual-era **Remote MCP Server (Streamable HTTP `2026-07-28` stat
   }
   ```
 
-### 4) Complete MCP Capabilities (46 Tools + 7 Static Resources + 4 Workspace Resource Templates + 9 Prompts)
+### 4) Complete MCP Capabilities (50 Tools + 7 Static Resources + 4 Workspace Resource Templates + 9 Prompts)
 - **Validation & Self-Correction (`v3.3.0`):** Invalid parameters return `INVALID_PARAMS` with `invalid_fields` and a concrete `recovery_hint`; ID fields require positive integer values, and API v3 errors (`FORBIDDEN_PROJECT_KEY`, `AI_API_ACCESS_DISABLED`, `VALIDATION_ERROR`, `RATE_LIMIT_EXCEEDED`, etc.) also return `recovery_hint` so connected agents can self-correct on retry without looping. JSON-RPC notifications have no response body (HTTP `202`); `id:null` remains a request; `Accept` negotiates JSON/SSE and `Mcp-Session-Id` is established on initialize and echoed on follow-up requests.
 - **Public Pre-Login Discovery, Full User Docs & Auth Tools (Zero Account Required — 10 Tools):**
   - `vismatix_list_docs` — Lists all 13 User Handbook guides & 22 Developer Docs pages with titles, slugs, categories, and URLs
@@ -1102,6 +1103,10 @@ Vismatix ships a dual-era **Remote MCP Server (Streamable HTTP `2026-07-28` stat
   - `vismatix_apply_template` & `vismatix_manage_presets_and_templates` (`list_presets`/`create_preset`/`delete_preset`/`list_templates`/`template_categories`/`get_template`/`apply_template`)
 - **Analytics, Webhooks, GC Wallet, Notifications, Audit & AI v3:**
   - `vismatix_get_analytics` (`overview`, `heatmap`, `export`) & `vismatix_audit_and_health` (`health`, `geo_guidelines`, `audit_logs`)
+  - `analytics_workspace_overview` — measured workspace KPIs, trends, channel breakdown, and best-performing Matrix slot
+  - `analytics_top_posts` — rank published posts by measured engagement rate, reach, comments, shares, clicks, impressions, or engagements
+  - `analytics_sync_post` — rate-limited refresh of one accessible published post; use the returned source and capture time
+  - `analytics_matrix_heatmap` — measured engagement aggregated across the 7×12 weekly Matrix; this is not a predicted best-time score
   - `vismatix_webhooks_manage` (`list`, `presets`, `show`, `create`, `update`, `delete`, `test`, `deliveries`, `retry` — `vmtx_u_`)
   - `vismatix_wallet_manage` (`overview`, `transactions`, `transfer`, `redeem` — `vmtx_u_`)
   - `vismatix_manage_notifications` (`list`, `unread_count`, `mark_read`, `mark_all_read`, `delete` — `vmtx_u_`)
@@ -1139,7 +1144,7 @@ CANONICAL BUSINESS FACTS AND CUSTOMER GUIDANCE:
 - Vismatix is operated by Al-Manassa Al-Shamikha Trading Establishment (مؤسسة المنصه الشامخه للتجارة), based in Jeddah, Kingdom of Saudi Arabia. Published registration identifiers are operator-supplied; do not describe them as independently verified. Public trust pages are /about, /contact, /security, /privacy, /terms, and /refund-policy.
 - Official owner, support, account verification and security contacts are owner@vismatix.online, support@vismatix.online, verify@vismatix.online, and security@vismatix.online respectively. The supplied Commercial Registration is 7016588738 and VAT registration is 300090183700003; do not invent additional identifiers, awards, reviews, customer counts, response SLAs, or certifications.
 - Workspace operations require an active paid plan; the Interactive Radar Simulator and public creator tools are available without one. Plan activation and Reserve token packs debit existing GC; direct top-ups and card checkout are unavailable, and plans do not automatically renew. Explain current published prices accurately and link to /pricing or /refund-policy. Do not describe the simulator as full Studio access or call it an instant live product demo.
-- The public product currently has 17 active publishing destinations. It includes a workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingestion and outbound replies depend on configured adapters and granted capabilities. It does not publish to X or YouTube, offer native iOS/Android apps, or synchronize post-publication likes/reach analytics.
+- The public product currently has 17 active publishing destinations. It includes a workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingestion and outbound replies depend on configured adapters and granted capabilities. It does not publish to X or YouTube or offer native iOS/Android apps. Post-publish analytics stores measured Facebook and Instagram metrics when permissions and an external post ID are available; unsupported destinations remain unavailable.
 
 TASK EXECUTION PLAYBOOKS:
 - For content work, establish the active project, goal, audience, destination, and required schedule details. Ask a focused question only when a missing detail affects safe execution.
@@ -2791,7 +2796,7 @@ curl -X GET "https://vismatix.online/api/v3/posts" \
 
 ###### API v3 Modules Directory
 
-[v3.0 New API v3.0 Next-Gen High-Performance Engine Sub-millisecond unified JSON envelope, sparse fields selection, batch operations, smart peak time-block resolution, and dynamic tier rate limiting.](/docs/developer/v3) [Security Dual-Tier Key Architecture Cryptographic isolation: Account Master (vmtx_u_) vs Project Restricted (vmtx_p_) access tiers.](/docs/developer/keys) [Policy AI External API Policy (403) Strict policy: AI generation via API tokens is blocked (403 AI_API_ACCESS_DISABLED).](/docs/developer/ai-policy) [AI Standard Autonomous AI Agent Protocol Copyable system prompt, RFC 7807 error handling, and zero-conflict automation standard.](/docs/developer/agents) [vmtx_u_ Account & Profile API Retrieve account metrics, list user workspaces, and update profile settings (vmtx_u_ only).](/docs/developer/account) [Workspaces & Projects API List workspaces or provision new project environments with automated 84-slot calendar grids.](/docs/developer/projects) [Posts & Virality Scoring API Create posts with algorithmic virality readiness scoring, smart peak reschedule, and batch creation.](/docs/developer/posts) [84-Slot Matrix & Moves API Query the complete weekly 7-day x 12-slot matrix tree and relocate posts across cells.](/docs/developer/matrix) [Tasks Hub & Backlog API List backlog tasks, create actionable items, and 1-click toggle completion status.](/docs/developer/tasks) [Ideas Scratchpad API Capture ideas programmatically and promote them into active scheduled drafts with one call.](/docs/developer/ideas) [Public System Diagnostics & Health API Public diagnostic probe for database latency, runtime memory, and platform uptime.](/docs/developer/health) [Zero-Dependency SDKs Official standard-library clients with built-in HMAC signing, retries, and dual-tier key support.](/docs/developer/sdks) [Events Webhooks & Event Streaming API Real-time event subscriptions for post.created, post.published, and task.completed with HMAC validation.](/docs/developer/webhooks) [vmtx_u_ Audit Logs & Telemetry API Chronological audit trail of API key invocations, workspace events, actor IPs, and mutations.](/docs/developer/audit-logs) [Supported Platforms API List supported social channels, character constraints, media requirements, and posting capabilities.](/docs/developer/platforms) [Analytics & Cadence Telemetry API Query cadence velocity scores, platform distribution breakdown, and hourly heatmaps.](/docs/developer/analytics) [Content Templates & Blueprints API Browse curated high-converting content frameworks and 1-click apply templates to draft posts.](/docs/developer/templates) [Notifications & Alerts API List in-app publication alerts, unread counts, mark notifications read, and dismiss.](/docs/developer/notifications) [GC Wallet & Transactions API Query GC credit balances, ledger transactions, redeem gift vouchers, and transfer credits.](/docs/developer/wallet) [Interactive Live Interactive API Sandbox Run real requests against /api/v3/* endpoints directly in your browser with real-time latency inspection.](/docs/developer/sandbox) [v3 GEO & AI Citation API Programmatic GEO scoring, citable excerpt extraction, and Schema.org markup generation for any content.](/docs/developer/geo)
+[v3.0 New API v3.0 Next-Gen High-Performance Engine Sub-millisecond unified JSON envelope, sparse fields selection, batch operations, smart peak time-block resolution, and dynamic tier rate limiting.](/docs/developer/v3) [Security Dual-Tier Key Architecture Cryptographic isolation: Account Master (vmtx_u_) vs Project Restricted (vmtx_p_) access tiers.](/docs/developer/keys) [Policy AI External API Policy (403) Strict policy: AI generation via API tokens is blocked (403 AI_API_ACCESS_DISABLED).](/docs/developer/ai-policy) [AI Standard Autonomous AI Agent Protocol Copyable system prompt, RFC 7807 error handling, and zero-conflict automation standard.](/docs/developer/agents) [vmtx_u_ Account & Profile API Retrieve account metrics, list user workspaces, and update profile settings (vmtx_u_ only).](/docs/developer/account) [Workspaces & Projects API List workspaces or provision new project environments with automated 84-slot calendar grids.](/docs/developer/projects) [Posts & Virality Scoring API Create posts with algorithmic virality readiness scoring, smart peak reschedule, and batch creation.](/docs/developer/posts) [84-Slot Matrix & Moves API Query the complete weekly 7-day x 12-slot matrix tree and relocate posts across cells.](/docs/developer/matrix) [Tasks Hub & Backlog API List backlog tasks, create actionable items, and 1-click toggle completion status.](/docs/developer/tasks) [Ideas Scratchpad API Capture ideas programmatically and promote them into active scheduled drafts with one call.](/docs/developer/ideas) [Public System Diagnostics & Health API Public diagnostic probe for database latency, runtime memory, and platform uptime.](/docs/developer/health) [Zero-Dependency SDKs Official standard-library clients with built-in HMAC signing, retries, and dual-tier key support.](/docs/developer/sdks) [Events Webhooks & Event Streaming API Real-time event subscriptions for post.created, post.published, and task.completed with HMAC validation.](/docs/developer/webhooks) [vmtx_u_ Audit Logs & Telemetry API Chronological audit trail of API key invocations, workspace events, actor IPs, and mutations.](/docs/developer/audit-logs) [Supported Platforms API List supported social channels, character constraints, media requirements, and posting capabilities.](/docs/developer/platforms) [Post-Publish Engagement Analytics API Read measured published-post engagement snapshots, ranked posts, provider sync status, cadence, and the actual-engagement 84-slot heatmap.](/docs/developer/analytics) [Content Templates & Blueprints API Browse curated high-converting content frameworks and 1-click apply templates to draft posts.](/docs/developer/templates) [Notifications & Alerts API List in-app publication alerts, unread counts, mark notifications read, and dismiss.](/docs/developer/notifications) [GC Wallet & Transactions API Query GC credit balances, ledger transactions, redeem gift vouchers, and transfer credits.](/docs/developer/wallet) [Interactive Live Interactive API Sandbox Run real requests against /api/v3/* endpoints directly in your browser with real-time latency inspection.](/docs/developer/sandbox) [v3 GEO & AI Citation API Programmatic GEO scoring, citable excerpt extraction, and Schema.org markup generation for any content.](/docs/developer/geo)
 
 ---
 
@@ -2952,13 +2957,17 @@ Standalone Markdown manual covering the full platform, Hoxi writing formats and 
 
 [Download VISMATIX_FULL_GUIDE.md](/docs/agent-pack/VISMATIX_FULL_GUIDE.md)
 
-OAuth 2.1 + MCP • 46 Tools CIMD • DCR • /agentauth
+OAuth 2.1 + MCP • 50 Tools CIMD • DCR • /agentauth
 
 ###### Official Vismatix MCP Server (OAuth 2.1, `/agentauth` & Zero-Auth Public Docs)
 
 Connect ChatGPT, Claude, Codex CLI, Gemini CLI, Cursor, Windsurf, or VS Code natively via **OAuth 2.1 (PKCE S256, CIMD & DCR)** , manage permissions from [/settings/ai-connections](/settings/ai-connections) , or authenticate terminal agents via `https://vismatix.online/agentauth` . Need anonymous pre-login docs exploration? Use `https://vismatix.online/mcp/public` .
 
 [AI Connections Center →](/settings/ai-connections) [/agentauth Portal ↗](/agentauth) [GET /mcp Discovery](/mcp)
+
+**Unified Social Inbox · MCP tools**
+
+Use inbox_list_threads and inbox_get_thread for workspace-scoped DMs, comments, and mentions; inbox_ai_suggest_replies creates Brand Kit-checked drafts, inbox_convert_to_post creates a Matrix draft, and inbox_reply queues an outbound reply only after explicit confirmation. Inbound events use configured normalized adapters or the signed Vismatix relay. Direct reply dispatch currently supports Facebook and Instagram when the connected account grants the capability; other destinations remain queued.
 
 OAuth 2.1 Remote Streamable HTTP (ChatGPT / Claude / Cursor / VS Code)
 
@@ -2991,7 +3000,7 @@ POST https://vismatix.online/api/mcp/auth/device
 POST https://vismatix.online/api/mcp/auth/token
 ```
 
-Supports OAuth 2.1 (16 granular scopes + project lock), API Keys (`vmtx_u_` / `vmtx_p_` ), 46 MCP Tools, 7 Static Resources, 4 Authenticated Workspace Resource Templates, and 9 Workflow Prompts. Notifications return an empty HTTP 202 response.
+Supports OAuth 2.1 (16 granular scopes + project lock), API Keys (`vmtx_u_` / `vmtx_p_` ), 50 MCP Tools, 7 Static Resources, 4 Authenticated Workspace Resource Templates, and 9 Workflow Prompts. Notifications return an empty HTTP 202 response.
 
 Authenticated Workspace Resource Templates (`resources/read` )
 
@@ -3112,7 +3121,7 @@ Core Operating Rules:
 
  llmstxt.org + OpenAPI 3.1 + JSON Tools
 
-[GET /llms.txt Standard AI Crawler Index ↗](/llms.txt) [GET /llms-full.txt Inline Full Knowledge Corpus ↗](/llms-full.txt) [GET /docs/agent-pack?target=tools 20 OpenAI Schemas + 46 MCP Tools + 119 Documented API Operations ↗](/docs/agent-pack?target=tools&inline=1) [GET /docs/developer/v3?format=json Next-Gen v3 JSON Spec →](/docs/developer/v3?format=json) [GET /api/v3/openapi.json OpenAPI 3.1.0 Contract →](/api/v3/openapi.json)
+[GET /llms.txt Standard AI Crawler Index ↗](/llms.txt) [GET /llms-full.txt Inline Full Knowledge Corpus ↗](/llms-full.txt) [GET /docs/agent-pack?target=tools 20 OpenAI Schemas + 50 MCP Tools + 124 Documented API Operations ↗](/docs/agent-pack?target=tools&inline=1) [GET /docs/developer/v3?format=json Next-Gen v3 JSON Spec →](/docs/developer/v3?format=json) [GET /api/v3/openapi.json OpenAPI 3.1.0 Contract →](/api/v3/openapi.json)
 
 ---
 
@@ -3762,17 +3771,19 @@ Platform Optimization Matrix 17 Active Validation Specs
 
 ---
 
-#### Page 30 of 35: Analytics & Cadence Telemetry API (`https://vismatix.online/docs/developer/analytics`)
-> **Category:** Observability | **Summary:** Query cadence velocity scores, platform distribution breakdown, and hourly heatmaps.
+#### Page 30 of 35: Post-Publish Engagement Analytics API (`https://vismatix.online/docs/developer/analytics`)
+> **Category:** Observability | **Summary:** Read measured published-post engagement snapshots, ranked posts, provider sync status, cadence, and the actual-engagement 84-slot heatmap.
 
 Observability & Telemetry vmtx_u_ / vmtx_p_
 
-##### Analytics, Cadence Score, Heatmaps & JSON Export API
+##### Post-Publish Engagement Analytics & Matrix Feedback API
 
-Query live publishing cadence scores (0–100), status breakdowns (`draft` , `scheduled` , `published` , `publishing` ), Golden Peak coverage, hourly matrix heatmaps, and full client-ready analytics exports. Supports `vmtx_p_` single-project isolation automatically.
+Read time-series snapshots for published posts, workspace rollups, total impressions/reach/engagements, platform breakdowns, engagement trends, and measured performance in the 7×12 Matrix heatmap. Rank posts, export CSV, refresh a workspace or individual post, request a measurement-grounded Hoxi post-mortem, and create draft-only winner repurposes in eligible open Golden Peak cells. Every operation honors `vmtx_p_` single-project isolation and active workspace access.
+
+**Provider coverage:** live metrics currently come from connected Facebook and Instagram accounts with the required permissions and a published external post ID. Other platforms or missing provider metrics are returned as unavailable, not estimated or treated as zero. Sandbox metrics are explicitly labeled.
 
 GET /api/v3/analytics/overview
- Cadence Score & Upcoming Queue
+ Measured KPIs, Cadence & Trends
 
 ```bash
 curl -X GET "https://vismatix.online/api/v3/analytics/overview" \
@@ -3802,6 +3813,26 @@ Sample Response (200 OK)
   }
 }
 ```
+
+###### Published post analytics
+
+`GET /api/v3/analytics/posts`
+
+List and sort published posts by engagement rate, reach, comments, shares, clicks, impressions, or total engagements. Add `format=csv` for a spreadsheet export. Results are scoped to the selected workspace and project-restricted keys.
+
+`POST /api/v3/analytics/sync`
+
+Queue a rate-limited refresh for a workspace. Use `POST /api/v3/analytics/posts/{post}/sync` for one published post. Check the returned capture time and source; do not retry refreshes blindly.
+
+`POST /api/v3/analytics/posts/{post}/diagnose`
+
+Ask Hoxi for a post-mortem grounded in the available metric snapshots. Distinguish measured results from hypotheses about hook, format, CTA, or posting slot.
+
+`POST /api/v3/analytics/posts/{post}/repurpose`
+
+Create new drafts from an eligible measured winner in open Golden Peak cells. This action does not schedule or publish; review the copy and ask before any externally visible action.
+
+Engagement rate = (likes + comments + shares + saves + clicks) ÷ max(reach, impressions, 1) × 100. Snapshots are observations captured over time, not guaranteed real-time provider totals.
 
 GET /api/v3/analytics/heatmap
  7x12 Hourly Slot Density

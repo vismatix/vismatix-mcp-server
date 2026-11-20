@@ -3,7 +3,7 @@
     "name": "vismatix",
     "version": "3.3.0",
     "description": "AI-native content operations for workspaces, Hoxi AI, Strategy Radar, the 84-slot weekly matrix, and 17 social publishing destinations.",
-    "description_for_model": "Read VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md first for authoritative Vismatix knowledge: workspaces and team roles, the 84-slot matrix and Golden Peak windows, Hoxi AI and Brand Kit guardrails, Strategy Radar, the Unified Social Inbox, supported channels, plans and GC credits, API v3, and OAuth 2.1 security. Use the 46 MCP tools, four live workspace resources, and nine workflow prompts by matching each goal to the live schemas. Read workspace context before actions and obtain explicit confirmation before publishing or queueing an outbound inbox reply.",
+    "description_for_model": "Read VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md first for authoritative Vismatix knowledge: workspaces and team roles, the 84-slot matrix and Golden Peak windows, Hoxi AI and Brand Kit guardrails, Strategy Radar, the Unified Social Inbox, post-publish engagement analytics, supported channels, plans and GC credits, API v3, and OAuth 2.1 security. Use the 50 MCP tools, including measured analytics overview, top posts, sync, and matrix heatmap, plus four live workspace resources and nine workflow prompts. Live analytics collection currently supports permissioned Facebook and Instagram metrics; do not invent data for other channels. Read workspace context before actions and obtain explicit confirmation before publishing or queueing an outbound inbox reply.",
     "author": {
         "name": "Al-Manassa Al-Shamikha Trading Establishment",
         "email": "support@vismatix.online",

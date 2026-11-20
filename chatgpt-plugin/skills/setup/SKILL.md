@@ -27,7 +27,7 @@ Vismatix (`https://vismatix.online`) is an AI-native content operations and mult
 - **AI quota and Reserve:** usage follows a rolling five-hour allowance, weekly allowance (no rollover), then non-expiring Reserve. Reserve packs are `100,000` tokens for `9.99 GC`, `500,000` for `39.99 GC`, or `1.5M` for `99.99 GC`; purchases use existing GC and do not charge a card or create new credits.
 - **Developer and security surfaces:** REST API v3 has an OpenAPI 3.1 spec. MCP uses JSON-RPC 2.0 and OAuth 2.1 with PKCE S256. `vmtx_u_*` keys are account-scoped; `vmtx_p_*` keys are confined to one project. Enforce tenant isolation, least privilege, plan/scope gates, approvals, and idempotency. Never reveal or request tokens, keys, private provider data, or secrets.
 
-## Map user goals to the 46 MCP tools
+## Map user goals to the 50 MCP tools
 
 Use the live `tools/list` schemas as the contract. Current tool families map goals as follows:
 
@@ -36,7 +36,7 @@ Use the live `tools/list` schemas as the contract. Current tool families map goa
 - **Create, review, and manage content:** `vismatix_list_posts`, `vismatix_create_post`, `vismatix_batch_create_posts`, `vismatix_bulk_create_drafts`, `vismatix_manage_post`, `vismatix_bulk_mutate_posts`, `vismatix_manage_post_snapshots`, `vismatix_audit_post_readiness`, `vismatix_virality_audit`, `vismatix_geo_analyze`, `vismatix_apply_template`, `vismatix_ai_studio_v3`.
 - **Inspect and manage the schedule:** `vismatix_get_matrix`, `vismatix_move_matrix_post`, `vismatix_auto_schedule_matrix`, `vismatix_matrix_controls`, `vismatix_smart_fill_matrix`.
 - **Organize work:** `vismatix_create_idea_or_task`, `vismatix_manage_tasks`, `vismatix_manage_ideas`.
-- **Review performance, budget, and integrations:** `vismatix_get_analytics`, `vismatix_webhooks_manage`, `vismatix_wallet_manage`, `vismatix_manage_presets_and_templates`, `vismatix_manage_notifications`, `vismatix_get_gc_and_plan_status`.
+- **Review performance, budget, and integrations:** `analytics_workspace_overview`, `analytics_top_posts`, `analytics_sync_post`, `analytics_matrix_heatmap`, `vismatix_get_analytics`, `vismatix_webhooks_manage`, `vismatix_wallet_manage`, `vismatix_manage_presets_and_templates`, `vismatix_manage_notifications`, `vismatix_get_gc_and_plan_status`.
 - **Handle customer conversations safely:** `inbox_list_threads`, `inbox_get_thread`, `inbox_ai_suggest_replies`, `inbox_reply`, `inbox_convert_to_post`. Hoxi suggestions are drafts; outbound replies require explicit confirmation and may remain queued until a supported connection and granted provider capability are available.
 
 ## Live workspace resources
@@ -49,6 +49,15 @@ Read `vismatix://docs/full-guide` for current full platform knowledge. Before wo
 - `vismatix://workspace/{id}/readiness-report` — connections, scheduled blockers, Brand Kit completeness, and next-seven-day slot gaps.
 
 Treat these four live workspace templates as tenant-scoped private data. Never guess a workspace ID. Read the matrix and Brand Kit before campaign planning; read readiness and audit posts before scheduling.
+
+## Post-publish performance intelligence
+
+- Use `analytics_workspace_overview` for period totals, trend, channel comparison, and the measured best matrix slot; use `analytics_top_posts` to rank published posts; use `analytics_matrix_heatmap` to compare measured engagement across the 84 weekly cells.
+- Use `analytics_sync_post` only when a refresh is needed. Refreshes are rate-limited and should not be repeated blindly. Explain when metrics were last captured and distinguish missing provider data from a true zero.
+- Treat engagement rate as `(likes + comments + shares + saves + clicks) / max(reach, impressions, 1) × 100`. Snapshots are time-series observations, not guaranteed real-time totals.
+- Provider collection is currently configured for connected Facebook and Instagram accounts. For other platforms, report that analytics are unavailable until a provider adapter supplies metrics. Never invent or present sandbox fallback metrics as live provider data.
+- For diagnosis, ground claims in a post's measured snapshots and compare like-for-like channels, formats, and matrix slots. Label hook/CTA/dialect explanations as hypotheses when those fields cannot be established from available post content or data.
+- Repurposing creates new drafts in eligible open Golden Peak cells; it does not publish. Review the proposed copy, destination, Brand Kit constraints, and schedule, then ask for confirmation before any publishing action.
 
 ## Nine composable workflow prompts
 

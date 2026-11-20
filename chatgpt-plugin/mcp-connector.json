@@ -40,7 +40,11 @@
         "vismatix_get_gc_and_plan_status",
         "vismatix_audit_post_readiness",
         "vismatix_bulk_create_drafts",
-        "vismatix_smart_fill_matrix"
+        "vismatix_smart_fill_matrix",
+        "analytics_workspace_overview",
+        "analytics_top_posts",
+        "analytics_sync_post",
+        "analytics_matrix_heatmap"
     ],
     "resource_templates": [
         "vismatix://workspace/{id}/snapshot",

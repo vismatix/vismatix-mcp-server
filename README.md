@@ -51,6 +51,12 @@ Inbound provider events must be normalized and sent to the workspace's signed Vi
 
 For terminal or headless clients, the optional device flow uses <https://vismatix.online/agentauth>. The agent starts a device request, shows the human an 8-character code to approve, then polls for the credential. The flow can issue an account key (`vmtx_u_`) or a single-project key (`vmtx_p_`). The account key has broader account authority; the project key is restricted to its project. Treat issued credentials as secrets and store them in your client’s secure credential store.
 
+## Post-Publish Engagement Analytics
+
+Vismatix records post-level engagement snapshots and workspace-safe rollups for provider-returned metrics. The API exposes `GET /api/v3/analytics/overview`, `GET /api/v3/analytics/posts`, `GET /api/v3/analytics/heatmap`, `GET /api/v3/analytics/export`, and rate-limited refresh endpoints `POST /api/v3/analytics/sync` and `POST /api/v3/analytics/posts/{post}/sync`. Hoxi post-mortems use `POST /api/v3/analytics/posts/{post}/diagnose` and captured measurements; `POST /api/v3/analytics/posts/{post}/repurpose` creates draft-only content in eligible open Golden Peak Matrix cells and never schedules or publishes.
+
+Current live analytics collection is configured for Facebook and Instagram and requires granted provider permissions and a published external post ID. Unsupported destinations and missing permissions are reported as unavailable; live metrics are not estimated. Deterministic metrics are marked as sandbox data and limited to local/testing environments or explicitly sandbox connections. The measured Matrix heatmap maps engagement back to a post's 7-day × 12-slot position.
+
 ## Agent Packs and Full Platform Guide
 
 Vismatix publishes two primary ZIP bundles plus a standalone Markdown guide, so teams can choose the right format without sorting through per-editor files:
@@ -163,7 +169,7 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 
 ## MCP Capabilities (`v3.3.0`)
 
-- **46 Tools:** 10 pre-login discovery/GEO/auth tools + 36 authenticated workspace, matrix, publishing, AI, inbox, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
+- **50 Tools:** 10 pre-login discovery/GEO/auth tools + 40 authenticated workspace, matrix, publishing, AI, Inbox, analytics, wallet, and webhook tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
 - **7 Static Documentation Resources** (`resources/list`)
 - **4 Authenticated Workspace Resource Templates** (`resources/templates/list`)
 - **9 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
@@ -198,6 +204,10 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 - `vismatix_manage_post_snapshots`
 - `vismatix_apply_template`
 - `vismatix_get_analytics`
+- `analytics_workspace_overview` — measured workspace engagement KPIs, trend, platform breakdown, and best Matrix slot.
+- `analytics_top_posts` — rank published posts by measured rate, reach, comments, shares, clicks, impressions, or engagements.
+- `analytics_sync_post` — rate-limited refresh for one accessible published post.
+- `analytics_matrix_heatmap` — measured 7×12 Matrix engagement by day and slot.
 - `vismatix_webhooks_manage`
 - `vismatix_wallet_manage`
 - `vismatix_ai_studio_v3`

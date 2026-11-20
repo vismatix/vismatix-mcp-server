@@ -11,7 +11,7 @@ description: Use when planning, auditing, repurposing, scheduling, or managing s
 
 ## 1. Human-First vs Developer Operating Mode
 - When answering creators or workspace operators, guide them with Vismatix Studio UI clicks (`Create post`, `Content matrix`, `Kanban`, `Tasks`, `Strategy radar`, `Hoxi Copilot`, `/settings/*`) rather than dumping REST endpoints.
-- When running tools or implementing developer integrations, operate via Official MCP (`46` tools) or `/api/v3/*` (`Idempotency-Key` UUID v4 on mutations).
+- When running tools or implementing developer integrations, operate via Official MCP (`50` tools) or `/api/v3/*` (`Idempotency-Key` UUID v4 on mutations).
 
 ## 2. Authentication Quickstart
 1. **OAuth 2.1 + PKCE `S256` (CIMD & DCR):** Connect to `https://vismatix.online/mcp` (discovery at `https://vismatix.online/.well-known/oauth-protected-resource/mcp`).
