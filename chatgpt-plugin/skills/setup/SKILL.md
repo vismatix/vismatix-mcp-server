@@ -27,7 +27,7 @@ Vismatix (`https://vismatix.online`) is an AI-native content operations and mult
 - **AI quota and Reserve:** usage follows a rolling five-hour allowance, weekly allowance (no rollover), then non-expiring Reserve. Reserve packs are `100,000` tokens for `9.99 GC`, `500,000` for `39.99 GC`, or `1.5M` for `99.99 GC`; purchases use existing GC and do not charge a card or create new credits.
 - **Developer and security surfaces:** REST API v3 has an OpenAPI 3.1 spec. MCP uses JSON-RPC 2.0 and OAuth 2.1 with PKCE S256. `vmtx_u_*` keys are account-scoped; `vmtx_p_*` keys are confined to one project. Enforce tenant isolation, least privilege, plan/scope gates, approvals, and idempotency. Never reveal or request tokens, keys, private provider data, or secrets.
 
-## Map user goals to the 41 MCP tools
+## Map user goals to the 46 MCP tools
 
 Use the live `tools/list` schemas as the contract. Current tool families map goals as follows:
 
@@ -37,6 +37,7 @@ Use the live `tools/list` schemas as the contract. Current tool families map goa
 - **Inspect and manage the schedule:** `vismatix_get_matrix`, `vismatix_move_matrix_post`, `vismatix_auto_schedule_matrix`, `vismatix_matrix_controls`, `vismatix_smart_fill_matrix`.
 - **Organize work:** `vismatix_create_idea_or_task`, `vismatix_manage_tasks`, `vismatix_manage_ideas`.
 - **Review performance, budget, and integrations:** `vismatix_get_analytics`, `vismatix_webhooks_manage`, `vismatix_wallet_manage`, `vismatix_manage_presets_and_templates`, `vismatix_manage_notifications`, `vismatix_get_gc_and_plan_status`.
+- **Handle customer conversations safely:** `inbox_list_threads`, `inbox_get_thread`, `inbox_ai_suggest_replies`, `inbox_reply`, `inbox_convert_to_post`. Hoxi suggestions are drafts; outbound replies require explicit confirmation and may remain queued until a supported connection and granted provider capability are available.
 
 ## Live workspace resources
 

@@ -34,7 +34,7 @@ public_open_core_materials: https://vismatix.online/openapi.json | https://visma
 - **What the 84-slot matrix means:** 7 days × 12 two-hour local-time windows = 84 weekly planning cells. Preferred slot order: `[7, 10, 8, 11, 6, 9, 5]`.
 - **Active destinations:** 17 — LinkedIn, Facebook Pages, Pinterest, Tumblr, Telegram, Discord, Instagram, TikTok, Snapchat, Threads, Reddit, WhatsApp Web, Bluesky, Medium, Substack, Twitch, and Kick.
 - **Monthly plans (USD):** Starter `$6.89` Entry / Discovery; full production plans start with Plus at $13.98/month, followed by Pro `$29.98` and Ultra `$51.98`. There is no free workspace plan. Public tools do not require a workspace subscription.
-- **Known product limits:** Vismatix does not currently support X (Twitter) or YouTube publishing, native iOS/Android apps, a unified social inbox, or synced post-publication likes and reach. Supported features and platform rules can change.
+- **Known product limits:** Vismatix does not currently support X (Twitter) or YouTube publishing, native iOS/Android apps, or synced post-publication likes and reach. Inbox provider ingestion and replies depend on configured adapters, account state, and granted provider capabilities. Supported features and platform rules can change.
 - **Open-Core scope:** Vismatix publicly provides its OpenAPI 3.1 specification, Python and JavaScript client libraries, and static HTML documentation; the hosted interactive Studio is proprietary. This describes which product surfaces are public and does not claim that the Studio or application core is open-source licensed. No official public application-core repository is identified in these materials.
 - **Workspace and billing access:** Workspace operations require an active paid plan; public creator tools do not. Plan activation and Reserve token-pack purchases debit existing GC. Direct GC top-ups and card checkout are unavailable, Stripe is not configured, and plans do not automatically renew.
 - **Enterprise Custom:** Per-account feature switches and limits can be agreed for workspaces, team seats, publishing channels, weekly matrix slots, API/MCP rates, Hoxi throughput, and support arrangements. Billing can be monthly, annual, or one-time in GC; an active contract is administered by Vismatix and debits the agreed amount from the user's existing GC balance. An email inquiry only starts a discussion; a plan is activated on the account by an administrator after the terms are agreed.
@@ -44,23 +44,23 @@ public_open_core_materials: https://vismatix.online/openapi.json | https://visma
 ## Localized Quick Facts
 
 ### English (en)
-Vismatix is a paid publishing workspace for creators, teams, and agencies. Its weekly plan has 84 cells (7 days × 12 two-hour windows), and its catalog includes 17 active publishing destinations. Starter costs `$6.89/month` for Entry / Discovery; full production plans are Plus `$13.98`, Pro `$29.98`, and Ultra `$51.98` per month. The product currently has no X or YouTube publishing, native mobile apps, unified social inbox, or synchronized post-publication engagement analytics.
+Vismatix is a paid publishing workspace for creators, teams, and agencies. Its weekly plan has 84 cells (7 days × 12 two-hour windows), and its catalog includes 17 active publishing destinations. Starter costs `$6.89/month` for Entry / Discovery; full production plans are Plus `$13.98`, Pro `$29.98`, and Ultra `$51.98` per month. Vismatix includes a workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingestion and outbound reply delivery depend on configured adapters and granted capabilities. It does not publish to X or YouTube, offer native mobile apps, or synchronize post-publication engagement analytics.
 Workspace operations require an active paid plan; public tools are available without one. Plan activation and Reserve packs debit existing GC; direct GC top-ups and card checkout are unavailable, and plans do not automatically renew. Enterprise Custom features and limits are agreed by contract and assigned by an administrator, with billing from existing GC. Operator: Al-Manassa Al-Shamikha Trading Establishment, CR `7016588738`, VAT `300090183700003`, Jeddah, Kingdom of Saudi Arabia.
 
 ### العربية (ar)
-Vismatix مساحة نشر مدفوعة لصنّاع المحتوى والفرق والوكالات. يتكوّن التخطيط الأسبوعي من 84 خانة (7 أيام × 12 نافذة من ساعتين)، ويضم الدليل 17 وجهة نشر نشطة. تبدأ Starter بسعر `$6.89` شهرياً للدخول والاستكشاف؛ وباقات الإنتاج الكامل هي Plus بسعر `$13.98` وPro بسعر `$29.98` وUltra بسعر `$51.98` شهرياً. لا يدعم المنتج حالياً النشر على X أو YouTube، ولا يوفر تطبيقات هاتف أصلية أو صندوق رسائل موحداً أو مزامنة تحليلات التفاعل بعد النشر.
+Vismatix مساحة نشر مدفوعة لصنّاع المحتوى والفرق والوكالات. يتكوّن التخطيط الأسبوعي من 84 خانة (7 أيام × 12 نافذة من ساعتين)، ويضم الدليل 17 وجهة نشر نشطة. تبدأ Starter بسعر `$6.89` شهرياً للدخول والاستكشاف؛ وباقات الإنتاج الكامل هي Plus بسعر `$13.98` وPro بسعر `$29.98` وUltra بسعر `$51.98` شهرياً. يشمل المنتج صندوق تواصل موحداً لمساحة العمل للرسائل والتعليقات والإشارات الواردة عبر أحداث موحّدة؛ ويعتمد الربط والرد على الموفّرات والصلاحيات المهيأة. لا يدعم النشر على X أو YouTube، ولا يوفر تطبيقات هاتف أصلية أو مزامنة تحليلات التفاعل بعد النشر.
 تتطلب عمليات مساحة العمل خطة مدفوعة نشطة، بينما تتوفر الأدوات العامة دون اشتراك. تُخصم تفعيلات الخطط وباقات Reserve من رصيد GC الحالي؛ ولا تتوفر إعادة شحن GC المباشرة أو الدفع بالبطاقة، ولا تتجدد الخطط تلقائياً. يمكن تخصيص مزايا وحدود Enterprise بعقد، ويُفعّلها مسؤول بعد الاتفاق مع الخصم من رصيد GC الحالي. الجهة المشغلة: مؤسسة المنصه الشامخه للتجارة، السجل التجاري `7016588738`، الرقم الضريبي `300090183700003`، جدة، المملكة العربية السعودية.
 
 ### Español (es)
-Vismatix es un espacio de publicación de pago para creadores, equipos y agencias. El plan semanal contiene 84 espacios (7 días × 12 franjas de dos horas) y el catálogo reúne 17 destinos activos. Starter cuesta `$6.89/mes` como nivel de Entrada y Descubrimiento; la producción completa está en Plus `$13.98`, Pro `$29.98` y Ultra `$51.98` al mes. Actualmente no publica en X ni YouTube y no ofrece aplicaciones móviles nativas, bandeja social unificada ni sincronización de interacción posterior a la publicación. El Simulador Interactivo de Radar y las herramientas públicas están disponibles sin suscripción; las operaciones del workspace requieren un plan de pago activo.
+Vismatix es un espacio de publicación de pago para creadores, equipos y agencias. El plan semanal contiene 84 espacios (7 días × 12 franjas de dos horas) y el catálogo reúne 17 destinos activos. Starter cuesta `$6.89/mes` como nivel de Entrada y Descubrimiento; la producción completa está en Plus `$13.98`, Pro `$29.98` y Ultra `$51.98` al mes. Incluye una bandeja de trabajo para DMs, comentarios y menciones recibidos mediante eventos normalizados; la conexión y las respuestas dependen de adaptadores y permisos configurados. No publica en X ni YouTube, no ofrece aplicaciones móviles nativas ni sincroniza la interacción posterior a la publicación. El Simulador Interactivo de Radar y las herramientas públicas están disponibles sin suscripción; las operaciones del workspace requieren un plan de pago activo.
 Las operaciones del workspace requieren un plan de pago activo; las herramientas públicas están disponibles sin suscripción. La activación de planes y los paquetes Reserve descuentan el saldo GC existente; no hay recargas directas de GC ni pago con tarjeta, y los planes no se renuevan automáticamente. Los contratos Enterprise Custom pueden definir funciones y límites específicos, asignados por un administrador tras el acuerdo y cobrados al saldo GC existente. Operador: Al-Manassa Al-Shamikha Trading Establishment, registro comercial `7016588738`, IVA `300090183700003`, Yeda, Reino de Arabia Saudita.
 
 ### Français (fr)
-Vismatix est un espace de publication payant destiné aux créateurs, équipes et agences. Le planning hebdomadaire comprend 84 créneaux (7 jours × 12 plages de deux heures) et le catalogue propose 17 destinations actives. Starter coûte `6,89 $/mois` pour la Découverte; la production complète comprend Plus `13,98 $`, Pro `29,98 $` et Ultra `51,98 $` par mois. La publication sur X et YouTube, les applications mobiles natives, la boîte de réception sociale unifiée et la synchronisation des interactions après publication ne sont pas actuellement proposées.
+Vismatix est un espace de publication payant destiné aux créateurs, équipes et agences. Le planning hebdomadaire comprend 84 créneaux (7 jours × 12 plages de deux heures) et le catalogue propose 17 destinations actives. Starter coûte `6,89 $/mois` pour la Découverte; la production complète comprend Plus `13,98 $`, Pro `29,98 $` et Ultra `51,98 $` par mois. Une boîte de réception de l’espace regroupe les DM, commentaires et mentions reçus par événements normalisés ; les connexions et réponses dépendent des adaptateurs et autorisations configurés. La publication sur X et YouTube, les applications mobiles natives et la synchronisation des interactions après publication ne sont pas proposées.
 Les opérations d’espace de travail nécessitent un forfait payant actif ; les outils publics sont accessibles sans abonnement. L’activation des forfaits et les packs Reserve débitent le solde GC existant ; les recharges GC directes et le paiement par carte ne sont pas disponibles, et les forfaits ne se renouvellent pas automatiquement. Les contrats Enterprise Custom peuvent définir des fonctions et limites spécifiques, activées par un administrateur après accord et débitées du solde GC existant. Exploitant : Al-Manassa Al-Shamikha Trading Establishment, CR `7016588738`, TVA `300090183700003`, Djeddah, Royaume d’Arabie saoudite.
 
 ### Deutsch (de)
-Vismatix ist ein kostenpflichtiger Veröffentlichungsarbeitsplatz für Kreative, Teams und Agenturen. Der Wochenplan umfasst 84 Zeitfenster (7 Tage × 12 zweistündige Blöcke); der Katalog enthält 17 aktive Ziele. Starter kostet `$6.89/Monat` als Einstiegs- und Entdeckungstarif; vollständige Produktion gibt es mit Plus `$13.98`, Pro `$29.98` und Ultra `$51.98` pro Monat. Veröffentlichungen auf X und YouTube, native Mobil-Apps, ein einheitlicher Social-Posteingang und synchronisierte Interaktionsanalysen nach der Veröffentlichung sind derzeit nicht verfügbar.
+Vismatix ist ein kostenpflichtiger Veröffentlichungsarbeitsplatz für Kreative, Teams und Agenturen. Der Wochenplan umfasst 84 Zeitfenster (7 Tage × 12 zweistündige Blöcke); der Katalog enthält 17 aktive Ziele. Starter kostet `$6.89/Monat` als Einstiegs- und Entdeckungstarif; vollständige Produktion gibt es mit Plus `$13.98`, Pro `$29.98` und Ultra `$51.98` pro Monat. Der Workspace enthält einen gemeinsamen Eingang für per normalisierten Ereignissen eingehende DMs, Kommentare und Erwähnungen; Verbindungen und Antworten hängen von konfigurierten Adaptern und Berechtigungen ab. Veröffentlichungen auf X und YouTube, native Mobil-Apps und synchronisierte Interaktionsanalysen nach der Veröffentlichung sind derzeit nicht verfügbar.
 Workspace-Operationen erfordern einen aktiven kostenpflichtigen Tarif; öffentliche Tools sind ohne Abo verfügbar. Tarifaktivierungen und Reserve-Pakete werden vom vorhandenen GC-Guthaben abgebucht. Direkte GC-Aufladungen und Kartenzahlung sind nicht verfügbar; Tarife verlängern sich nicht automatisch. Enterprise-Custom-Verträge können Funktionen und Kontingente festlegen; ein Administrator weist den vereinbarten Tarif nach Vertragsabschluss zu, die Abrechnung erfolgt über vorhandenes GC-Guthaben. Betreiber: Al-Manassa Al-Shamikha Trading Establishment, Handelsregister `7016588738`, USt.-Nr. `300090183700003`, Dschidda, Königreich Saudi-Arabien.
 
 ## Source and Licensing Transparency
@@ -99,6 +99,8 @@ Vismatix's Open-Core approach makes the OpenAPI 3.1 specification, developer doc
 > **Compiled Coverage:** Human-First Studio Assistant Contract + practical creation, scheduling, publishing, connection, and support-handoff playbooks + Complete Web UI Encyclopedia + all 35 live `/docs` pages (13 Handbook guides + 22 API v3 guides) + product limits, AI and quota references, 17 active publishing destinations, media behavior, MCP tool schemas, legal identity and current billing availability.
 > **Guide Source:** Current public Vismatix documentation, platform configuration, and API catalog.
 
+> **Publishing scope:** There is no X or YouTube publishing support; both are copy-only formats. Vismatix can help create copy for these channels, but it does not publish to them.
+
 ## 0. HOST ARCHITECTURE
 
 - Public marketing pages, docs, OAuth callbacks, webhook endpoints, REST API v3, and MCP stay on the primary host (`https://vismatix.online`).
@@ -113,33 +115,36 @@ Vismatix's Open-Core approach makes the OpenAPI 3.1 specification, developer doc
 - **Localized public trust pages:** `/about`, `/contact`, `/security`, `/privacy`, `/terms`, `/refund-policy`, and `/data-deletion` support English, Arabic, Spanish, French and German. OAuth callbacks, API v3, MCP and webhooks remain on each environment's primary host.
 - **Official contact addresses:** Owner `owner@vismatix.online`; support `support@vismatix.online`; account verification `verify@vismatix.online`; security disclosures `security@vismatix.online`. Official social profiles currently linked from the public identity page are Facebook and Discord.
 - **Public developer materials:** OpenAPI 3.1, Python and JavaScript SDKs, and static documentation are public. The hosted Studio is proprietary. Do not claim the application core has an open-source license or that a public core repository exists unless verified.
-- **Universal Agent Pack ZIP:** Download `https://vismatix.online/docs/agent-pack/universal-agent-pack.zip` for one unified bundle for Claude Code, Cursor, Windsurf, OpenAI Codex, Gemini CLI, and VS Code Copilot. It contains `VISMATIX_FULL_GUIDE.md`, `VISMATIX_AGENT_GUIDE.md`, `AGENTS.md`, `SKILL.md`, and one remote Streamable HTTP `mcp.json` definition.
+- **Universal Agent Pack ZIP:** Download `https://vismatix.online/docs/agent-pack/universal-agent-pack.zip` for one unified bundle for Claude Code, Cursor, Windsurf, OpenAI Codex, Gemini CLI, and VS Code Copilot. It includes a context-efficient `START_HERE.md`, concise always-on `AGENTS.md`, MCP workflow `SKILL.md`, the generated `VISMATIX_FULL_GUIDE.md`, ready workflow examples, and a remote Streamable HTTP `mcp.json` definition.
 - **ChatGPT Plugin ZIP:** Download `https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip` for the dedicated ChatGPT bundle. It includes `plugin.json`, `mcp.json`, `PLUGIN_PROMPT.md`, and the complete generated `VISMATIX_FULL_GUIDE.md`. ChatGPT workspace upload and custom MCP access depend on OpenAI account/workspace permissions. Use OAuth 2.1 for ChatGPT; the separate Bearer API-key config is for MCP clients that support customer-supplied keys.
+- **Hoxi writing scope:** Hoxi supports platform-native multi-format copy, active Brand Kit and recent-post context, deterministic brand/length preflight, one-click transformations, and seven-day campaign generation. Applying a Hoxi campaign creates drafts only in open Golden Peak cells; publishing and scheduling remain separate actions. X and YouTube formats are copy-only.
 - **Legacy single-file Agent Pack targets:** Existing `/docs/agent-pack?target=...` formats remain available for backward compatibility. The two ZIP bundles above are the primary downloads; choose the Universal Agent Pack for cross-client setup.
 - **Data statement:** Public privacy materials state that Vismatix does not sell personal or workspace data. Do not invent certifications, subprocessors, retention periods, customer counts, or additional legal identifiers.
 - **Billing status:** Workspace operations require an active paid plan; public creator tools do not. Plan activation and Reserve token-pack purchases debit the account’s existing GC balance. New direct GC top-ups and card checkout are unavailable, Stripe is not configured, and plans do not automatically renew. Enterprise Custom contracts can set feature and resource overrides and are assigned by an administrator after agreement; billing uses the existing GC balance.
 - The CR/VAT identifiers above were supplied by the operator and link to official lookup services; this pack does not attest to independent verification. Do not invent identifiers, awards, reviews, response SLAs, delivery guarantees, or checkout functionality.
 
 <!-- PUBLIC_COMPARISON_START -->
-## Current Public Product Comparison (as of November 16, 2026)
+## Current Public Product Comparison (product update November 20, 2026; competitor sources November 16, 2026)
 
 The workspace is paid-only. Starter is the $6.89/month Entry / Discovery tier; full production begins with Plus at $13.98/month. Public creator tools are available without a workspace subscription.
 
-Vismatix currently does not support X or YouTube publishing, native mobile apps, a unified social inbox, or synchronized post-publication engagement analytics.
+Vismatix now includes a workspace-scoped inbox for normalized DMs, comments, and mentions; actual provider ingestion and reply delivery depend on configured adapters and granted capabilities. Vismatix does not support X or YouTube publishing, native mobile apps, or synchronized post-publication engagement analytics.
+
+Vismatix Hoxi writing details updated November 20, 2026. Third-party product and pricing details reflect public sources reviewed November 16, 2026.
 
 | Capability / Criterion | Vismatix | Buffer | Hootsuite | Metricool | Sprout Social | Later |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Visual Planning Model | 84-Slot Weekly Matrix (7×12 Golden Peak Grid) + Kanban | Linear publishing queue and calendar view | Traditional planner calendar with streams | Calendar with best-time heatmap | Content calendar and team workflows | Visual drag-and-drop planner with media library; Instagram-focused workflow |
 | Active Publishing Channels | 17 active channels, including Snapchat, WhatsApp, Reddit, Medium, and Substack | About 11 destinations; includes X, YouTube Shorts, and Substack Notes. Snapchat, WhatsApp, and Reddit are not listed as publishing channels. | 10+ social networks; includes X and YouTube. WhatsApp is available for inbox messaging, not as a publishing profile. | 10 major social platforms listed; X is a paid add-on. WhatsApp, Reddit, Medium, and Substack are not listed as publishing destinations. | 11+ profile/network types across publishing and integrations, including X, YouTube, WhatsApp, and Snapchat integrations; access varies by profile and workflow. | 8 profiles per Social Set: Instagram, Facebook, TikTok, Threads, YouTube, Pinterest, LinkedIn, and Snapchat |
-| X (Twitter) & YouTube | Not currently supported | Supported, including YouTube Shorts; X channel pricing applies | Supported | YouTube supported; X is a paid add-on | Supported | YouTube supported; X is not listed among Later’s supported social profiles |
-| Built-in AI & BYOK | HOXI 3.1 and 4 HOXI Ultra, plus BYOK across six AI providers | AI Assistant included; BYOK is not listed | OwlyWriter AI for content assistance; BYOK is not listed | AI writing assistant with plan-based credits; BYOK is not listed | Trellis AI features and plan-based credits; BYOK is not listed | AI caption tools with plan-based monthly credits; BYOK is not listed |
+| X (Twitter) & YouTube | Writing formats supported; no publishing | Supported, including YouTube Shorts; X channel pricing applies | Supported | YouTube supported; X is a paid add-on | Supported | YouTube supported; X is not listed among Later’s supported social profiles |
+| Built-in AI & BYOK | HOXI 3.1 and 4 HOXI Ultra; native multi-format writing, Brand Kit and recent-post context, one-click rewrites, and draft-only weekly campaigns; BYOK across six providers | AI Assistant included; BYOK is not listed | OwlyWriter AI for content assistance; BYOK is not listed | AI writing assistant with plan-based credits; BYOK is not listed | Trellis AI features and plan-based credits; BYOK is not listed | AI caption tools with plan-based monthly credits; BYOK is not listed |
 | Hook & AI Search (GEO) Scorers | Included: HookMeter score and GEO citation/schema checks | Not listed | Not listed | Not listed | Not listed | Not listed |
 | AI Assistant Control (MCP) | Native Remote MCP server for supported workspace actions | Not listed in public product pages reviewed | Not listed in public product pages reviewed | Native Metricool MCP is publicly documented; availability depends on account permissions and plan limits | Not listed in public product pages reviewed | Not listed in public product pages reviewed |
 | Free Forever Plan | No free workspace plan. Paid plans start at $6.89/mo; the Radar Simulator is free, while Studio access is by invitation and checkout is closed. | Yes; up to 3 channels on Free | No permanent free plan; free trial available | Yes; Free plan with 1 brand and limited monthly posts/analytics | No permanent free plan; 30-day trial available | No permanent free plan; 14-day trial available |
 | Entry Paid Monthly Price | $6.89/mo (Starter discovery tier) · Full production plans from $13.98/mo (Plus) | $6/channel/mo billed monthly; $5/channel/mo equivalent billed annually | Standard: $99/user/mo billed annually | Starter: $20/mo billed annually; monthly billing may differ | Essentials: $79/seat/mo billed annually ($99 monthly) | Starter: $18.75/mo billed annually |
 | Agency Multi-Client Workspaces | Unlimited workspaces from Plus ($13.98/mo); workspace and plan limits apply | Per-channel pricing; cost rises as channels are added | Team plan starts around $249/mo; profile and seat limits depend on plan | 5 brands on Starter; higher tiers support more brands, with custom options at the top end | Per-seat plans; additional profiles and advanced services can raise total cost | Scales by Social Set (8 profiles); additional sets are available on higher tiers |
 | Post-Publish Engagement Analytics | Schedule cadence and ROI telemetry; no synced post-publish likes/reach | Post metrics and channel analytics | Post and channel analytics with reporting options | Deep post-publish and advertising analytics | Cross-channel analytics, reporting, and social listening | Social performance and link-in-bio analytics; features vary by plan |
-| Unified Social Inbox (DMs/Replies) | No unified inbox; Auto First-Comment is available for Facebook and LinkedIn | Engagement tools for comments; a full cross-channel DM inbox is not listed | Unified inbox for supported comments and direct messages | Inbox and streams for social messages; availability varies by plan and network | Advanced Smart Inbox for team engagement workflows | Instagram Conversations and comment management on eligible plans; not a full cross-network inbox |
+| Unified Social Inbox (DMs/Replies) | Workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingest/reply depend on configured adapters and granted capabilities | Engagement tools for comments; a full cross-channel DM inbox is not listed | Unified inbox for supported comments and direct messages | Inbox and streams for social messages; availability varies by plan and network | Advanced Smart Inbox for team engagement workflows | Instagram Conversations and comment management on eligible plans; not a full cross-network inbox |
 | Native iOS / Android Mobile Apps | Responsive web app; no native iOS/Android app currently | Native iOS and Android apps | Native iOS and Android apps | Native iOS and Android apps | Native iOS and Android apps | Native iOS and Android apps |
 | Pay-As-You-Go Add-Ons | 20 Growth Credit micro-features priced from $0.25–$5.00 | No comparable per-action wallet listed; per-channel plan pricing | No comparable per-action wallet listed; plan upgrades and add-ons | No comparable per-action wallet listed; plan limits and add-ons | No comparable per-action wallet listed; plan and seat upgrades | No comparable per-action wallet listed; paid plan add-ons available |
 
@@ -184,10 +189,12 @@ Use these workflows to move from a user's goal to a clear, verifiable result. Ke
 
 ### Create, Review, and Schedule Content
 1. Identify the active project and intended audience, outcome, destination, and format. Ask only for details that are necessary and missing; never assume another project or workspace.
-2. Draft in the user's language and brand voice. Check the selected destinations against the 17 active channels and their media, length, hashtag, and thread rules. X (Twitter) and YouTube publishing are not currently supported.
-3. In the Studio, use **Create post** and the composer **Target Platforms**, **Pre-flight**, **Schedule Time**, and **Save Post** controls. Save as a draft when the user asks for copy or planning but has not asked to schedule or publish.
-4. Schedule only when the user has asked for a time or has approved the proposed time. Use their configured publishing timezone; valid schedule times are at least 60 minutes and no more than 12 months ahead. Ambiguous or nonexistent daylight-saving wall times must be corrected, not guessed.
-5. State the resulting status exactly. A draft is not scheduled; a scheduled item is not published. Report completion only after a successful Studio/API/MCP result confirms the change.
+2. Draft in the user's language and brand voice. Hoxi supports X single posts/threads, LinkedIn thought leadership/B2B stories, Instagram captions/carousels, short-video scripts, Facebook posts, YouTube descriptions, and long-form SEO articles. Check publishing destinations against the 17 active channels and their media, length, hashtag, and thread rules. X and YouTube are writing formats only; Vismatix does not publish to them.
+3. Use recent and scheduled workspace post titles/topics to avoid recycled angles. Apply the active Brand Kit's audience, value propositions, voice, tone controls, forbidden words, and forbidden claims. Treat the deterministic Brand Alignment score as a content preflight signal, not a factual/legal/platform approval guarantee.
+4. For a weekly brief, Hoxi can diversify seven posts across educational, storytelling, social-proof, product/offer, and engagement pillars. Applying the batch creates up to 15 draft-only items in open Golden Peak slots and checks access, plan/Enterprise limits, conflicts, channel limits, Brand Kit terms, and character caps; it does not schedule or publish.
+5. In the Studio, use **Create post** and the composer **Target Platforms**, **Pre-flight**, **Schedule Time**, and **Save Post** controls. Save as a draft when the user asks for copy or planning but has not asked to schedule or publish.
+6. Schedule only when the user has asked for a time or has approved the proposed time. Use their configured publishing timezone; valid schedule times are at least 60 minutes and no more than 12 months ahead. Ambiguous or nonexistent daylight-saving wall times must be corrected, not guessed.
+7. State the resulting status exactly. A draft is not scheduled; a scheduled item is not published. Report completion only after a successful Studio/API/MCP result confirms the change.
 
 ### Publishing, Approval, and Recovery
 - Lifecycle: `idea` → `draft` → `scheduled` → `publishing` → `published`; review holds can produce `awaiting_verification`, and rejection/retry/recovery states remain distinct.
@@ -226,9 +233,9 @@ Use these workflows to move from a user's goal to a clear, verifiable result. Ke
 6. [Exact Algorithmic Formulas: Schedule Health, Rebalancer, ROI, Cadence, HookMeter & GEO](#6-exact-algorithmic-formulas-schedule-health-rebalancer-roi-cadence-hookmeter--geo)
 7. [17 Active Publishing Destinations, Reliability & Media Pipeline](#7-17-active-publishing-destinations-reliability--media-pipeline)
 8. [Developer REST API v3 Security, Keys, Rate Limits, Wallet & Idempotency](#8-developer-rest-api-v3-security-keys-rate-limits-wallet--idempotency)
-9. [Complete Catalog: All 100 REST API v3 Endpoints & Examples](#9-complete-catalog-all-100-rest-api-v3-endpoints--examples)
+9. [Complete Catalog: 119 REST API v3 Route Registrations & Examples](#9-complete-catalog-119-rest-api-v3-route-registrations--examples)
 10. [Webhooks, HMAC-SHA256 Verification & SDKs](#10-webhooks-hmac-sha256-verification--sdks)
-10B. [Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 41 Tools)](#10b-official-vismatix-mcp-server-mcp-agentauth-device-auth--41-tools)
+10B. [Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 46 Tools)](#10b-official-vismatix-mcp-server-mcp-agentauth-device-auth--46-tools)
 11. [Drop-In Autonomous Agent System Prompt & Tool Schemas (20 Functions)](#11-drop-in-autonomous-agent-system-prompt--tool-schemas-20-functions)
 12. [Complete Live `/docs` Page-by-Page Reference (All 35 Pages)](#12-complete-live-docs-page-by-page-reference-all-35-pages)
 
@@ -475,6 +482,10 @@ Vismatix separates **Google Gemini** models (`4 Hydrogen`, `3.8 Flash Medium`, `
   2. `thought_leader` — Executive Thought Leader (analytical depth, structured tradeoffs)
   3. `creative_director` — Creative Director & Brand Storyteller (vivid narrative imagery, brand cadence)
   4. `direct_response` — Direct Response Copywriter (objection crushing, conversion CTAs)
+- **Full-spectrum copy production:** The AI Writer supports platform-native X single posts/threads, LinkedIn thought leadership and B2B stories, Instagram captions/carousels, TikTok/Reels/Shorts scripts, Facebook posts, YouTube descriptions, and long-form SEO articles. Arabic can use commercial Saudi/Gulf, Modern Standard, or Egyptian register; English, Spanish, French, and German are generated idiomatically. X and YouTube are writing-only formats.
+- **Workspace grounding and preflight:** Hoxi receives recent/scheduled titles and topics to avoid repeated angles and applies the active Brand Kit's audience, value propositions, voice, tone controls, forbidden words, and forbidden claims. Generation, transformations, and campaign plans return Brand Alignment/format checks and withhold detected forbidden terms or over-limit output.
+- **Inline transformations:** From the editor or Copilot drawer, generate three distinct hooks, adapt copy for selected channels, adjust dialect/tone, or turn copy into a carousel, thread, or short-video script; apply a reviewed result directly into the composer without manual copy/paste.
+- **Weekly campaign drafting:** Give Hoxi one brief to generate a diversified seven-day plan across educational, storytelling, social-proof, product/offer, and engagement pillars. Applying a plan creates draft-only posts in open Golden Peak cells (up to 15 items per batch), respecting workspace permissions, plan/Enterprise limits, occupied-slot conflicts, channel limits, Brand Kit rules, and character limits. The action does not schedule or publish.
 - **Web Studio AI Capabilities (Interactive Workspace Suites — Separate from `/api/v3/*`):**
   - **Core Content Generators:** Post Writer, Text Polish, Idea Brainstorming, Task Generation, Schedule Audit, Weekly Plan, Cross-Channel Repurpose, and Hook Analysis.
   - **7 Strategy Radar Tools:** AI Niche Strategy Builder, Traffic/Growth Forecast, Strategic Diagnosis, AI Auto-Fill Vacant Slots, Competitor Benchmark Gap Probe, Smart Auto-Tune, and Apply Auto-Tune.
@@ -504,7 +515,15 @@ When drafting or repurposing copy per network, Hoxi & automation agents follow t
 | **Substack** | `100,000` | `500–1,500` words | `3` | Reader-first newsletter with distinct title, scannable sections, warm sign-off | Timely reader problem/promise -> reply or subscribe |
 | **Twitch / Kick** | `500` | `140–280` chars | `3` | High-energy Go-Live alert (`Title <140 chars` + stream challenge + chat prompt) | Live stakes/milestone -> jump into live chat |
 
-### 4.4 Acceptable-Use Safety & Media Content Policy
+### 4.4 Hoxi Multi-Format Writing, Brand Preflight & Campaign Drafting
+- **Format presets:** Platform-native automatic mode; X single post and 4–7 post thread (copy only); LinkedIn thought leadership and B2B story; Instagram caption and slide-by-slide carousel; 15–45 second TikTok/Reels/Shorts script with spoken hook and visual cues; Facebook post; YouTube description (copy only); and long-form SEO article.
+- **Language and voice:** English, Arabic, Spanish, French, and German. Arabic follows the selected Saudi/Gulf commercial, Modern Standard Arabic, or Egyptian register; other languages use idiomatic native phrasing. Avoid generic AI openings, repetitive structures, invented evidence, and unsupported claims.
+- **Workspace memory:** Fresh recent and scheduled post titles/topics are passed into generation and rewriting to reduce repeated angles. The current workspace's Brand Kit supplies audience, value propositions, voice, tone controls, forbidden words, and forbidden claims.
+- **Deterministic preflight:** Returned drafts include a 0–100 Brand Alignment result and note. Detected forbidden terms/claims or a format/channel length violation withhold unsafe copy for revision. This check is not a guarantee of legal, factual, or platform approval.
+- **Inline transformations:** Generate three hook alternatives, adapt to selected supported publishing channels, adjust tone/register, or convert to carousel, thread, and short-video formats. Reviewed output can be applied to the composer without copying manually.
+- **Weekly campaign workflow:** A user brief can produce seven distinct posts across educational, storytelling, social-proof, product/offer, and engagement pillars. Applying the campaign creates up to 15 draft-only posts in open Golden Peak cells, while checking workspace access, occupied slots, plan/Enterprise matrix limits, channel eligibility/limits, Brand Kit rules, and character limits. It does not schedule or publish automatically.
+
+### 4.5 Acceptable-Use Safety & Media Content Policy
 - **Automated Prompt & Media Safety:** Prompts and uploaded visuals undergo automated Acceptable-Use compliance checks to prohibit explicit sexual content, sexual exploitation, graphic violence, and alcohol promotion; repeated policy violations trigger warnings or temporary account suspension (`422` / `403`).
 
 ---
@@ -760,7 +779,7 @@ For high-security clients, incoming API v3 requests can optionally include:
 
 ---
 
-## 9. Complete Catalog: All 100 REST API v3 Endpoints & Examples
+## 9. Complete Catalog: 119 REST API v3 Route Registrations & Examples
 
 Base prefix: **`https://vismatix.online/api/v3`** (or `https://vismatix.online/api/v3`). Supports `?fields=id,title,status` sparse fieldsets on list/detail collections where applicable. External API keys and MCP integrations use `/api/v3/*` exclusively.
 
@@ -963,21 +982,21 @@ Base prefix: **`https://vismatix.online/api/v3`** (or `https://vismatix.online/a
 
 ---
 
-## 10B. Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 41 Tools)
+## 10B. Official Vismatix MCP Server (`/mcp`, `/agentauth` Device Auth & 46 Tools)
 
-Vismatix ships a **Remote MCP Server (Streamable HTTP `2025-11-25` / `2025-06-18` / `2025-03-26`, JSON-RPC 2.0)** with **OAuth 2.1 + PKCE (`S256`) + CIMD + DCR**, **10 pre-login public docs/UI/plan/discovery tools**, **31 authenticated tools**, **7 static documentation resources including `vismatix://docs/full-guide`**, **4 authenticated workspace resource templates**, and **9 workflow prompts**. MCP JSON-RPC notifications return empty HTTP `202`; clients may negotiate JSON or SSE, initialize responses establish session IDs, and mixed request/notification batches retain only response-bearing items. Major AI clients connect using OAuth browser sign-in or Bearer keys.
+Vismatix ships a dual-era **Remote MCP Server (Streamable HTTP `2026-07-28` stateless plus legacy `2025-11-25` / `2025-06-18` / `2025-03-26`, JSON-RPC 2.0)** with **OAuth 2.1 + PKCE (`S256`) + CIMD + DCR**, **10 pre-login public docs/UI/plan/discovery tools**, **36 authenticated tools**, **7 static documentation resources including `vismatix://docs/full-guide`**, **4 authenticated workspace resource templates**, and **9 workflow prompts**. Modern clients use `server/discover`, per-request protocol metadata, and method/name headers without protocol sessions; legacy clients retain `initialize` negotiation and optional session IDs. JSON-RPC notifications return empty HTTP `202` with no body when accepted; both eras negotiate JSON/SSE responses.
 
 ### 1) Official Connection Endpoints & Transports
 - **Primary Authenticated Remote MCP (OAuth 2.1 + Bearer API Key):**
   - `https://vismatix.online/mcp` *(alias `https://vismatix.online/api/mcp`)*
-  - Unauthenticated Streamable HTTP requests return `401 Unauthorized` + RFC 9728 `WWW-Authenticate: Bearer resource_metadata="..."` so ChatGPT, Claude, Codex, Gemini CLI, Cursor, and VS Code launch OAuth sign-in automatically.
+  - Unauthenticated clients can discover MCP capabilities and per-tool `securitySchemes` without accessing workspace data. Protected calls return an RFC 9728 HTTP challenge or a tool-level `_meta["mcp/www_authenticate"]` hint so ChatGPT can open OAuth sign-in.
 - **Zero-Auth Public Docs & Device-Auth Endpoint (Pre-Login Mode):**
   - `https://vismatix.online/mcp/public` *(alias `https://vismatix.online/api/mcp/public`)* — allows unauthenticated exploration of all 35 user/developer docs, plans, Studio UI guides, GEO audit, and `/agentauth` device login.
 - **OAuth 2.1 Discovery & Authorization Endpoints:**
-  - Protected Resource Metadata (RFC 9728): `https://vismatix.online/.well-known/oauth-protected-resource`
+  - Protected Resource Metadata (RFC 9728): `https://vismatix.online/.well-known/oauth-protected-resource/mcp`
   - Authorization Server Metadata (RFC 8414): `https://vismatix.online/.well-known/oauth-authorization-server`
   - Authorize Consent: `https://vismatix.online/oauth/authorize` | Token: `https://vismatix.online/oauth/token` | Dynamic Client Registration: `https://vismatix.online/oauth/register` | Revocation: `https://vismatix.online/oauth/revoke`
-  - Supports **CIMD (HTTPS Client ID Metadata Documents)** and **RFC 7591 DCR**, mandatory **PKCE `S256`**, **Refresh Token Rotation with replay family revocation**, and granular scopes (`profile:read`, `projects:read`, `projects:write`, `posts:read`, `posts:write`, `posts:publish`, `matrix:read`, `matrix:write`, `tasks:read`, `tasks:write`, `analytics:read`, `webhooks:manage`, `wallet:read`, `wallet:transfer`, `ai:use`, `offline_access`).
+  - Supports **CIMD (HTTPS Client ID Metadata Documents)** and **RFC 7591 DCR**, mandatory **PKCE `S256`**, **Refresh Token Rotation with replay family revocation**, and granular scopes (`profile:read`, `projects:read`, `projects:write`, `posts:read`, `posts:write`, `posts:publish`, `matrix:read`, `matrix:write`, `tasks:read`, `tasks:write`, `analytics:read`, `inbox:read`, `inbox:write`, `webhooks:manage`, `wallet:read`, `wallet:transfer`, `ai:use`, `offline_access`).
 - **Local CLI Stdio MCP Command (For Local Repo/Terminal Agents):**
   - `php artisan vismatix:mcp` *(reads `VISMATIX_API_KEY` env or `--key=vmtx_...`, OR authenticates interactively via `vismatix_begin_device_auth` + `vismatix_poll_device_auth`)*
 - **Human Verification & AI Connections Management Portals:**
@@ -987,7 +1006,7 @@ Vismatix ships a **Remote MCP Server (Streamable HTTP `2025-11-25` / `2025-06-18
 ### 2) Authentication Methods (OAuth 2.1 Primary + API Key + `/agentauth` Code)
 - **Method A — OAuth 2.1 One-Click Browser Connect (Recommended for ChatGPT, Claude, Codex, Gemini CLI, Cursor, Windsurf, VS Code):**
   1. Add `https://vismatix.online/mcp` in your AI client and click **Connect / Sign in** (or `codex mcp login vismatix` / `/mcp auth`).
-  2. Client discovers `/.well-known/oauth-protected-resource` and redirects to `https://vismatix.online/oauth/authorize`.
+  2. Client discovers `/.well-known/oauth-protected-resource/mcp` and redirects to `https://vismatix.online/oauth/authorize`.
   3. Sign in to Vismatix, choose **All Projects** or **Single Project Lock**, inspect granular scopes, and approve.
 - **Method B — Direct API Key (`vmtx_u_` / `vmtx_p_`):**
   - Pass `Authorization: Bearer vmtx_u_...` (or `vmtx_p_...`) or `X-API-Key: <token>` header on `POST https://vismatix.online/mcp`, or set `VISMATIX_API_KEY` for `php artisan vismatix:mcp`.
@@ -1044,7 +1063,7 @@ Vismatix ships a **Remote MCP Server (Streamable HTTP `2025-11-25` / `2025-06-18
   }
   ```
 
-### 4) Complete MCP Capabilities (41 Tools + 7 Static Resources + 4 Workspace Resource Templates + 9 Prompts)
+### 4) Complete MCP Capabilities (46 Tools + 7 Static Resources + 4 Workspace Resource Templates + 9 Prompts)
 - **Validation & Self-Correction (`v3.3.0`):** Invalid parameters return `INVALID_PARAMS` with `invalid_fields` and a concrete `recovery_hint`; ID fields require positive integer values, and API v3 errors (`FORBIDDEN_PROJECT_KEY`, `AI_API_ACCESS_DISABLED`, `VALIDATION_ERROR`, `RATE_LIMIT_EXCEEDED`, etc.) also return `recovery_hint` so connected agents can self-correct on retry without looping. JSON-RPC notifications have no response body (HTTP `202`); `id:null` remains a request; `Accept` negotiates JSON/SSE and `Mcp-Session-Id` is established on initialize and echoed on follow-up requests.
 - **Public Pre-Login Discovery, Full User Docs & Auth Tools (Zero Account Required — 10 Tools):**
   - `vismatix_list_docs` — Lists all 13 User Handbook guides & 22 Developer Docs pages with titles, slugs, categories, and URLs
@@ -1074,6 +1093,10 @@ Vismatix ships a **Remote MCP Server (Streamable HTTP `2025-11-25` / `2025-06-18
   - `vismatix_get_matrix`, `vismatix_move_matrix_post`, `vismatix_auto_schedule_matrix`
   - `vismatix_smart_fill_matrix` — fill approved drafts into open `PRIME_SLOTS` across up to 31 local dates, honoring Enterprise slot limits and schedule conflicts
   - `vismatix_get_gc_and_plan_status` — read-only plan, Enterprise access/limit overrides, GC visibility, quota usage, and credential scope summary; project keys omit account-wide wallet data
+  - `inbox_list_threads`, `inbox_get_thread` — list, search, and read tenant-scoped DMs, comments, and mentions
+  - `inbox_reply` — create a private team note or queue an outbound reply; outbound calls require `confirm_send=true` after explicit user approval
+  - `inbox_ai_suggest_replies` — generate three Brand Kit-checked Hoxi options; suggestions are not sent
+  - `inbox_convert_to_post` — create a privacy-safe draft in an available Matrix cell without scheduling or publishing
   - `vismatix_matrix_controls` — `slots`, `stats`, `export`, `bulk_shift` (`-7..+7`), `toggle_peak`
   - `vismatix_create_idea_or_task`, `vismatix_manage_tasks` (`list`/`get`/`create`/`update`/`toggle`/`delete`), `vismatix_manage_ideas` (`list`/`get`/`create`/`update`/`convert_to_draft`/`delete`)
   - `vismatix_apply_template` & `vismatix_manage_presets_and_templates` (`list_presets`/`create_preset`/`delete_preset`/`list_templates`/`template_categories`/`get_template`/`apply_template`)
@@ -1116,10 +1139,13 @@ CANONICAL BUSINESS FACTS AND CUSTOMER GUIDANCE:
 - Vismatix is operated by Al-Manassa Al-Shamikha Trading Establishment (مؤسسة المنصه الشامخه للتجارة), based in Jeddah, Kingdom of Saudi Arabia. Published registration identifiers are operator-supplied; do not describe them as independently verified. Public trust pages are /about, /contact, /security, /privacy, /terms, and /refund-policy.
 - Official owner, support, account verification and security contacts are owner@vismatix.online, support@vismatix.online, verify@vismatix.online, and security@vismatix.online respectively. The supplied Commercial Registration is 7016588738 and VAT registration is 300090183700003; do not invent additional identifiers, awards, reviews, customer counts, response SLAs, or certifications.
 - Workspace operations require an active paid plan; the Interactive Radar Simulator and public creator tools are available without one. Plan activation and Reserve token packs debit existing GC; direct top-ups and card checkout are unavailable, and plans do not automatically renew. Explain current published prices accurately and link to /pricing or /refund-policy. Do not describe the simulator as full Studio access or call it an instant live product demo.
-- The public product currently has 17 active publishing destinations. It does not publish to X or YouTube and has no native iOS/Android app, unified social inbox, or synchronized post-publication likes/reach analytics.
+- The public product currently has 17 active publishing destinations. It includes a workspace-scoped inbox for normalized DMs, comments, and mentions; provider ingestion and outbound replies depend on configured adapters and granted capabilities. It does not publish to X or YouTube, offer native iOS/Android apps, or synchronize post-publication likes/reach analytics.
 
 TASK EXECUTION PLAYBOOKS:
 - For content work, establish the active project, goal, audience, destination, and required schedule details. Ask a focused question only when a missing detail affects safe execution.
+- Hoxi writes native X posts/threads, LinkedIn thought leadership/B2B stories, Instagram captions/carousels, TikTok/Reels/Shorts scripts, Facebook posts, YouTube descriptions, and long-form SEO articles. X and YouTube do not publish through Vismatix. Write idiomatically in English, Arabic, Spanish, French, or German; Arabic registers include Saudi/Gulf commercial, MSA, and Egyptian.
+- Ground Hoxi drafts and rewrites in fresh recent/scheduled workspace topics and the active Brand Kit (audience, value propositions, voice, tone controls, forbidden words/claims). Review the returned Brand Alignment and format-length preflight; withhold detected violations instead of editing around them silently.
+- One-click editor/Copilot transformations include three hooks, selected-channel adaptation, tone/dialect adjustments, and carousel/thread/video conversions. A seven-day campaign brief can create up to 15 draft-only items in open Golden Peak cells after workspace, plan/Enterprise, conflict, channel, Brand Kit, and length checks. This action never schedules or publishes automatically.
 - Respect the user's content and approval intent: create a draft for copy/planning requests; schedule or publish only when requested. Check platform and plan eligibility plus pre-flight rules before saving an externally visible schedule.
 - Use the user's configured timezone. Scheduling accepts `+60 minutes` through `+12 months`; ambiguous/nonexistent daylight-saving times need clarification. A scheduled time is a target, not a guaranteed delivery second.
 - Treat `idea`, `draft`, `scheduled`, `publishing`, `awaiting_verification`, `published`, rejected, and retry states as distinct. Only report the state confirmed by the latest tool result.
@@ -1933,7 +1959,7 @@ Keyboard Command Strip
 
 Filter or jump directly to any workspace capability
 
-[→ Matrix Grid & Drag-and-Drop Zero-friction calendar matrix with HTML5 drag-and-drop, golden peak hours, and mobile touch safety.](/docs/matrix) [→ Kanban Publishing Stages Four discrete publishing stages (Idea, Draft, Scheduled, Published) with status pipeline transitions.](/docs/kanban) [→ Tasks & Workflow Hub Built-in task backlog with priorities, 1-click sound confirmations, and project workspace isolation.](/docs/tasks) [→ Ideas Scratchpad Instant slide-over scratchpad (shortcut I) with 1-click conversion into active draft posts.](/docs/ideas) [→ Viral Hook & Quality Meter A 20–100 interactive simulator for opening length, digits, whitespace and CTA signals.](/docs/hookmeter) [→ Viral Templates & UTM Links Proven framework library across product launches and tutorial threads, paired with UTM tracking builder.](/docs/templates) [→ Audio FX & Zen Focus Mode Zero-asset browser procedural synthesizer paired with distraction-free Zen focus writing (shortcut Z).](/docs/audio-zen) [→ AI Copilot & Repurposing In-app AI assistant with four distinct personas and multi-platform content repurposing.](/docs/ai) [→ Keyboard Shortcuts Full keyboard navigation matrix (M, K, T, J, I, Z, Ctrl+K) for pro creators and agile workflows.](/docs/shortcuts) [→ Multi-Channel Auto-Publishing Automated background publishing with Discord webhooks, Telegram bots,.](/docs/publishing) [→ Radar & Strategy Insights Visual multi-dimensional balance radar, audience engagement heatmaps, and AI strategy optimization.](/docs/radar) [→ Generative Engine Optimization (GEO) Strategies, Schema microdata, and E-E-A-T signals to get cited by ChatGPT, Perplexity, Google Gemini, and Claude.](/docs/geo)
+[→ Matrix Grid & Drag-and-Drop Zero-friction calendar matrix with HTML5 drag-and-drop, golden peak hours, and mobile touch safety.](/docs/matrix) [→ Kanban Publishing Stages Four discrete publishing stages (Idea, Draft, Scheduled, Published) with status pipeline transitions.](/docs/kanban) [→ Tasks & Workflow Hub Built-in task backlog with priorities, 1-click sound confirmations, and project workspace isolation.](/docs/tasks) [→ Ideas Scratchpad Instant slide-over scratchpad (shortcut I) with 1-click conversion into active draft posts.](/docs/ideas) [→ Viral Hook & Quality Meter A 20–100 interactive simulator for opening length, digits, whitespace and CTA signals.](/docs/hookmeter) [→ Viral Templates & UTM Links Proven framework library across product launches and tutorial threads, paired with UTM tracking builder.](/docs/templates) [→ Audio FX & Zen Focus Mode Zero-asset browser procedural synthesizer paired with distraction-free Zen focus writing (shortcut Z).](/docs/audio-zen) [→ Hoxi AI Writing Studio & Repurposing Platform-native multi-format writing with workspace Brand Kit and recent-post context, inline rewrites, and draft-only weekly campaign creation.](/docs/ai) [→ Keyboard Shortcuts Full keyboard navigation matrix (M, K, T, J, I, Z, Ctrl+K) for pro creators and agile workflows.](/docs/shortcuts) [→ Multi-Channel Auto-Publishing Automated background publishing with Discord webhooks, Telegram bots,.](/docs/publishing) [→ Radar & Strategy Insights Visual multi-dimensional balance radar, audience engagement heatmaps, and AI strategy optimization.](/docs/radar) [→ Generative Engine Optimization (GEO) Strategies, Schema microdata, and E-E-A-T signals to get cited by ChatGPT, Perplexity, Google Gemini, and Claude.](/docs/geo)
 
 ---
 
@@ -2239,14 +2265,34 @@ Recommended 15-Min Deep Writing Sprint:
 
 ---
 
-#### Page 9 of 35: AI Copilot & Repurposing (`https://vismatix.online/docs/ai`)
-> **Category:** Web App Copilot | **Summary:** In-app AI assistant with four distinct personas and multi-platform content repurposing.
+#### Page 9 of 35: Hoxi AI Writing Studio & Repurposing (`https://vismatix.online/docs/ai`)
+> **Category:** Web App Copilot | **Summary:** Platform-native multi-format writing with workspace Brand Kit and recent-post context, inline rewrites, and draft-only weekly campaign creation.
 
 Hoxi Intelligence Engine Web Studio Exclusive
 
 ##### AI Copilot, Cross-Channel Repurposing & 3-Bucket Quota Control
 
-Vismatix embeds context-aware AI directly inside the scheduling workspace—using project context and open matrix slots to help draft, adapt content for supported destinations, or run Ultra Mode (**4 HOXI** ) without leaving your flow.
+Vismatix embeds context-aware AI directly inside the scheduling workspace. Hoxi writes and adapts platform-native copy, uses recent workspace posts to avoid repeated angles, applies Brand Kit guardrails, and can turn one brief into draft-only campaign content for open matrix slots.
+
+###### Full-spectrum writing, grounded in your workspace
+
+ Hoxi AI
+
+**Native formats & language**
+
+Write X posts and threads, LinkedIn thought leadership and B2B stories, Instagram captions and carousels, TikTok/Reels/Shorts scripts, Facebook posts, YouTube descriptions, and long-form SEO articles. X and YouTube are writing-only formats, not publishing destinations. Hoxi supports English, Arabic, Spanish, French, and German, including Saudi/Gulf commercial, Modern Standard, and Egyptian Arabic registers.
+
+**Brand Kit & anti-repetition checks**
+
+Generation and rewrites receive the active workspace Brand Kit and recent or scheduled post topics. Hoxi checks forbidden words/claims and format or channel character limits, then returns an alignment score and note; detected violations are withheld for revision.
+
+**One-click transformations**
+
+Generate three hook options, adapt a draft to selected channels, adjust tone or Arabic register, or convert copy into a carousel, thread, or short-video script. Apply a reviewed result into the composer without manual copy and paste.
+
+**Brief to weekly campaign drafts**
+
+Hoxi diversifies a seven-day plan across educational, storytelling, social-proof, product/offer, and engagement pillars. Applying it creates up to 15 drafts in open Golden Peak cells after access, plan, conflict, channel, Brand Kit, and length checks. It does not schedule or publish automatically.
 
 ###### Plan access and Hoxi navigation
 
@@ -2686,11 +2732,13 @@ Compute a deterministic editorial heuristic with hook, structure and CTA scores;
 
 curl -X POST "https://vismatix.online/api/v3/posts/virality-audit" \ -H "Authorization: Bearer YOUR_API_KEY" \ -H "Content-Type: application/json" \ -d '{"title": "Stop wasting 15 hours every week", "description": "Here is how the 84-slot matrix works:"}'
 
-Complete 100-Route Architecture OpenAPI 3.1 (/api/v3/openapi.json)
+Complete 119-Route Architecture OpenAPI 3.1 (/api/v3/openapi.json)
 
-###### All 100 REST API v3 Endpoints by Domain & Studio Boundary
+###### 119 REST API v3 Routes by Domain & Studio Boundary
 
-[System, Account & Identity (9) `/health` , `/openapi.json` , `/platforms` , `/audit-logs` , `/me` , `/user` , `/account*`](/docs/developer/keys) [Projects & Team RBAC (10) `/projects` CRUD, `/duplicate` , and `/members*` role management](/docs/developer/projects) [Posts Lifecycle & Audits (25) `/posts` CRUD, batch/bulk ops, snapshots, smart-reschedule, publish-now, recycle, `/virality-audit`](/docs/developer/posts) [84-Slot Matrix, Ideas, Tasks & Templates (27) `/matrix*` (8), `/ideas*` (6), `/tasks*` (6), `/presets*` (3), `/templates*` (4)](/docs/developer/matrix) [AI Suite & Public GEO (9) 7 `/ai/*` endpoints (admin-verified) + public `/geo/analyze` & `/geo/guidelines`](/docs/developer/ai) [Analytics, Notifications, Wallet & Webhooks (20) `/analytics*` (3), `/notifications*` (5), `/wallet*` (4), `/webhooks*` (8 with HMAC test/retry)](/docs/developer/wallet)
+[System, Account & Identity (9) `/health` , `/openapi.json` , `/platforms` , `/audit-logs` , `/me` , `/user` , `/account*`](/docs/developer/keys) [Projects & Team RBAC (10) `/projects` CRUD, `/duplicate` , and `/members*` role management](/docs/developer/projects) [Posts Lifecycle & Audits (25) `/posts` CRUD, batch/bulk ops, snapshots, smart-reschedule, publish-now, recycle, `/virality-audit`](/docs/developer/posts) [84-Slot Matrix, Ideas, Tasks & Templates (27) `/matrix*` (8), `/ideas*` (6), `/tasks*` (6), `/presets*` (3), `/templates*` (4)](/docs/developer/matrix) [AI Suite & Public GEO (9) 7 `/ai/*` endpoints (admin-verified) + public `/geo/analyze` & `/geo/guidelines`](/docs/developer/ai) [Analytics, Notifications, Wallet & Webhooks (20) `/analytics*` (3), `/notifications*` (5), `/wallet*` (4), `/webhooks*` (8 with HMAC test/retry)](/docs/developer/wallet) [Unified Social Inbox (19) `/inbox/threads*` , stats, channel accounts, saved replies, eligible-plan automation, signed normalized ingestion, assignments, presence, Hoxi suggestions, and Matrix draft conversion.](/api/v3/openapi.json)
+
+Inbox AI suggestions remain drafts. An outbound reply is queued only after explicit confirmation, and actual delivery depends on the connected provider adapter and granted account capabilities. Normalized signed ingestion is available for provider relays.
 
 **Web Studio Separation:** Session-authenticated Studio routes under `/api/pro/*` , `/api/ai/*` , `/api/agent-accounts*` , and `/api/wallet/buy-feature` operate inside the web session; external `vmtx_*` API keys use `/api/v3/*` exclusively.
 
@@ -2874,13 +2922,13 @@ HTTP/1.1 403 Forbidden
 
 ##### Agent Packs
 
-Choose the universal agent bundle, the dedicated ChatGPT package, or the standalone full platform guide.
+Choose an agent bundle or the standalone guide. Each includes Hoxi’s native writing formats, workspace-aware Brand Kit preflight, and draft-only campaign workflow.
 
 ###### Universal Agent Pack
 
  UNIVERSAL · ZIP
 
-One unified pack for Claude Code, Cursor, Windsurf, Codex, Gemini CLI & VS Code Copilot. Includes the full Vismatix guide, universal instructions, skill, and remote MCP config.
+One unified pack for Claude Code, Cursor, Windsurf, Codex, Gemini CLI & VS Code Copilot. Includes a concise always-on guide, quick start, MCP skill, full Vismatix knowledge, workflow examples, and remote config.
 
 Remote MCP endpoint: `https://vismatix.online/mcp`
  [Download vismatix-agent-pack.zip](/docs/agent-pack/universal-agent-pack.zip)
@@ -2889,7 +2937,7 @@ Remote MCP endpoint: `https://vismatix.online/mcp`
 
  Dedicated ChatGPT bundle · OAuth 2.1
 
-Ready-to-upload ChatGPT package with the complete Vismatix platform guide, domain-grounded prompt, and OAuth 2.1 MCP connector.
+Ready-to-upload ChatGPT package with Hoxi writing formats, Brand Kit and workspace-memory guidance, draft-only campaign workflow, and OAuth 2.1 MCP connector.
 
  `https://vismatix.online/mcp`
  [Download vismatix-chatgpt-plugin.zip](/docs/agent-pack/chatgpt-plugin.zip)
@@ -2898,13 +2946,13 @@ Ready-to-upload ChatGPT package with the complete Vismatix platform guide, domai
 
  MARKDOWN · GUIDE
 
-Single standalone Markdown manual for direct paste or upload into any AI chat, custom project knowledge, or CLI agent without unzipping.
+Standalone Markdown manual covering the full platform, Hoxi writing formats and Brand Kit rules, weekly draft workflow, and MCP/API knowledge.
 
  `https://vismatix.online/docs/agent-pack/VISMATIX_FULL_GUIDE.md`
 
 [Download VISMATIX_FULL_GUIDE.md](/docs/agent-pack/VISMATIX_FULL_GUIDE.md)
 
-OAuth 2.1 + MCP • 41 Tools CIMD • DCR • /agentauth
+OAuth 2.1 + MCP • 46 Tools CIMD • DCR • /agentauth
 
 ###### Official Vismatix MCP Server (OAuth 2.1, `/agentauth` & Zero-Auth Public Docs)
 
@@ -2943,7 +2991,7 @@ POST https://vismatix.online/api/mcp/auth/device
 POST https://vismatix.online/api/mcp/auth/token
 ```
 
-Supports OAuth 2.1 (16 granular scopes + project lock), API Keys (`vmtx_u_` / `vmtx_p_` ), 41 MCP Tools, 7 Static Resources, 4 Authenticated Workspace Resource Templates, and 9 Workflow Prompts. Notifications return an empty HTTP 202 response.
+Supports OAuth 2.1 (16 granular scopes + project lock), API Keys (`vmtx_u_` / `vmtx_p_` ), 46 MCP Tools, 7 Static Resources, 4 Authenticated Workspace Resource Templates, and 9 Workflow Prompts. Notifications return an empty HTTP 202 response.
 
 Authenticated Workspace Resource Templates (`resources/read` )
 
@@ -3064,7 +3112,7 @@ Core Operating Rules:
 
  llmstxt.org + OpenAPI 3.1 + JSON Tools
 
-[GET /llms.txt Standard AI Crawler Index ↗](/llms.txt) [GET /llms-full.txt Inline Full Knowledge Corpus ↗](/llms-full.txt) [GET /docs/agent-pack?target=tools 20 OpenAI Schemas + 41 MCP Tools + 100 Documented API Operations ↗](/docs/agent-pack?target=tools&inline=1) [GET /docs/developer/v3?format=json Next-Gen v3 JSON Spec →](/docs/developer/v3?format=json) [GET /api/v3/openapi.json OpenAPI 3.1.0 Contract →](/api/v3/openapi.json)
+[GET /llms.txt Standard AI Crawler Index ↗](/llms.txt) [GET /llms-full.txt Inline Full Knowledge Corpus ↗](/llms-full.txt) [GET /docs/agent-pack?target=tools 20 OpenAI Schemas + 46 MCP Tools + 119 Documented API Operations ↗](/docs/agent-pack?target=tools&inline=1) [GET /docs/developer/v3?format=json Next-Gen v3 JSON Spec →](/docs/developer/v3?format=json) [GET /api/v3/openapi.json OpenAPI 3.1.0 Contract →](/api/v3/openapi.json)
 
 ---
 

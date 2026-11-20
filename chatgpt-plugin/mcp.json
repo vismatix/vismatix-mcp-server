@@ -18,7 +18,9 @@
                             "posts:write",
                             "matrix:read",
                             "matrix:write",
-                            "ai:use"
+                            "ai:use",
+                            "inbox:read",
+                            "inbox:write"
                         ]
                     }
                 }

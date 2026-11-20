@@ -7,7 +7,7 @@
         "protocol": "OAuth 2.1",
         "issuer": "https://vismatix.online",
         "authorization_server_metadata_url": "https://vismatix.online/.well-known/oauth-authorization-server",
-        "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource",
+        "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource/mcp",
         "authorization_endpoint": "https://vismatix.online/oauth/authorize",
         "token_endpoint": "https://vismatix.online/oauth/token",
         "registration_endpoint": "https://vismatix.online/oauth/register",
@@ -24,7 +24,9 @@
             "posts:write",
             "matrix:read",
             "matrix:write",
-            "ai:use"
+            "ai:use",
+            "inbox:read",
+            "inbox:write"
         ]
     },
     "api_key": {

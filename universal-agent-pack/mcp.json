@@ -8,7 +8,7 @@
         "preferred": {
             "type": "oauth2",
             "authorization_server_metadata_url": "https://vismatix.online/.well-known/oauth-authorization-server",
-            "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource",
+            "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource/mcp",
             "grant_type": "authorization_code",
             "code_challenge_method": "S256"
         },

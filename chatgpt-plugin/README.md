@@ -2,6 +2,8 @@
 
 This ZIP uses the portable OpenAI Agent Plugins layout (`plugin.json`, `mcp.json`, `skills/`, and `assets/`). Begin with `PLUGIN_PROMPT.md` for the system/domain manual, then consult `VISMATIX_FULL_GUIDE.md` for complete current product and developer knowledge.
 
+The same guide is available as a standalone Markdown download at `https://vismatix.online/docs/agent-pack/VISMATIX_FULL_GUIDE.md` for direct use without unzipping.
+
 ## English setup
 
 1. In ChatGPT on the web, open the Plugins area for the intended workspace. If **Upload plugin** is available and you have upload permission, choose **Add → Upload plugin** and select this ZIP. Upload access and custom MCP availability are controlled by ChatGPT plan, workspace policy, and administrator permissions.

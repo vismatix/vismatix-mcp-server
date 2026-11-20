@@ -3,13 +3,13 @@
     "name_for_human": "Vismatix",
     "name_for_model": "vismatix",
     "description_for_human": "Manage content drafts, publishing readiness, and the weekly matrix in Vismatix.",
-    "description_for_model": "Read VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md first. Vismatix covers content operations, the 84-slot weekly matrix, Hoxi AI, Brand Kit, Strategy Radar, workspaces and team roles, 17 publishing destinations, GC plans, API v3, and OAuth 2.1. Use its 41 MCP tools, live workspace resources, and prompts with tenant-scoped context; confirm before publishing.",
+    "description_for_model": "Read VISMATIX_FULL_GUIDE.md and PLUGIN_PROMPT.md first. Vismatix covers content operations, the 84-slot weekly matrix, Hoxi AI, Brand Kit, Strategy Radar, a workspace-scoped unified social inbox, workspaces and team roles, 17 publishing destinations, GC plans, API v3, and OAuth 2.1. Use its 46 MCP tools, live workspace resources, and prompts with tenant-scoped context; confirm before publishing or queueing an outbound reply.",
     "mcp_url": "https://vismatix.online/mcp",
     "oauth": {
         "protocol": "OAuth 2.1",
         "issuer": "https://vismatix.online",
         "authorization_server_metadata_url": "https://vismatix.online/.well-known/oauth-authorization-server",
-        "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource",
+        "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource/mcp",
         "authorization_endpoint": "https://vismatix.online/oauth/authorize",
         "token_endpoint": "https://vismatix.online/oauth/token",
         "registration_endpoint": "https://vismatix.online/oauth/register",
@@ -26,7 +26,9 @@
             "posts:write",
             "matrix:read",
             "matrix:write",
-            "ai:use"
+            "ai:use",
+            "inbox:read",
+            "inbox:write"
         ]
     },
     "bearer_api_key": {

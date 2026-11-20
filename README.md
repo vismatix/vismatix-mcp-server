@@ -41,6 +41,14 @@ The supported OAuth scopes are `profile:read`, `projects:read`, `projects:write`
 
 The HTTP transport accepts JSON-RPC 2.0 objects and batches, negotiates JSON or Server-Sent Events from `Accept`, and returns `202 Accepted` with an empty body for notifications. An `initialize` response creates a `Mcp-Session-Id`; subsequent responses echo a valid supplied session ID. Keep credentials in the `Authorization: Bearer` header and store them in a secure credential manager.
 
+## Unified Social Inbox
+
+The workspace-scoped Inbox brings normalized DMs, comments, and mentions into one triage queue with assignment, tags, intent/sentiment classification, private team notes, saved replies, teammate presence, and first-response SLA tracking. Threads can be converted into draft-only content in an available Golden Peak Matrix cell. Hoxi suggestions are Brand Kit checked and are never sent automatically.
+
+Inbox API v3 routes include `GET /api/v3/inbox/threads`, `GET /api/v3/inbox/stats`, `GET /api/v3/inbox/threads/{id}`, `GET /api/v3/inbox/threads/{id}/messages`, `POST /api/v3/inbox/threads/{id}/reply`, `POST /api/v3/inbox/threads/{id}/ai-suggest`, `POST /api/v3/inbox/threads/{id}/summarize`, and `POST /api/v3/inbox/threads/{id}/convert-to-post`; inbox paths are documented in `/api/v3/openapi.json`, and the Full Platform Guide lists the complete v3 route catalog. MCP tools are `inbox_list_threads`, `inbox_get_thread`, `inbox_reply`, `inbox_ai_suggest_replies`, and `inbox_convert_to_post`. OAuth scopes are `inbox:read` and `inbox:write` (Hoxi suggestions also require `ai:use`).
+
+Inbound provider events must be normalized and sent to the workspace's signed Vismatix relay at `/api/inbox/provider-webhook/{accountId}`. The relay uses a per-account HMAC secret and replay protection. Provider coverage depends on configured adapters and granted scopes; the current direct outbound reply adapter supports Facebook and Instagram only. Unsupported or disconnected delivery remains queued. Every outbound reply requires explicit user confirmation; private internal notes are not sent to a social provider.
+
 For terminal or headless clients, the optional device flow uses <https://vismatix.online/agentauth>. The agent starts a device request, shows the human an 8-character code to approve, then polls for the credential. The flow can issue an account key (`vmtx_u_`) or a single-project key (`vmtx_p_`). The account key has broader account authority; the project key is restricted to its project. Treat issued credentials as secrets and store them in your client’s secure credential store.
 
 ## Agent Packs and Full Platform Guide
@@ -155,7 +163,7 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 
 ## MCP Capabilities (`v3.3.0`)
 
-- **41 Tools:** 10 pre-login discovery/GEO/auth tools + 31 authenticated workspace, matrix, publishing, AI, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
+- **46 Tools:** 10 pre-login discovery/GEO/auth tools + 36 authenticated workspace, matrix, publishing, AI, inbox, wallet, webhook, and analytics tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
 - **7 Static Documentation Resources** (`resources/list`)
 - **4 Authenticated Workspace Resource Templates** (`resources/templates/list`)
 - **9 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
