@@ -1,0 +1,25 @@
+{
+    "mcpServers": {
+        "vismatix": {
+            "url": "https://vismatix.online/mcp"
+        }
+    },
+    "_authentication": {
+        "preferred": {
+            "type": "oauth2",
+            "authorization_server_metadata_url": "https://vismatix.online/.well-known/oauth-authorization-server",
+            "protected_resource_metadata_url": "https://vismatix.online/.well-known/oauth-protected-resource",
+            "grant_type": "authorization_code",
+            "code_challenge_method": "S256"
+        },
+        "compatible_client_bearer_api_key": {
+            "header": "Authorization",
+            "scheme": "Bearer",
+            "accepted_key_prefixes": [
+                "vmtx_u_",
+                "vmtx_p_"
+            ],
+            "secret_environment_variable": "VISMATIX_API_KEY"
+        }
+    }
+}

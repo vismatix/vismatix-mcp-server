@@ -96,7 +96,7 @@ Vismatix's Open-Core approach makes the OpenAPI 3.1 specification, developer doc
 > **Official Company Owner Email:** `owner@vismatix.online` | **Platform Support Email:** `support@vismatix.online`
 > **Official Community:** [Discord Server](https://discord.gg/Wqyn939s2B) | [Facebook Page](https://facebook.com/Vismatix)
 > **Compiled Coverage:** Human-First Studio Assistant Contract + practical creation, scheduling, publishing, connection, and support-handoff playbooks + Complete Web UI Encyclopedia + all 35 live `/docs` pages (13 Handbook guides + 22 API v3 guides) + product limits, AI and quota references, 17 active publishing destinations, media behavior, MCP tool schemas, legal identity and current billing availability.
-> **Snapshot Timestamp:** `2026-11-19T21:39:59+00:00`
+> **Snapshot Timestamp:** `2026-11-20T07:12:19+00:00`
 
 ## 0. HOST ARCHITECTURE
 
@@ -112,7 +112,9 @@ Vismatix's Open-Core approach makes the OpenAPI 3.1 specification, developer doc
 - **Localized public trust pages:** `/about`, `/contact`, `/security`, `/privacy`, `/terms`, `/refund-policy`, and `/data-deletion` support English, Arabic, Spanish, French and German. OAuth callbacks, API v3, MCP and webhooks remain on each environment's primary host.
 - **Official contact addresses:** Owner `owner@vismatix.online`; support `support@vismatix.online`; account verification `verify@vismatix.online`; security disclosures `security@vismatix.online`. Official social profiles currently linked from the public identity page are Facebook and Discord.
 - **Public developer materials:** OpenAPI 3.1, Python and JavaScript SDKs, and static documentation are public. The hosted Studio is proprietary. Do not claim the application core has an open-source license or that a public core repository exists unless verified.
-- **ChatGPT Plugin ZIP:** Download the portable Agent Plugins package at `https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip`. It includes `plugin.json`, `mcp.json`, `PLUGIN_PROMPT.md`, and the complete generated `VISMATIX_FULL_GUIDE.md`. ChatGPT workspace upload and custom MCP access depend on OpenAI account/workspace permissions. Use OAuth 2.1 for ChatGPT; the separate Bearer API-key config is for MCP clients that support customer-supplied keys.
+- **Universal Agent Pack ZIP:** Download `https://vismatix.online/docs/agent-pack/universal-agent-pack.zip` for one unified bundle for Claude Code, Cursor, Windsurf, OpenAI Codex, Gemini CLI, and VS Code Copilot. It contains `VISMATIX_FULL_GUIDE.md`, `VISMATIX_AGENT_GUIDE.md`, `AGENTS.md`, `SKILL.md`, and one remote Streamable HTTP `mcp.json` definition.
+- **ChatGPT Plugin ZIP:** Download `https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip` for the dedicated ChatGPT bundle. It includes `plugin.json`, `mcp.json`, `PLUGIN_PROMPT.md`, and the complete generated `VISMATIX_FULL_GUIDE.md`. ChatGPT workspace upload and custom MCP access depend on OpenAI account/workspace permissions. Use OAuth 2.1 for ChatGPT; the separate Bearer API-key config is for MCP clients that support customer-supplied keys.
+- **Legacy single-file Agent Pack targets:** Existing `/docs/agent-pack?target=...` formats remain available for backward compatibility. The two ZIP bundles above are the primary downloads; choose the Universal Agent Pack for cross-client setup.
 - **Data statement:** Public privacy materials state that Vismatix does not sell personal or workspace data. Do not invent certifications, subprocessors, retention periods, customer counts, or additional legal identifiers.
 - **Billing status:** Workspace operations require an active paid plan; public creator tools do not. Plan activation and Reserve token-pack purchases debit the account’s existing GC balance. New direct GC top-ups and card checkout are unavailable, Stripe is not configured, and plans do not automatically renew. Enterprise Custom contracts can set feature and resource overrides and are assigned by an administrator after agreement; billing uses the existing GC balance.
 - The CR/VAT identifiers above were supplied by the operator and link to official lookup services; this pack does not attest to independent verification. Do not invent identifiers, awards, reviews, response SLAs, delivery guarantees, or checkout functionality.
@@ -1926,14 +1928,6 @@ Keyboard Command Strip
 | Editor | editor | `isEditor()` • Author/edit posts, drag Matrix blocks, manage Kanban tasks and ideas (cannot manage billing or team invites). |
 | Viewer | viewer | `isViewer()` • Read-only inspection across workspace posts, Matrix occupancy, analytics, and comments. |
 
-Agent Knowledge Pack VISMATIX-AGENT-GUIDE.md
-
-###### Teach Your AI Agent All of Vismatix in One Drop-In File
-
-Download a complete Markdown manual auto-compiling the published content from all 35 live /docs pages (13 Handbook guides + 22 API v3 pages), Starter–Ultra plans, 3-Bucket Reserve Vault, GEO pillars, and JSON tool definitions.
-
-[↓ Download for Agent](/docs/agent-pack) [Preview .md](/docs/agent-pack?inline=1)
-
 ###### Browse All Platform Guides
 
 Filter or jump directly to any workspace capability
@@ -2289,10 +2283,9 @@ A non-expiring token reserve. Token packs purchased with existing GC add to it; 
 
  Click a persona to preview output style
 
-###### 1-Click Multi-Channel Repurposing & External Agent Export
+###### 1-Click Multi-Channel Repurposing
 
 Paste any long-form note, draft, or newsletter and let Vismatix Copilot generate native-fit posts for LinkedIn authority essays, Threads/Bluesky flows, Instagram Reels scripts, TikTok hooks, Discord embeds, and Telegram broadcasts simultaneously.
- [↓ Download for Agent (.md)](/docs/agent-pack)
 
 BYOK (/settings/ai)
 
@@ -2584,7 +2577,7 @@ Publish [/llms.txt](/llms.txt) and [/llms-full.txt](/llms-full.txt) at root doma
 
 API v3.0 Next-Gen Ultra-High Throughput • Sub-Millisecond
 
-[↓ Download for Agent](/docs/agent-pack) [Raw JSON Spec](/docs/developer/v3?format=json)
+[Agent Packs](/docs/developer/agents) [Raw JSON Spec](/docs/developer/v3?format=json)
 
 ###### Next-Gen API v3.0: Faster, Better, Stronger
 
@@ -2709,7 +2702,7 @@ Vismatix REST API v3.1 Sub-Millisecond
 
 Unified JSON envelopes, sparse fieldsets, atomic batching, HMAC webhooks & autonomous agent specs.
 
-[↓ Download for Agent (.md)](/docs/agent-pack) [API v3.0 Core →](/docs/developer/v3) [Try Live Sandbox](/docs/api/sandbox)
+[Agent Packs](/docs/developer/agents) [API v3.0 Core →](/docs/developer/v3) [Try Live Sandbox](/docs/api/sandbox)
 
 ##### Developer API Architecture
 
@@ -2878,39 +2871,27 @@ HTTP/1.1 403 Forbidden
 #### Page 18 of 35: Autonomous AI Agent Protocol (`https://vismatix.online/docs/developer/agents`)
 > **Category:** Agent Standard | **Summary:** Copyable system prompt, RFC 7807 error handling, and zero-conflict automation standard.
 
-Instant AI Agent Onboarding Pack VISMATIX-AGENT-GUIDE.md
+##### Agent Packs
 
-##### Download for Agent — Complete Vismatix Knowledge File
+Choose one complete bundle: a universal pack for six agent environments or the dedicated ChatGPT package.
 
-Instead of browsing 35 separate web pages, download one auto-compiled handbook with all 35 live `/docs` pages (13 Handbook guides + 22 API v3 pages), plus plan and Reserve Vault facts, channel limits, GEO, webhook HMAC, MCP/API tools, and practical playbooks for drafting, scheduling, publish-state recovery, platform checkpoints, and confirmed Hoxi support handoff.
+###### Universal Agent Pack
 
-[Download for Agent (.md)](/docs/agent-pack) [Preview Raw .md](/docs/agent-pack?inline=1)
+ UNIVERSAL · ZIP
 
-###### Drop-In Knowledge Packs by Ecosystem
+One unified pack for Claude Code, Cursor, Windsurf, Codex, Gemini CLI & VS Code Copilot. Includes the full Vismatix guide, universal instructions, skill, and remote MCP config.
 
-Every export stays synced with Vismatix Handbook, Reserve Vault rules, and live REST API v3 endpoints.
- 12 Formats + llms.txt
+Remote MCP endpoint: `https://vismatix.online/mcp`
+ [Download vismatix-agent-pack.zip](/docs/agent-pack/universal-agent-pack.zip)
 
-ChatGPT Plugin ZIP .ZIP
+###### ChatGPT Plugin
 
-Portable plugin for ChatGPT workspaces where Plugin ZIP upload and remote MCP are enabled. Features and permissions vary by workspace; personal accounts cannot create new custom GPTs. Use OAuth 2.1 in ChatGPT. The Bearer API-key config is for compatible MCP clients.
+ Dedicated ChatGPT bundle · OAuth 2.1
 
-https://vismatix.online/mcp
+Ready-to-upload ChatGPT package with the complete Vismatix platform guide, domain-grounded prompt, and OAuth 2.1 MCP connector.
+
+ `https://vismatix.online/mcp`
  [Download vismatix-chatgpt-plugin.zip](/docs/agent-pack/chatgpt-plugin.zip)
-
-CLI Quick Install (Cursor / Windsurf / Copilot / Claude Code / Codex / VS Code) zsh / bash
-
-```bash
-curl -fsSL "https://vismatix.online/docs/agent-pack?target=guide" -o VISMATIX-AGENT-GUIDE.md
-curl -fsSL "https://vismatix.online/docs/agent-pack?target=skill" -o SKILL.md
-curl -fsSL "https://vismatix.online/docs/agent-pack?target=claude" -o CLAUDE.md
-curl -fsSL "https://vismatix.online/docs/agent-pack?target=codex" -o AGENTS.md
-curl -fsSL "https://vismatix.online/docs/agent-pack?target=windsurf" -o .windsurfrules
-mkdir -p .github && curl -fsSL "https://vismatix.online/docs/agent-pack?target=copilot" -o .github/copilot-instructions.md
-mkdir -p .cursor/rules && curl -fsSL "https://vismatix.online/docs/agent-pack?target=cursor" -o .cursor/rules/vismatix.mdc
-mkdir -p .cursor && curl -fsSL "https://vismatix.online/docs/agent-pack?target=mcp-config" -o .cursor/mcp.json
-mkdir -p .vscode && curl -fsSL "https://vismatix.online/docs/agent-pack?target=vscode-mcp" -o .vscode/mcp.json
-```
 
 OAuth 2.1 + MCP • 41 Tools CIMD • DCR • /agentauth
 
@@ -3072,7 +3053,7 @@ Core Operating Rules:
 
  llmstxt.org + OpenAPI 3.1 + JSON Tools
 
-[GET /docs/agent-pack Download VISMATIX-AGENT-GUIDE.md ↓](/docs/agent-pack) [GET /llms.txt Standard AI Crawler Index ↗](/llms.txt) [GET /llms-full.txt Inline Full Knowledge Corpus ↗](/llms-full.txt) [GET /docs/agent-pack?target=tools 20 OpenAI Schemas + 41 MCP Tools + 100 Documented API Operations ↗](/docs/agent-pack?target=tools&inline=1) [GET /docs/developer/v3?format=json Next-Gen v3 JSON Spec →](/docs/developer/v3?format=json) [GET /api/v3/openapi.json OpenAPI 3.1.0 Contract →](/api/v3/openapi.json)
+[GET /llms.txt Standard AI Crawler Index ↗](/llms.txt) [GET /llms-full.txt Inline Full Knowledge Corpus ↗](/llms-full.txt) [GET /docs/agent-pack?target=tools 20 OpenAI Schemas + 41 MCP Tools + 100 Documented API Operations ↗](/docs/agent-pack?target=tools&inline=1) [GET /docs/developer/v3?format=json Next-Gen v3 JSON Spec →](/docs/developer/v3?format=json) [GET /api/v3/openapi.json OpenAPI 3.1.0 Contract →](/api/v3/openapi.json)
 
 ---
 
@@ -3475,7 +3456,7 @@ Official Client Libraries
 
 ##### Zero-Dependency Python & JavaScript SDKs
 
-[↓ Download Agent Guide (.md)](/docs/agent-pack) REST API v3
+[Agent Packs](/docs/developer/agents) REST API v3
 
 Pure standard-library clients requiring zero pip or npm dependencies. Automatically handle bearer authentication, `Idempotency-Key` UUID injection, exponential backoff on HTTP 429, and dual `vmtx_u_` / `vmtx_p_` scopes.
 

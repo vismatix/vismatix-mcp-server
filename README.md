@@ -43,6 +43,15 @@ The HTTP transport accepts JSON-RPC 2.0 objects and batches, negotiates JSON or 
 
 For terminal or headless clients, the optional device flow uses <https://vismatix.online/agentauth>. The agent starts a device request, shows the human an 8-character code to approve, then polls for the credential. The flow can issue an account key (`vmtx_u_`) or a single-project key (`vmtx_p_`). The account key has broader account authority; the project key is restricted to its project. Treat issued credentials as secrets and store them in your client’s secure credential store.
 
+## The Two Agent Packs
+
+Vismatix publishes two primary downloads so teams can choose the right bundle without sorting through per-editor files:
+
+1. **Universal Agent Pack** — [Download `vismatix-agent-pack.zip`](https://vismatix.online/docs/agent-pack/universal-agent-pack.zip). One unified bundle for Claude Code, Cursor, Windsurf, OpenAI Codex, Gemini CLI, and VS Code Copilot. It includes `VISMATIX_FULL_GUIDE.md`, `VISMATIX_AGENT_GUIDE.md`, `AGENTS.md`, `SKILL.md`, a single remote Streamable HTTP `mcp.json`, and setup notes. The generated package source is [`universal-agent-pack/`](universal-agent-pack/).
+2. **ChatGPT Plugin** — [Download `vismatix-chatgpt-plugin.zip`](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip). A dedicated ChatGPT bundle with `plugin.json`, `mcp.json`, `PLUGIN_PROMPT.md`, the complete platform guide, and an English/Arabic setup guide. Its generated package source is [`chatgpt-plugin/`](chatgpt-plugin/).
+
+Both bundles include the full Vismatix knowledge base. MCP clients should read `VISMATIX_AGENT_GUIDE.md` or `PLUGIN_PROMPT.md`, then use `VISMATIX_FULL_GUIDE.md` and live schemas. The complete guide is also available over authenticated MCP as `vismatix://docs/full-guide`. Both ZIP endpoints return `application/zip` with `X-Robots-Tag: noindex, nofollow`. Existing `/docs/agent-pack?target=...` exports remain available for backward compatibility; they are no longer the primary UI choices.
+
 ## Client Setup (30-Second Configs)
 
 Ready-to-copy client configurations and skill playbooks are included in this repository and downloadable directly from <https://vismatix.online/docs/developer/agents>:
@@ -133,7 +142,7 @@ Add `vismatix` in `~/.gemini/settings.json`:
 
 ### ChatGPT Plugin ZIP
 
-Download the [Vismatix ChatGPT Plugin ZIP](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip) or use the generated files in [`chatgpt-plugin/`](chatgpt-plugin/). It is a portable OpenAI Agent Plugins package containing `plugin.json`, OAuth-enabled `mcp.json`, the setup skill, `PLUGIN_PROMPT.md` domain manual, and the complete generated `VISMATIX_FULL_GUIDE.md`. The guide is also available live over MCP as `vismatix://docs/full-guide`. The directory copy is kept aligned with the downloadable archive.
+Use the dedicated [Vismatix ChatGPT Plugin ZIP](https://vismatix.online/docs/agent-pack/chatgpt-plugin.zip) and its generated source files in [`chatgpt-plugin/`](chatgpt-plugin/). It contains `plugin.json`, `mcp.json`, the setup skill, `PLUGIN_PROMPT.md` domain manual, the complete generated `VISMATIX_FULL_GUIDE.md`, and bilingual setup instructions. For Claude Code, Cursor, Windsurf, Codex, Gemini CLI, and VS Code, use the [Universal Agent Pack](https://vismatix.online/docs/agent-pack/universal-agent-pack.zip) instead.
 
 1. In ChatGPT on the web, open the Plugins section for the intended workspace. If **Upload plugin** is available and you have permission, choose **Add → Upload plugin** and select the ZIP.
 2. Enable the plugin. If the workspace prompts for an MCP connection, use `https://vismatix.online/mcp`, choose OAuth, and complete Vismatix sign-in and scope consent. OAuth discovery advertises PKCE `S256`, CIMD, and DCR.
