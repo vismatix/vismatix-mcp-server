@@ -13,7 +13,7 @@ Keep this short contract in context. Use `START_HERE.md` to connect, `SKILL.md` 
 
 - Never request, reveal, log, or embed an API key, OAuth token, provider credential, or private account data. Use the client's secure credential store.
 - `vmtx_u_*` keys are account-scoped. `vmtx_p_*` keys are restricted to one project; do not use them to enumerate or access another project or account-level resources.
-- Respect workspace roles, subscription and Enterprise limits, OAuth scopes, channel eligibility, and approval gates. A tool denial is authoritative; do not work around it.
+- Respect workspace roles, plan limits, OAuth scopes, channel eligibility, and approval gates. A tool denial is authoritative; do not work around it.
 
 ## Make changes safely
 

@@ -23,7 +23,7 @@ The operator details and registration identifiers above are published as supplie
 - Compatibility endpoint aliases: `/api/mcp` and `/api/mcp/public`
 - Transport: MCP Streamable HTTP with JSON-RPC 2.0; GET provides discovery, POST handles MCP messages, and DELETE terminates a session.
 - Server version: `3.3.0`
-- Default protocol version: `2025-03-26`; supported versions: `2025-11-25`, `2025-06-18`, `2025-03-26`, and `2024-11-05`.
+- Default protocol version: `2025-03-26`; supported versions include `2026-07-28`, `2025-11-25`, `2025-06-18`, `2025-03-26`, and `2024-11-05`.
 
 The authenticated endpoint initiates OAuth when a client connects without a bearer credential. OAuth discovery is available at:
 
@@ -37,7 +37,7 @@ Vismatix supports OAuth 2.1 Authorization Code with PKCE `S256`, OAuth Dynamic C
 - Exchange or refresh token: `POST https://vismatix.online/oauth/token`
 - Revoke token: `POST https://vismatix.online/oauth/revoke`
 
-The supported OAuth scopes are `profile:read`, `projects:read`, `projects:write`, `posts:read`, `posts:write`, `posts:publish`, `matrix:read`, `matrix:write`, `tasks:read`, `tasks:write`, `analytics:read`, `webhooks:manage`, `wallet:read`, `wallet:transfer`, `ai:use`, and `offline_access`. Review the consent screen and grant only the access needed for your workflow. Workspace plan and role checks still apply.
+The supported OAuth scopes are `profile:read`, `projects:read`, `projects:write`, `posts:read`, `posts:write`, `posts:publish`, `matrix:read`, `matrix:write`, `tasks:read`, `tasks:write`, `analytics:read`, `inbox:read`, `inbox:write`, `webhooks:manage`, `wallet:read`, `wallet:transfer`, `ai:use`, and `offline_access`. Review the consent screen and grant only the access needed for your workflow. Workspace plan and role checks still apply.
 
 The HTTP transport accepts JSON-RPC 2.0 objects and batches, negotiates JSON or Server-Sent Events from `Accept`, and returns `202 Accepted` with an empty body for notifications. An `initialize` response creates a `Mcp-Session-Id`; subsequent responses echo a valid supplied session ID. Keep credentials in the `Authorization: Bearer` header and store them in a secure credential manager.
 
@@ -56,6 +56,12 @@ For terminal or headless clients, the optional device flow uses <https://vismati
 Vismatix records post-level engagement snapshots and workspace-safe rollups for provider-returned metrics. The API exposes `GET /api/v3/analytics/overview`, `GET /api/v3/analytics/posts`, `GET /api/v3/analytics/heatmap`, `GET /api/v3/analytics/export`, and rate-limited refresh endpoints `POST /api/v3/analytics/sync` and `POST /api/v3/analytics/posts/{post}/sync`. Hoxi post-mortems use `POST /api/v3/analytics/posts/{post}/diagnose` and captured measurements; `POST /api/v3/analytics/posts/{post}/repurpose` creates draft-only content in eligible open Golden Peak Matrix cells and never schedules or publishes.
 
 Current live analytics collection is configured for Facebook and Instagram and requires granted provider permissions and a published external post ID. Unsupported destinations and missing permissions are reported as unavailable; live metrics are not estimated. Deterministic metrics are marked as sandbox data and limited to local/testing environments or explicitly sandbox connections. The measured Matrix heatmap maps engagement back to a post's 7-day × 12-slot position.
+
+## Agency Collaboration and Guided Onboarding
+
+Plus, Pro, and Ultra workspaces support agency collaboration with Owner and Editor roles plus an isolated Client Reviewer role. Review links can be scoped to a week or campaign, optionally protected by a PIN, and revoked. The client review portal shows only the scoped review content—not private workspace, AI, or billing data.
+
+Brand DNA extraction can prepare a draft brand profile from a public website; review suggestions before saving them to the Brand Kit. First-week onboarding helps teams establish brand context, connect eligible channels, and plan in the Matrix. Hoxi reuses the existing planning and draft workflows: applying a plan creates drafts only and never schedules or publishes.
 
 ## Agent Packs and Full Platform Guide
 
@@ -169,7 +175,7 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 
 ## MCP Capabilities (`v3.3.0`)
 
-- **50 Tools:** 10 pre-login discovery/GEO/auth tools + 40 authenticated workspace, matrix, publishing, AI, Inbox, analytics, wallet, and webhook tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
+- **53 Tools:** 10 pre-login discovery/GEO/auth tools + 43 authenticated workspace, matrix, publishing, AI, Inbox, analytics, wallet, and webhook tools with compact JSON responses and self-correcting `INVALID_PARAMS` / `recovery_hint` guidance.
 - **7 Static Documentation Resources** (`resources/list`)
 - **4 Authenticated Workspace Resource Templates** (`resources/templates/list`)
 - **9 Composable Workflow Prompts** (`prompts/list` & `prompts/get`)
@@ -221,9 +227,13 @@ See [OpenAI’s plugin packaging guide](https://developers.openai.com/plugins/bu
 - `vismatix_manage_notifications`
 - `vismatix_audit_and_health`
 - `vismatix_bulk_create_drafts` — validate up to 15 drafts independently and create valid rows in one atomic batch.
-- `vismatix_smart_fill_matrix` — place eligible drafts into open Golden Peak windows, honoring schedule bounds, collisions, approval gates, and Enterprise slot limits.
+- `vismatix_smart_fill_matrix` — place eligible drafts into open Golden Peak windows, honoring schedule bounds, plan rules, collisions, and approval gates.
 - `vismatix_audit_post_readiness` — check platform character/media rules, forbidden brand terms, and locally known destination connection status.
-- `vismatix_get_gc_and_plan_status` — inspect plan, safe Enterprise overrides, quotas, GC visibility, and credential scopes without exposing tokens.
+- `vismatix_get_gc_and_plan_status` — inspect plan, quotas, GC visibility, and credential scopes without exposing tokens.
+- `inbox_list_threads`, `inbox_get_thread`, `inbox_reply`, `inbox_ai_suggest_replies`, and `inbox_convert_to_post` — manage workspace-scoped conversations; Hoxi suggestions are drafts, outbound replies require explicit confirmation, and post conversions create drafts only.
+- `hoxi_generate_matrix_plan` — preview a Brand Kit-aware seven-day Matrix plan; it does not create or schedule posts.
+- `hoxi_draft_inbox_reply` — draft Brand Kit-checked Inbox reply options without sending them.
+- `hoxi_repurpose_winner` — after explicit approval, create brand-checked draft variants from measured winners; never schedules or publishes.
 
 `vismatix_audit_and_health` also exposes public `health` and `geo_guidelines` operations; other operations are subject to authentication and authorization.
 

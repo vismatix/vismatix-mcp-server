@@ -24,7 +24,7 @@ This is a draft-only campaign workflow until the user separately approves schedu
 1. Retrieve `preflight_and_publish_week` and follow its live instructions. Start with the readiness report and upcoming scheduled posts.
 2. Run `vismatix_audit_post_readiness` for each relevant post. Explain brand violations, format limits, media gaps, and channel connection problems before editing.
 3. Propose copy fixes and open Golden Peak slots. Do not silently change existing copy or move posts.
-4. After the user approves the specific edits or schedule, apply them through the appropriate tool. Use `vismatix_smart_fill_matrix` only for eligible, approved drafts and respect conflict, plan, Enterprise, and channel limits.
+4. After the user approves the specific edits or schedule, apply them through the appropriate tool. Use `vismatix_smart_fill_matrix` only for eligible, approved drafts and respect conflict, plan, and channel limits.
 5. Scheduling is not publishing. Before a publish action, show what will be published and where, then obtain explicit confirmation. Report only the final status returned by Vismatix.
 
 ## 4. Triage an Inbox conversation

@@ -14,10 +14,14 @@
                         "baseScopes": [
                             "profile:read",
                             "projects:read",
+                            "projects:write",
                             "posts:read",
                             "posts:write",
                             "matrix:read",
                             "matrix:write",
+                            "tasks:read",
+                            "tasks:write",
+                            "analytics:read",
                             "ai:use",
                             "inbox:read",
                             "inbox:write"

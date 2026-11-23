@@ -11,7 +11,7 @@ description: Use when planning, auditing, repurposing, scheduling, or managing s
 
 ## 1. Human-First vs Developer Operating Mode
 - When answering creators or workspace operators, guide them with Vismatix Studio UI clicks (`Create post`, `Content matrix`, `Kanban`, `Tasks`, `Strategy radar`, `Hoxi Copilot`, `/settings/*`) rather than dumping REST endpoints.
-- When running tools or implementing developer integrations, operate via Official MCP (`50` tools, including four measured post-publish analytics tools) or `/api/v3/*` (`Idempotency-Key` UUID v4 on mutations).
+- When running tools or implementing developer integrations, operate via Official MCP (`53` tools, including measured post-publish analytics tools) or `/api/v3/*` (`Idempotency-Key` on applicable mutations).
 
 ## 2. Authentication Quickstart
 1. **OAuth 2.1 + PKCE `S256` (CIMD & DCR):** Connect to `https://vismatix.online/mcp` (discovery at `https://vismatix.online/.well-known/oauth-protected-resource`).
@@ -39,11 +39,14 @@ Read these before drafting or batch-scheduling to ground output in real workspac
 - `preflight_and_publish_week` — review the readiness report, audit upcoming scheduled posts, suggest safe brand/length corrections, then fill open Golden Peak slots after schedule confirmation.
 - Core onboarding & utility prompts: `human-studio-companion`, `agent-auth-onboarding`, `weekly-content-planner`, `geo-article-auditor`.
 
-## 6. v3.3 Agency Workflow Tools
+## 6. Agency Workflow Tools
+- Client Reviewer access is isolated from general workspace access. Approval links can be scoped to a week or campaign, optionally PIN-protected, and revoked; the portal exposes only the scoped review content.
+- Brand DNA extraction prepares a draft profile from a public website for user review. First-week onboarding reuses existing Hoxi Matrix planning and draft workflows; applying a plan creates drafts only.
+- `hoxi_generate_matrix_plan` returns a contextual seven-day plan preview only; it does not create or schedule posts. `hoxi_draft_inbox_reply` returns unsent, Brand Kit-checked reply options. `hoxi_repurpose_winner` creates drafts only after explicit user approval and never schedules or publishes them.
 - `vismatix_bulk_create_drafts` validates up to 15 rows, creates valid rows in one transaction, and reports per-item validation skips.
-- `vismatix_smart_fill_matrix` schedules eligible approved drafts into open Golden Peak slots; it honors schedule bounds, collisions, approval gates, and Enterprise `matrix_slots` limits.
+- `vismatix_smart_fill_matrix` schedules eligible approved drafts into open Golden Peak slots; it honors schedule bounds, collisions, and approval gates.
 - `vismatix_audit_post_readiness` checks platform text/media limits, Brand Kit forbidden terms, and locally known channel connection/expiry state. It does not contact social providers.
-- `vismatix_get_gc_and_plan_status` shows plan, permitted Enterprise overrides, quota use, and key scopes. Project-scoped credentials do not receive account GC balance or other workspace data.
+- `vismatix_get_gc_and_plan_status` shows plan, quota use, and key scopes. Project-scoped credentials do not receive account GC balance or other workspace data.
 - JSON-RPC notifications receive an empty HTTP `202`; `Accept` negotiates JSON/SSE, and initialize responses establish a `Mcp-Session-Id`.
 
 ## 7. Self-Correcting Validation & Error Recovery

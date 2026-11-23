@@ -11,7 +11,7 @@ description: Use when planning, auditing, repurposing, scheduling, or managing s
 
 ## 1. Human-First vs Developer Operating Mode
 - When answering creators or workspace operators, guide them with Vismatix Studio UI clicks (`Create post`, `Content matrix`, `Kanban`, `Tasks`, `Strategy radar`, `Hoxi Copilot`, `/settings/*`) rather than dumping REST endpoints.
-- When running tools or implementing developer integrations, operate via Official MCP (`50` tools) or `/api/v3/*` (`Idempotency-Key` UUID v4 on mutations).
+- When running tools or implementing developer integrations, operate via Official MCP (`53` tools) or `/api/v3/*` (`Idempotency-Key` on applicable mutations).
 
 ## 2. Authentication Quickstart
 1. **OAuth 2.1 + PKCE `S256` (CIMD & DCR):** Connect to `https://vismatix.online/mcp` (discovery at `https://vismatix.online/.well-known/oauth-protected-resource/mcp`).
@@ -29,7 +29,7 @@ Read these before drafting or batch-scheduling to ground output in real workspac
 - Native formats include X single posts and threads (copy only), LinkedIn thought leadership and B2B stories, Instagram captions/carousels, TikTok/Reels/Shorts scripts, Facebook posts, YouTube descriptions (copy only), and long-form SEO articles.
 - Match English, Arabic, Spanish, French, or German. Arabic registers include commercial Saudi/Gulf, Modern Standard Arabic, and Egyptian Arabic.
 - Apply the current workspace Brand Kit and recent/scheduled post memory to every generation or rewrite. Use three-hook, selected-channel adaptation, tone/dialect, carousel, thread, and short-video transformations. Review the returned Brand Alignment score/note; it is not a factual or legal approval guarantee.
-- A seven-day campaign uses educational, storytelling, social-proof, product/offer, and engagement pillars. Applying a plan creates up to 15 draft-only posts in open Golden Peak slots with access, plan/Enterprise, conflict, channel, Brand Kit, and length checks. It does not schedule or publish.
+- A seven-day campaign uses educational, storytelling, social-proof, product/offer, and engagement pillars. Applying a plan creates up to 15 draft-only posts in open Golden Peak slots with access, plan, conflict, channel, Brand Kit, and length checks. It does not schedule or publish.
 
 ## 3B. Unified Social Inbox
 - Read conversations only in the authenticated workspace using `inbox_list_threads` and `inbox_get_thread`; Hoxi options from `inbox_ai_suggest_replies` are drafts and require Brand Kit review.
@@ -38,6 +38,9 @@ Read these before drafting or batch-scheduling to ground output in real workspac
 - Provider events enter through configured normalized adapters or the signed Vismatix webhook relay. Do not claim automatic polling for a platform unless the live workspace reports that connection.
 
 ## 4. Composable Workflow Prompts (`prompts/get`)
+- Agency workspaces on Plus, Pro, and Ultra can use isolated Client Reviewer access with revocable week- or campaign-scoped approval links and optional PIN protection. The review portal exposes only scoped content.
+- Brand DNA extraction proposes a draft profile from a public website for review. First-week onboarding reuses existing Matrix planning and draft workflows; applying plans creates drafts only.
+- `hoxi_generate_matrix_plan` is a preview only; `hoxi_draft_inbox_reply` creates unsent reply options; `hoxi_repurpose_winner` requires explicit approval and creates drafts only. None of these tools schedules or publishes content.
 - `weekly_content_sprint` — read workspace snapshot + brand voice, fill open Golden Peak gaps, score via `vismatix_virality_audit`, and stage draft-only posts.
 - `brand_audit_and_realign` — audit queued drafts against `brand_kit.forbidden_words`, platform character caps, and tone rules.
 - `campaign_matrix_fill` — distribute multi-channel campaign pillars across unoccupied weekly slots within `+60 minutes` to `+12 months`.

@@ -19,7 +19,7 @@ One unified knowledge and connection bundle for Claude Code, Cursor, Windsurf, O
 - `WORKFLOW_EXAMPLES.md`: read-only workspace audit, draft-only campaign, and preflight/scheduling recipes.
 - `mcp.json`: one remote Streamable HTTP server definition and OAuth/API-key discovery notes.
 
-The MCP server currently exposes 50 tools, 7 static resources, 4 authenticated workspace resource templates, and 9 prompts. Discover live definitions after connecting. Client config formats differ; use the URL and Streamable HTTP transport from `mcp.json` in the client's remote-server settings rather than assuming the whole file is accepted unchanged. Read workspace context before private actions and get explicit confirmation before publishing. Inbox replies also require explicit confirmation; Hoxi suggestions are drafts only. ChatGPT uses its dedicated `vismatix-chatgpt-plugin.zip` package.
+The MCP server currently exposes 53 tools, 7 static resources, 4 authenticated workspace resource templates, and 9 prompts. Discover live definitions after connecting. Client config formats differ; use the URL and Streamable HTTP transport from `mcp.json` in the client's remote-server settings rather than assuming the whole file is accepted unchanged. Read workspace context before private actions and get explicit confirmation before publishing. Inbox replies also require explicit confirmation; Hoxi suggestions are drafts only. ChatGPT uses its dedicated `vismatix-chatgpt-plugin.zip` package.
 
 Need the guide by itself? Download `VISMATIX_FULL_GUIDE.md` from `https://vismatix.online/docs/agent-pack/VISMATIX_FULL_GUIDE.md`; it is identical to the copy in this ZIP.
 
