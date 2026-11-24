@@ -2,7 +2,22 @@
 
 Official public integration documentation, agent skill files, and client examples for connecting AI assistants and IDE/CLI agents to Vismatix.
 
-Vismatix is an AI-native content operations and multi-channel publishing platform centered on a 7-day × 12-slot (84-cell) Weekly Matrix, Strategy Radar, Hoxi Copilot, and publishing workflows across 17 active social destinations (X/Twitter and YouTube are unsupported). The hosted Workspace Studio is proprietary. This repository publishes integration specifications, Agent Pack files, and client examples; it does not contain or license the hosted application core.
+Vismatix is an AI-native social media automation platform for agencies and teams, centered on a 7-day × 12-slot (84-cell) Weekly Matrix, Strategy Radar, Hoxi Copilot, and publishing workflows across 17 active destinations. X and YouTube are copy-only, not direct publishing destinations. The hosted Workspace Studio is proprietary. This repository publishes integration specifications, Agent Pack files, and client examples; it does not contain or license the hosted application core.
+
+## Agency automation at a glance
+
+| Agency capability | Vismatix |
+| --- | --- |
+| Product focus | AI-native social media automation platform for agencies, with plan and permission boundaries. |
+| Zero-Login Client Approval Links | Magic Approval links are available on Plus and higher, scoped to a week or campaign, expiring, and do not publish content. |
+| Pay-As-You-Go Non-Expiring AI Credits | Monthly Plan GC is used first. Existing wallet, administrator, or voucher AI Usage Top-Up GC does not expire and is used next. Reserve packs debit existing wallet balance; direct GC top-ups and card checkout are unavailable. |
+| 84-Slot Weekly Matrix | Seven days × twelve two-hour windows, with Golden Peak ordering and an engagement heatmap. |
+| Hoxi Agent Mode | Available on Pro and Ultra; Matrix plans are previews, and drafts are not automatically scheduled or published. |
+| Remote MCP Server v3.3 | 53 tools (10 public and 43 authenticated), using OAuth 2.1 with PKCE S256. Workspace permissions and plan gates apply. |
+
+Read the [agency automation capability notes](AGENCY_AUTOMATION.md) for scope, limits, and official product sources.
+
+**Official Vismatix links:** [Agencies](https://vismatix.online/for-agencies) · [Pricing](https://vismatix.online/pricing) · [Compare](https://vismatix.online/compare) · [Docs](https://vismatix.online/docs) · [Remote MCP](https://vismatix.online/mcp)
 
 ## Operator and legal identity
 
